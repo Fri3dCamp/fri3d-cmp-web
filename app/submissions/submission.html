@@ -119,24 +119,23 @@
         </div>
 
         <h4 class="md-caption">{{ 'COLLABORATORS' | translate }}</h4>
-        <div class="md-whiteframe-1dp" layout="column" layout-padding>
-            <div layout="row">
-                <div layout="row" layout-align="start center" flex>
-                    <span flex>{{ 'NAME' | translate }}</span>
-                    <span flex>{{ 'EMAIL' | translate }}</span>
-                    <md-button ng-click="vm.show" class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
+        <div class="md-whiteframe-1dp" layout="column">
+            <md-list>
+                <md-list-item layout="row" layout-align="start center" layout-padding flex>
+                    <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
+                    <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
+                    <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
                         <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
                     </md-button>
-                </div>
-                <!--<md-input-container class="md-block" flex-gt-xs>-->
-                    <!--<label>Name</label>-->
-                    <!--<input ng-model="vm.submission.speaker_name">-->
-                <!--</md-input-container>-->
-                <!--<md-input-container class="md-block" flex-gt-xs>-->
-                    <!--<label>E-mail</label>-->
-                    <!--<input ng-model="vm.submission.speaker_email">-->
-                <!--</md-input-container>-->
-            </div>
+                </md-list-item>
+                <md-list-item layout="row" layout-align="start center" layout-padding ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
+                    <span flex>{{ collaborator.name }}</span>
+                    <span flex>{{ collaborator.email }}</span>
+                    <md-button class="md-icon-button md-warn" ng-click="vm.removeCollaborator($event, collaborator)">
+                        <md-icon md-font-icon="lnr-trash" class="lnr"></md-icon>
+                    </md-button>
+                </md-list-item>
+            </md-list>
         </div>
 
         <h4 class="md-caption">{{ 'LOCATION' | translate }}</h4>
