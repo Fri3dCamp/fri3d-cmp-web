@@ -116,9 +116,9 @@
           'AUDIENCE': 'Audience',
           'WORKSHOP': 'Workshop',
           'TALK': 'Talk',
-          'TITLE': 'Title',
-          'FULLTIME': 'Full-time',
-          'WALK-IN': 'Walk-in-walk-out',
+          'TITLE': 'Title of your activity',
+          'FULLTIME': 'Attendance from start to end',
+          'WALK-IN': 'Walk-in attendance',
           'SUBMISSION_TYPE': 'Type',
           'ATTENDANCE_TYPE': 'Format',
           'SUMMARY': 'Summary',
@@ -126,7 +126,10 @@
           'INTENDED_AUDIENCE': 'Intended Audience',
           'NAME': 'Name',
           'EMAIL': 'E-Mail',
-          'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?'
+          'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
+          'FORMINTRO' : 'Submit your proposal for a talk, workshop or other activity on Fri3d Camp 2018.',
+          'ASSOCIATED' : 'Hacker- or makerspaces with which you are affiliated',
+          'REPEATS' : 'Maximum nr. of times you want to repeat your activity'
       });
 
       $translateProvider.translations('nl', {
@@ -138,9 +141,9 @@
           'AUDIENCE': 'Publiek',
           'WORKSHOP': 'Workshop',
           'TALK': 'Presentatie',
-          'TITLE': 'Titel',
-          'FULLTIME': 'Fulltime',
-          'WALK-IN': 'In-uit',
+          'TITLE': 'Titel van je activiteit',
+          'FULLTIME': 'Aanwezigheid van begin tot einde',
+          'WALK-IN': 'Doorlopende deelname',
           'SUBMISSION_TYPE': 'Type',
           'ATTENDANCE_TYPE': 'Format',
           'SUMMARY': 'Samenvatting',
@@ -148,7 +151,10 @@
           'INTENDED_AUDIENCE': 'Doelpubliek',
           'NAME': 'Naam',
           'EMAIL': 'E-Mail Adres',
-          'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?'
+          'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?',
+          'FORMINTRO' : 'Dien jouw voorstel in voor een talk, workshop of andere activiteit op Fri3d Camp 2018.',
+          'ASSOCIATED' : 'Hacker- of makerspaces waar je bijhoort',
+          'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen'
       });
 
       $translateProvider.preferredLanguage('nl');
