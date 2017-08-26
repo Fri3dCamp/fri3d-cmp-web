@@ -1,0 +1,64 @@
+body {
+  /*background-color: #efefef;*/
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+.lnr {
+  color: #515151;
+  font-size: 24px;
+}
+
+.status-error { color: red; }
+.status-warn { color: orange; }
+.status-debug { color: gray; }
+
+/*.login-page {*/
+  /*background-color: #008888;*/
+  /*color: white;*/
+/*}*/
+
+.login-page img {
+  max-width: 200px;
+}
+
+.login-page button {
+  color: white;
+}
+
+/*md-toolbar.md-default-theme:not(.md-menu-toolbar) md-icon, md-toolbar:not(.md-menu-toolbar) md-icon {*/
+  /*color: #c1c1c1;*/
+/*}*/
+
+/*md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {*/
+  /*background-color: transparent;*/
+/*}*/
+
+/*md-toolbar .md-button.active md-icon {*/
+  /*color: #515151;*/
+/*}*/
+
+/*md-toolbar .md-button:hover md-icon {*/
+  /*color: #515151;*/
+/*}*/
+
+md-input-container.search .md-errors-spacer {
+  /*float: right;*/
+  /*min-height: 0px;*/
+  /*min-width: 0px;*/
+  display: none;
+}
+
+h1 {
+  font-weight: 100;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h4 {
+  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
+}
+
+md-content > form > div {
+  background-color: white;
+}

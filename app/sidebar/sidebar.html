@@ -1,0 +1,31 @@
+<md-sidenav
+  class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')"
+  md-whiteframe="4"
+  style="border-right: solid 1px #dedede; "
+  flex>
+
+  <div layout="row" layout-padding>
+    <img class="md-avatar" ng-src="{{vm.auth.getCachedProfile().picture}}" alt="User" style="max-width: 48px; max-height: 48px;">
+    <div layout="column" flex>
+      <span class="md-title">{{vm.auth.getCachedProfile().nickname}}</span>
+      <span class="md-caption">{{vm.auth.getCachedProfile().name}}</span>
+    </div>
+    <div>
+      <md-button class="md-icon-button" ng-click="vm.auth.logout()">
+        <md-icon md-font-icon="lnr-exit" class="lnr"></md-icon>
+      </md-button>
+    </div>
+  </div>
+
+  <md-content layout-padding layout="column" flex>
+    <md-list flex>
+      <md-list-item ng-click="vm.goto('/')">
+        <md-icon md-font-icon="lnr-home" class="lnr"></md-icon>
+        <span flex>Home</span>
+      </md-list-item>
+    </md-list>
+  </md-content>
+
+</md-sidenav>

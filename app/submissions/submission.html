@@ -1,0 +1,244 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">NL</md-button>
+        <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">EN</md-button>
+        <span flex></span>
+        <md-button ng-click="vm.save()">Save</md-button>
+        <md-button ng-click="vm.publish()">Publish</md-button>
+    </div>
+
+</md-toolbar>
+
+<div flex layout="row">
+
+<md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-whiteframe="4"
+        style="border-right: solid 1px #dedede; ">
+
+    <md-button href=""> {{ 'GENERAL' | translate }} </md-button>
+    <md-button href=""> {{ 'SPEAKER' | translate }} </md-button>
+    <md-button href=""> {{ 'COLLABORATORS' | translate }} </md-button>
+    <md-button href=""> {{ 'ACTIVITY' | translate }} </md-button>
+    <md-button href=""> {{ 'LOCATION' | translate }} </md-button>
+    <md-button href=""> {{ 'AUDIENCE' | translate }} </md-button>
+</md-sidenav>
+
+<md-content layout="column" layout-padding flex>
+    <form name="userForm">
+        <div class="md-whiteframe-2dp" layout="column" layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>{{ 'TITLE' | translate }}</label>
+                    <input ng-model="vm.submission.title">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>{{ 'SUBMISSION_TYPE' | translate }}</label>
+                    <md-select ng-model="vm.submission.type">
+                        <md-option ng-repeat="type in vm.types" ng-value="type">
+                            {{ type | translate }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>{{ 'ATTENDANCE_TYPE' | translate }}</label>
+                    <md-select ng-model="vm.submission.attendanceType">
+                        <md-option ng-repeat="type in vm.attendanceTypes" ng-value="type">
+                            {{ type | translate }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div>
+                <md-input-container class="md-block">
+                    <label>Summary</label>
+                    <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
+                </md-input-container>
+            </div>
+
+            <div>
+                <md-input-container class="md-block">
+                    <label>Description</label>
+                    <textarea ng-model="vm.submission.description" rows="5"></textarea>
+                </md-input-container>
+            </div>
+        </div>
+
+        <h4 class="md-caption">{{ 'SPEAKER' | translate }}</h4>
+        <div class="md-whiteframe-1dp" layout="column" layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Name</label>
+                    <input ng-model="vm.submission.speaker_name">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>E-mail</label>
+                    <input ng-model="vm.submission.speaker_email">
+                </md-input-container>
+            </div>
+
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Associated Hackerspaces</label>
+                <input ng-model="vm.submission.associated_hackerspaces">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Bio</label>
+                <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="5"></textarea>
+            </md-input-container>
+        </div>
+
+        <h4 class="md-caption">{{ 'COLLABORATORS' | translate }}</h4>
+        <div class="md-whiteframe-1dp" layout="column" layout-padding>
+            <div layout="row">
+                <h1>To be completed</h1>
+                <!--<md-input-container class="md-block" flex-gt-xs>-->
+                    <!--<label>Name</label>-->
+                    <!--<input ng-model="vm.submission.speaker_name">-->
+                <!--</md-input-container>-->
+                <!--<md-input-container class="md-block" flex-gt-xs>-->
+                    <!--<label>E-mail</label>-->
+                    <!--<input ng-model="vm.submission.speaker_email">-->
+                <!--</md-input-container>-->
+            </div>
+        </div>
+
+        <h4 class="md-caption">{{ 'ACTIVITY' | translate }}</h4>
+        <div class="md-whiteframe-1dp" layout="column" layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Visit Duration</label>
+                    <input ng-model="vm.submission.visit_duration">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Activity Duration</label>
+                    <input ng-model="vm.submission.activity_duration">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Multiple Sessions</label>
+                    <input ng-model="vm.submission.multiple_sessions">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Maximum Repeats</label>
+                    <input ng-model="vm.submission.maximum_repeats">
+                </md-input-container>
+            </div>
+        </div>
+
+        <h4 class="md-caption">{{ 'LOCATION' | translate }}</h4>
+        <div class="md-whiteframe-1dp" layout="column" layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Type</label>
+                    <input ng-model="vm.submission.location_type">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Requirements</label>
+                    <input ng-model="vm.submission.location_requirements">
+                </md-input-container>
+            </div>
+        </div>
+
+        <h4 class="md-caption">{{ 'AUDIENCE' | translate }}</h4>
+        <div class="md-whiteframe-1dp" layout="column" layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Level</label>
+                    <input ng-model="vm.submission.audience_level">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Requirements</label>
+                    <input ng-model="vm.submission.audience_requirements">
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Maximum Participants</label>
+                    <input ng-model="vm.submission.maximum_participants">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>Maximum Group Size</label>
+                    <input ng-model="vm.submission.maximum_group_size">
+                </md-input-container>
+            </div>
+        </div>
+
+
+        <!--
+        "speaker_name": { "type": "text" },
+                "speaker_email": { "type": "text" },
+                "speaker_bio": { "type": "text" },
+                "associated_hackerspaces": {"type": "text"},
+
+                "collaborators": {
+                    "type": "nested",
+                    "properties": {
+                        "name" : {"type": "text"},
+                        "email" : {"type": "text"}
+                    }
+                },
+
+                "visit_duration_minutes": { "type": "integer" },
+                "duration_minutes": { "type": "integer" },
+
+                "sessions_needed": { "type": "integer" },
+                "max_repeats": { "type": "integer" },
+
+                "presentation_type": { "type": "keyword" },
+                "attendance_type": { "type": "keyword" },
+
+                "participant_cap": { "type": "integer" },
+                "total_group_size": { "type": "integer" },
+                "additional_costs_fixed": { "type": "float" },
+                "additional_costs_per_attendant": { "type": "float" },
+
+                "location": {
+                    "type": "nested",
+                    "properties": {
+                        "location_type": { "type": "keyword" },
+                        "location_requirements": { "type": "keyword" }
+                    }
+                },
+                "audience": {
+                    "type": "nested",
+                    "properties": {
+                        "audience_level": {"type": "keyword"},
+                        "audience_requirements": { "type": "keyword" }
+                    }
+                },
+
+                // anything special orga is to provide
+                "required_from_orga" : {"type": "text"},
+
+
+                // timing
+                //  these should all default to normal content hours
+                "time_available_friday_start": { "type": "integer" },
+                "time_available_friday_stop": { "type": "integer" },
+                "time_available_saturday_start": { "type": "integer" },
+                "time_available_saturday_stop": { "type": "integer" },
+                "time_available_sunday_start": { "type": "integer" },
+                "time_available_sunday_stop": { "type": "integer" }
+        -->
+    </form>
+</md-content>
+
+    <md-sidenav
+            class="md-sidenav-right"
+            md-component-id="right"
+            md-is-locked-open="$mdMedia('gt-md')"
+            md-whiteframe="4"
+            style="border-right: solid 1px #dedede; "
+            layout-padding
+            flex>
+
+        <h2>Comments</h2>
+    </md-sidenav>
+</div>

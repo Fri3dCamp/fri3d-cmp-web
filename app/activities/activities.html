@@ -1,0 +1,49 @@
+<md-content layout="column" layout-padding flex>
+  <md-grid-list
+    md-cols="6" md-row-height="2:2"
+    md-gutter="12px">
+
+    <md-grid-tile md-rowspan="1" md-colspan="2">
+      <md-card style="width:100%; height: 100%;">
+        <md-card-title>
+          <h1 style="margin: 0;">Models</h1>
+        </md-card-title>
+        <md-card-content style="padding-bottom: 0;">
+          <p>Have a look at all your models.</p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-padding>
+          <md-input-container class="search" flex>
+            <label>Search</label>
+            <input ng-model="vm.search" ng-model-options="{debounce: 1000}" ng-change="vm.query(vm.search)">
+          </md-input-container>
+        </md-card-actions>
+      </md-card>
+    </md-grid-tile>
+
+    <md-grid-tile md-rowspan="1" md-colspan="1" ng-repeat="model in vm.models">
+      <model-card style="width:100%; height: 100%;" model="model" on-edit="vm.edit($event, model)" on-remove="vm.remove($event, model)"></model-card>
+    </md-grid-tile>
+  </md-grid-list>
+</md-content>
+
+<!--<md-content layout="column" flex>-->
+  <!--<md-toolbar>-->
+    <!--<div class="md-toolbar-tools">-->
+      <!--<span flex>Models</span>-->
+      <!--&lt;!&ndash;<md-input-container class="search" flex>&ndash;&gt;-->
+        <!--&lt;!&ndash;<label>Search</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input ng-model="vm.search" ng-model-options="{debounce: 1000}" ng-change="vm.query(vm.search)">&ndash;&gt;-->
+      <!--&lt;!&ndash;</md-input-container>&ndash;&gt;-->
+      <!--<md-button class="md-icon-button" aria-label="Create Model" ng-click="vm.new($event)">-->
+        <!--<md-tooltip>Create Model</md-tooltip>-->
+        <!--<md-icon md-font-icon="lnr-file-add" class="lnr" style="color: white;"></md-icon>-->
+      <!--</md-button>-->
+    <!--</div>-->
+  <!--</md-toolbar>-->
+
+  <!--<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center start">-->
+    <!--<div flex layout="row" layout-padding layout-wrap>-->
+      <!--<model-card model="model" on-edit="vm.edit($event, model)" on-remove="vm.remove($event, model)" ng-repeat="model in vm.models"></model-card>-->
+    <!--</div>-->
+  <!--</md-content>-->
+<!--</md-content>-->
