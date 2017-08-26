@@ -9,7 +9,7 @@ app.get('/*', function(req, res) {
 });
 
 const hostname = '0.0.0.0';
-const port = 80;
+const port = 3000;
 
 const server = app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);  
