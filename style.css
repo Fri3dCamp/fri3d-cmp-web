@@ -62,3 +62,19 @@ h4 {
 md-content > form > div {
   background-color: white;
 }
+
+md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder, md-input-container.md-default-theme label, md-input-container label {
+    color:black;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: black;
+}
+
+md-content.md-default-theme, md-content {
+    color:black;
+}
+
+md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder {
+    color: black;
+}
