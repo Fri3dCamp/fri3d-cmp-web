@@ -8,9 +8,9 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-const hostname = 'localhost';
-const port = 3000;
+const hostname = '0.0.0.0';
+const port = 80;
 
-const server = app.listen(port, hostname, () => {
+const server = app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);  
 });

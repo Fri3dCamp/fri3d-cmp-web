@@ -61,7 +61,9 @@
               if ($route.current.params.id) {
                 return SubmissionService.get($route.current.params.id);
               } else {
-                return {};
+                return {
+                    status: "IN_PREPARATION"
+                };
               }
             }]
           }
@@ -118,7 +120,13 @@
           'FULLTIME': 'Full-time',
           'WALK-IN': 'Walk-in-walk-out',
           'SUBMISSION_TYPE': 'Type',
-          'ATTENDANCE_TYPE': 'Format'
+          'ATTENDANCE_TYPE': 'Format',
+          'SUMMARY': 'Summary',
+          'DESCRIPTION': 'Description',
+          'INTENDED_AUDIENCE': 'Intended Audience',
+          'NAME': 'Name',
+          'EMAIL': 'E-Mail',
+          'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?'
       });
 
       $translateProvider.translations('nl', {
@@ -134,7 +142,13 @@
           'FULLTIME': 'Fulltime',
           'WALK-IN': 'In-uit',
           'SUBMISSION_TYPE': 'Type',
-          'ATTENDANCE_TYPE': 'Format'
+          'ATTENDANCE_TYPE': 'Format',
+          'SUMMARY': 'Samenvatting',
+          'DESCRIPTION': 'Omschrijving',
+          'INTENDED_AUDIENCE': 'Doelpubliek',
+          'NAME': 'Naam',
+          'EMAIL': 'E-Mail Adres',
+          'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?'
       });
 
       $translateProvider.preferredLanguage('nl');
