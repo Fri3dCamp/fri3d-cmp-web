@@ -1,4 +1,4 @@
-<md-toolbar>
+<md-toolbar class="md-scroll-shrink">
     <div class="md-toolbar-tools">
         <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">NL</md-button>
         <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">EN</md-button>
@@ -9,13 +9,13 @@
 
 </md-toolbar>
 
-<div flex layout="row" layout-align="center start">
 
-<md-content layout="column" layout-padding flex="66">
-    <p>
-        {{ 'FORMINTRO' | translate }}
-    </p>
+<md-content>
+<div layout="column" layout-padding layout-align="start center">
     <form name="userForm">
+            <p>
+            {{ 'FORMINTRO' | translate }}
+            </p>
         <div class="md-whiteframe-2dp" layout="column" layout-padding>
             <div layout="row">
                 <md-input-container flex="66">
@@ -91,7 +91,7 @@
             </div>
             <div layout="column" layout-padding>
                 <div layout="row">
-                    <md-switch ng-model="vm.wants_to_repeat" aria-label="Limited capacity">
+                    <md-switch class="md-primary" ng-model="vm.wants_to_repeat" aria-label="Limited capacity">
                         {{ "WILLING_TO_REPEAT" | translate }}
                     </md-switch>
                 </div>
@@ -139,11 +139,11 @@
                 <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="column">
                     <span>Requirements</span>
 
-                    <md-switch ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>Special items?</label>
                         <input ng-model="vm.submission.location_req_special">
@@ -151,10 +151,10 @@
                 </div>
                 <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="column">
                     <span>Requirements</span>
-                    <md-switch ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>Special items?</label>
                         <input ng-model="vm.submission.location_req_special">
@@ -168,7 +168,7 @@
 
             <div layout="column" layout-padding>
                 <div layout="row">
-                    <md-switch ng-model="vm.limited_capacity" aria-label="Limited capacity">
+                    <md-switch class="md-primary" ng-model="vm.limited_capacity" aria-label="Limited capacity">
                         Audience Capacity Limit
                     </md-switch>
                 </div>
@@ -262,7 +262,7 @@
 
             <div layout="column" layout-padding>
                 <div layout="row" layout-align="space-between center">
-                    <md-switch ng-model="vm.is_sessionized" aria-label="Limited capacity">
+                    <md-switch class="md-primary" ng-model="vm.is_sessionized" aria-label="Limited capacity">
                         Is your activity split into multiple sessions?
                     </md-switch>
                     <div ng-if="vm.is_sessionized">
@@ -365,5 +365,5 @@
                 "time_available_sunday_stop": { "type": "integer" }
         -->
     </form>
-</md-content>
 </div>
+</md-content>
