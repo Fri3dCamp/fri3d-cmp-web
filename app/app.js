@@ -25,16 +25,40 @@
     $translateProvider
   ) {
 
-      let fri3dMap = $mdThemingProvider.extendPalette('cyan', {
-        '600': '#0E98AF'
+      $mdThemingProvider.definePalette('fri3dPalette', {
+            '50': 'ff0000',
+            '100': 'ff0000',
+            '200': 'ff0000',
+            '300': 'ff0000',
+            '400': 'ff0000',
+            '500': 'ff0000',
+            '600': 'ff0000',
+            '700': 'ff0000',
+            '800': 'ff0000',
+            '900': 'ff0000',
+            'A100': 'ff0000',
+            'A200': 'ff0000',
+            'A400': 'ff0000',
+            'A700': 'ff0000',
+            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                // on this palette should be dark or light
+
+            'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+             '200', '300', '400', 'A100'],
+            'contrastLightColors': undefined    // could also specify this if default was 'dark'
       });
 
+
+      //let fri3dMap = $mdThemingProvider.extendPalette('cyan', {
+      //    '600': '#0E98AF'
+      //});
+
       // Register the new color palette map with the name <code>neonRed</code>
-      $mdThemingProvider.definePalette('fri3d', fri3dMap);
+      //$mdThemingProvider.definePalette('fri3d', fri3dMap);
 
       // Use that theme for the primary intentions
       $mdThemingProvider.theme('default')
-          .primaryPalette('fri3d');
+          .primaryPalette('fri3dPalette');
 
     $routeProvider
       .when('/callback', {
