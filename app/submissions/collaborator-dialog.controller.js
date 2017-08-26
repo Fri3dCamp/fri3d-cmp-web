@@ -6,9 +6,11 @@
     .module('app')
     .controller('CollaboratorDialogController', CollaboratorDialogController);
 
-    CollaboratorDialogController.$inject = ['$scope', '$mdDialog'];
+    CollaboratorDialogController.$inject = ['$scope', '$mdDialog', 'collaborator'];
 
-  function CollaboratorDialogController($scope, $mdDialog) {
+  function CollaboratorDialogController($scope, $mdDialog, collaborator) {
+      $scope.model = collaborator;
+
       $scope.hide = function() {
           $mdDialog.hide();
       };
@@ -17,8 +19,8 @@
           $mdDialog.cancel();
       };
 
-      $scope.answer = function(answer) {
-          $mdDialog.hide(answer);
+      $scope.save = function() {
+          $mdDialog.hide($scope.model);
       };
   }
 })();

@@ -36,6 +36,8 @@
     vm.save = save;
     vm.publish = publish;
     vm.showNewCollaboratorDialog = showNewCollaboratorDialog;
+    vm.editCollaborator = editCollaborator;
+    vm.removeCollaborator = removeCollaborator;
 
     function save() {
       SubmissionService.save(vm.submission).then(function(response) {
@@ -61,17 +63,51 @@
 
       function showNewCollaboratorDialog(ev) {
           $mdDialog.show({
-              controller: CollaboratorDialogController,
+              controller: 'CollaboratorDialogController',
               templateUrl: '/app/submissions/collaborator-dialog.html',
               parent: angular.element(document.body),
               targetEvent: ev,
-              clickOutsideToClose:true
+              clickOutsideToClose:true,
+              locals: {
+                  collaborator: {}
+              }
           })
-              .then(function(answer) {
-                  $scope.status = 'You said the information was "' + answer + '".';
-              }, function() {
-                  $scope.status = 'You cancelled the dialog.';
+              .then(function(collaborator) {
+                  if (! vm.submission.collaborators) vm.submission.collaborators = [];
+                  vm.submission.collaborators.push(collaborator)
               });
+      }
+
+      function editCollaborator(ev, collaborator) {
+        var idx = vm.submission.collaborators.indexOf(collaborator);
+
+          $mdDialog.show({
+              controller: 'CollaboratorDialogController',
+              templateUrl: '/app/submissions/collaborator-dialog.html',
+              parent: angular.element(document.body),
+              targetEvent: ev,
+              clickOutsideToClose:true,
+              locals: {
+                  collaborator: collaborator
+              }
+          })
+              .then(function(collaborator) {
+                  vm.submission.collaborators[idx] = collaborator;
+              });
+      }
+
+      function removeCollaborator(ev, collaborator) {
+          var confirm = $mdDialog.confirm()
+              .title('Remove Collaborator?')
+              .textContent('Do you want to remove ' + collaborator.name + ' from the list of collaborators?')
+              .ariaLabel('Remove Collaborator')
+              .targetEvent(ev)
+              .ok('Remove')
+              .cancel('Cancel');
+
+          $mdDialog.show(confirm).then(function() {
+              vm.submission.collaborators.splice(vm.submission.collaborators.indexOf(collaborator), 1);
+          });
       }
 
     function _generateTimeBuckets() {
