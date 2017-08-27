@@ -9,361 +9,399 @@
 
 </md-toolbar>
 
-
-<md-content>
-<div layout="column" layout-padding layout-align="start center">
-    <form name="userForm">
-            <p>
-            {{ 'FORMINTRO' | translate }}
-            </p>
-        <div class="md-whiteframe-2dp" layout="column" layout-padding>
-            <div layout="row">
-                <md-input-container flex="66">
-                    <label>{{ 'TITLE' | translate }}</label>
-                    <input ng-model="vm.submission.title">
-                </md-input-container>
-                <md-input-container flex="33">
-                    <label>{{ 'SUBMISSION_TYPE' | translate }}</label>
-                    <md-select ng-model="vm.submission.type">
-                        <md-option ng-repeat="type in vm.types" ng-value="type">
-                            {{ type | translate }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <md-input-container flex>
-                    <label>{{ 'ATTENDANCE_TYPE' | translate }}</label>
-                    <md-select ng-model="vm.submission.format">
-                        <md-option ng-repeat="type in vm.attendanceTypes" ng-value="type">
-                            {{ type | translate }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
+<div layout="row">
+    <md-content flex>
+    <div layout="column" layout-padding layout-align="start center">
+        <form name="userForm">
+                <p>
+                {{ 'FORMINTRO' | translate }}
+                </p>
+            <div class="md-whiteframe-2dp" layout="column" layout-padding>
                 <div layout="row">
-                    <md-input-container flex>
-                        <label>{{ 'INTENDED_AUDIENCE' | translate }}</label>
-                        <md-select ng-model="vm.submission.audience_level" flex>
-                            <md-option ng-repeat="level in vm.audienceLevels" ng-value="level">
-                                {{ level | translate }}
+                    <md-input-container flex="66">
+                        <label>{{ 'TITLE' | translate }}</label>
+                        <input ng-model="vm.submission.title">
+                    </md-input-container>
+                    <md-input-container flex="33">
+                        <label>{{ 'SUBMISSION_TYPE' | translate }}</label>
+                        <md-select ng-model="vm.submission.type">
+                            <md-option ng-repeat="type in vm.types" ng-value="type">
+                                {{ type | translate }}
                             </md-option>
                         </md-select>
                     </md-input-container>
                 </div>
-            </div>
-            <div layout="row">
-                <md-input-container flex>
-                    <label>{{ 'SUMMARY' | translate }}</label>
-                    <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <md-input-container flex>
-                    <label>{{ 'DESCRIPTION' | translate }}</label>
-                    <textarea ng-model="vm.submission.description" rows="5"></textarea>
-                </md-input-container>
-            </div>
-        </div>
-
-        <h4 class="md-caption">{{ 'SPEAKER' | translate }}</h4>
-        <div class="md-whiteframe-2dp" layout="column" layout-padding>
-            <div layout="row">
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>{{ 'NAME' | translate }}</label>
-                    <input ng-model="vm.submission.speaker_name">
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>{{ 'EMAIL' | translate }}</label>
-                    <input ng-model="vm.submission.speaker_email">
-                </md-input-container>
-            </div>
-            <div>
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>{{ 'ASSOCIATED' | translate }}</label>
-                    <input ng-model="vm.submission.speaker_associated_hackerspaces">
-                </md-input-container>
-            </div>
-            <div>
-                <md-input-container class="md-block">
-                    <label>Bio</label>
-                    <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
-                </md-input-container>
-            </div>
-            <div layout="column" layout-padding>
                 <div layout="row">
-                    <md-switch class="md-primary" ng-model="vm.wants_to_repeat" aria-label="Limited capacity">
-                        {{ "WILLING_TO_REPEAT" | translate }}
-                    </md-switch>
+                    <md-input-container flex>
+                        <label>{{ 'ATTENDANCE_TYPE' | translate }}</label>
+                        <md-select ng-model="vm.submission.format">
+                            <md-option ng-repeat="type in vm.attendanceTypes" ng-value="type">
+                                {{ type | translate }}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div layout="row">
+                        <md-input-container flex>
+                            <label>{{ 'INTENDED_AUDIENCE' | translate }}</label>
+                            <md-select ng-model="vm.submission.audience_level" flex>
+                                <md-option ng-repeat="level in vm.audienceLevels" ng-value="level">
+                                    {{ level | translate }}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
                 </div>
-                <div ng-if="vm.wants_to_repeat">
-                    <md-input-container class="md-block" flex-gt-xs>
-                        <label>{{ "REPEATS" | translate }}</label>
-                        <input type="number" ng-model="vm.submission.maximum_repeats">
-                        <div class="hint">What is the maximum number of times you want to repeat this activity?</div>
+                <div layout="row">
+                    <md-input-container flex>
+                        <label>{{ 'SUMMARY' | translate }}</label>
+                        <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    <md-input-container flex>
+                        <label>{{ 'DESCRIPTION' | translate }}</label>
+                        <textarea ng-model="vm.submission.description" rows="5"></textarea>
                     </md-input-container>
                 </div>
             </div>
-        </div>
 
-        <h4 class="md-caption">{{ 'COLLABORATORS' | translate }}</h4>
-        <div class="md-whiteframe-1dp" layout="column">
-            <md-list>
-                <md-list-item layout="row" layout-align="start center" layout-padding flex>
-                    <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
-                    <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
-                    <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
-                        <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
-                    </md-button>
-                </md-list-item>
-                <md-list-item layout="row" layout-align="start center" layout-padding ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
-                    <span class="md-body-1" flex>{{ collaborator.name }}</span>
-                    <span class="md-body-1" flex>{{ collaborator.email }}</span>
-                    <md-button class="md-icon-button md-warn" ng-click="vm.removeCollaborator($event, collaborator)">
-                        <md-icon md-font-icon="lnr-trash" class="lnr"></md-icon>
-                    </md-button>
+            <h4 class="md-caption">{{ 'SPEAKER' | translate }}</h4>
+            <div class="md-whiteframe-2dp" layout="column" layout-padding>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>{{ 'NAME' | translate }}</label>
+                        <input ng-model="vm.submission.speaker_name">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>{{ 'EMAIL' | translate }}</label>
+                        <input ng-model="vm.submission.speaker_email">
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>{{ 'ASSOCIATED' | translate }}</label>
+                        <input ng-model="vm.submission.speaker_associated_hackerspaces">
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container class="md-block">
+                        <label>Bio</label>
+                        <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
+                    </md-input-container>
+                </div>
+                <div layout="column" layout-padding>
+                    <div layout="row">
+                        <md-switch class="md-primary" ng-model="vm.wants_to_repeat" aria-label="Limited capacity">
+                            {{ "WILLING_TO_REPEAT" | translate }}
+                        </md-switch>
+                    </div>
+                    <div ng-if="vm.wants_to_repeat">
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>{{ "REPEATS" | translate }}</label>
+                            <input type="number" ng-model="vm.submission.maximum_repeats">
+                            <div class="hint">What is the maximum number of times you want to repeat this activity?</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="md-caption">{{ 'COLLABORATORS' | translate }}</h4>
+            <div class="md-whiteframe-1dp" layout="column">
+                <md-list>
+                    <md-list-item layout="row" layout-align="start center" layout-padding flex>
+                        <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
+                        <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
+                        <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
+                            <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
+                        </md-button>
+                    </md-list-item>
+                    <md-list-item layout="row" layout-align="start center" layout-padding ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
+                        <span class="md-body-1" flex>{{ collaborator.name }}</span>
+                        <span class="md-body-1" flex>{{ collaborator.email }}</span>
+                        <md-button class="md-icon-button md-warn" ng-click="vm.removeCollaborator($event, collaborator)">
+                            <md-icon md-font-icon="lnr-trash" class="lnr"></md-icon>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+            </div>
+
+            <h4 class="md-caption">{{ 'LOCATION' | translate }}</h4>
+            <div class="md-whiteframe-1dp" layout="column" layout-padding>
+                <div layout="column">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>{{ 'LOCATION' | translate }}</label>
+                        <md-select ng-model="vm.submission.location_type">
+                            <md-option ng-repeat="type in vm.locationTypes" ng-value="type">
+                                {{ type | translate }}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="column">
+                        <span>Requirements</span>
+
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Special items?</label>
+                            <input ng-model="vm.submission.location_req_special">
+                        </md-input-container>
+                    </div>
+                    <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="column">
+                        <span>Requirements</span>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                        <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Special items?</label>
+                            <input ng-model="vm.submission.location_req_special">
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="md-caption">{{ 'AUDIENCE' | translate }}</h4>
+            <div class="md-whiteframe-1dp" layout="column" layout-padding>
+
+                <div layout="column" layout-padding>
+                    <div layout="row">
+                        <md-switch class="md-primary" ng-model="vm.limited_capacity" aria-label="Limited capacity">
+                            Audience Capacity Limit
+                        </md-switch>
+                    </div>
+                    <div ng-if="vm.limited_capacity">
+                        <md-input-container class="md-block">
+                            <label>Activity Limit</label>
+                            <input type="number" ng-model="vm.submission.activity_participant_limit">
+                            <div class="hint">What is the maximum number of participant for this activity</div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Session Limit</label>
+                            <input type="number" ng-model="vm.submission.session_participant_limit">
+                            <div class="hint">What is the maximum number of participant for a single session</div>
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>Requirements</label>
+                        <input ng-model="vm.submission.audience_requirements">
+                    </md-input-container>
+                </div>
+
+            </div>
+
+            <h4 class="md-caption">{{ 'TIME' | translate }}</h4>
+            <div class="md-whiteframe-1dp" layout="column" layout-padding>
+                <div>
+                    <span>{{ 'AVAILABILITY' | translate }}</span>
+                    <div layout="column">
+                        <div layout="row" layout-align="start center">
+                            <span flex class="md-body-1">Day 1</span>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'FROM' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_1_from">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'UNTIL' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_1_until">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div layout="row"  layout-align="start center">
+                            <span flex class="md-body-1">Day 2</span>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'FROM' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_2_from">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'UNTIL' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_2_until">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div layout="row" layout-align="start center">
+                            <span flex class="md-body-1">Day 3</span>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'FROM' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_3_from">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>{{ 'UNTIL' | translate }}</label>
+                                <md-select ng-model="vm.submission.day_3_until">
+                                    <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
+                                        {{ tb }}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                    </div>
+                </div>
+
+                <div layout="column" layout-padding>
+                    <div layout="row" layout-align="space-between center">
+                        <md-switch class="md-primary" ng-model="vm.is_sessionized" aria-label="Limited capacity">
+                            Is your activity split into multiple sessions?
+                        </md-switch>
+                        <div ng-if="vm.is_sessionized">
+                            <md-input-container md-no-float>
+                                <label>Number of Sessions</label>
+                                <input type="number" ng-model="vm.submission.multiple_sessions">
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div layout="row">
+                    <md-slider-container>
+                        <span class="md-body-1">Duration</span>
+                        <md-slider md-discrete flex ng-model="vm.activity_duration" min="15" max="240" step="15" aria-label="Activity Duration" class="md-primary">
+                        </md-slider>
+                        <md-input-container>
+                            <input flex type="number" ng-model="vm.activity_duration" aria-label="blue" aria-controls="blue-slider">
+                        </md-input-container>
+                    </md-slider-container>
+                </div>
+                <div layout="column" ng-if="vm.submission.format == 'WALK-IN'">
+                    <md-slider-container>
+                        <span class="md-body-1">Visit Duration</span>
+                        <md-slider md-discrete flex ng-model="vm.visit_duration" min="15" max="240" step="15" aria-label="Visit Duration" class="md-primary">
+                        </md-slider>
+                        <md-input-container>
+                            <input flex type="number" ng-model="vm.visit_duration" aria-label="blue" aria-controls="blue-slider">
+                        </md-input-container>
+                    </md-slider-container>
+                    <!--<md-radio-group ng-model="vm.visit_duration" layout="row">-->
+                    <!--<md-radio-button ng-value="60">1h</md-radio-button>-->
+                    <!--<md-radio-button ng-value="120">2h</md-radio-button>-->
+                    <!--<md-radio-button ng-value="240">4h</md-radio-button>-->
+                    <!--<md-radio-button ng-value="'other'"> other </md-radio-button>-->
+                    <!--</md-radio-group>-->
+
+                    <!--<md-input-container class="md-block" ng-if="vm.visit_duration == 'other'" flex-gt-xs>-->
+                    <!--<label>Duration</label>-->
+                    <!--<input ng-model="vm.custom_visit_duration">-->
+                    <!--</md-input-container>-->
+                </div>
+            </div>
+
+            <!--
+            "speaker_name": { "type": "text" },
+                    "speaker_email": { "type": "text" },
+                    "speaker_bio": { "type": "text" },
+                    "associated_hackerspaces": {"type": "text"},
+
+                    "collaborators": {
+                        "type": "nested",
+                        "properties": {
+                            "name" : {"type": "text"},
+                            "email" : {"type": "text"}
+                        }
+                    },
+
+                    "visit_duration_minutes": { "type": "integer" },
+                    "duration_minutes": { "type": "integer" },
+
+                    "sessions_needed": { "type": "integer" },
+                    "max_repeats": { "type": "integer" },
+
+                    "presentation_type": { "type": "keyword" },
+                    "attendance_type": { "type": "keyword" },
+
+                    "participant_cap": { "type": "integer" },
+                    "total_group_size": { "type": "integer" },
+                    "additional_costs_fixed": { "type": "float" },
+                    "additional_costs_per_attendant": { "type": "float" },
+
+                    "location": {
+                        "type": "nested",
+                        "properties": {
+                            "location_type": { "type": "keyword" },
+                            "location_requirements": { "type": "keyword" }
+                        }
+                    },
+                    "audience": {
+                        "type": "nested",
+                        "properties": {
+                            "audience_level": {"type": "keyword"},
+                            "audience_requirements": { "type": "keyword" }
+                        }
+                    },
+
+                    // anything special orga is to provide
+                    "required_from_orga" : {"type": "text"},
+
+
+                    // timing
+                    //  these should all default to normal content hours
+                    "time_available_friday_start": { "type": "integer" },
+                    "time_available_friday_stop": { "type": "integer" },
+                    "time_available_saturday_start": { "type": "integer" },
+                    "time_available_saturday_stop": { "type": "integer" },
+                    "time_available_sunday_start": { "type": "integer" },
+                    "time_available_sunday_stop": { "type": "integer" }
+            -->
+        </form>
+    </div>
+    </md-content>
+
+    <md-sidenav
+            class="md-sidenav-right"
+            md-component-id="right"
+            md-is-locked-open="$mdMedia('gt-md')"
+            md-whiteframe="4">
+        <md-content flex>
+            <md-list class="md-dense" flex>
+                <md-list-item ng-repeat="comment in vm.comments.data" class="md-3-line" >
+                    <md-icon md-font-icon="lnr-warning" class="lnr md-avatar"></md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h4>{{comment.data.message}}</h4>
+                        <span class="md-caption" am-time-ago="comment.data.timestamp | amParse"></span>
+                        <div layout="column">
+                            <div layout="row" ng-repeat="delta in comment.data.diff" layout-align="space-between center">
+                                <span class="md-caption">{{ delta.path.join(', ') }}</span>
+                                <span class="md-caption" ng-if="delta.kind == 'N'"> SET </span>
+                                <span class="md-caption" ng-if="delta.kind == 'D'"> DEL </span>
+                                <span class="md-caption" ng-if="delta.kind == 'E'"> SET </span>
+                                <span class="md-caption" ng-if="delta.kind == 'A'"> ADD </span>
+                                <span class="md-caption" flex>{{ delta.rhs | limitTo:100 }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <md-divider></md-divider>
                 </md-list-item>
             </md-list>
+        </md-content>
+        <md-divider></md-divider>
+        <div layout="row" layout-align="start stretch" layout-padding>
+            <md-input-container flex>
+                <label>{{ 'MESSAGE' | translate }}</label>
+                <textarea ng-model="vm.comment" rows="3"></textarea>
+            </md-input-container>
+            <md-button>Send</md-button>
         </div>
-
-        <h4 class="md-caption">{{ 'LOCATION' | translate }}</h4>
-        <div class="md-whiteframe-1dp" layout="column" layout-padding>
-            <div layout="column">
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>{{ 'LOCATION' | translate }}</label>
-                    <md-select ng-model="vm.submission.location_type">
-                        <md-option ng-repeat="type in vm.locationTypes" ng-value="type">
-                            {{ type | translate }}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-                <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="column">
-                    <span>Requirements</span>
-
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
-                    <md-input-container class="md-block" flex-gt-xs>
-                        <label>Special items?</label>
-                        <input ng-model="vm.submission.location_req_special">
-                    </md-input-container>
-                </div>
-                <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="column">
-                    <span>Requirements</span>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
-                    <md-input-container class="md-block" flex-gt-xs>
-                        <label>Special items?</label>
-                        <input ng-model="vm.submission.location_req_special">
-                    </md-input-container>
-                </div>
-            </div>
-        </div>
-
-        <h4 class="md-caption">{{ 'AUDIENCE' | translate }}</h4>
-        <div class="md-whiteframe-1dp" layout="column" layout-padding>
-
-            <div layout="column" layout-padding>
-                <div layout="row">
-                    <md-switch class="md-primary" ng-model="vm.limited_capacity" aria-label="Limited capacity">
-                        Audience Capacity Limit
-                    </md-switch>
-                </div>
-                <div ng-if="vm.limited_capacity">
-                    <md-input-container class="md-block">
-                        <label>Activity Limit</label>
-                        <input type="number" ng-model="vm.submission.activity_participant_limit">
-                        <div class="hint">What is the maximum number of participant for this activity</div>
-                    </md-input-container>
-                    <md-input-container class="md-block">
-                        <label>Session Limit</label>
-                        <input type="number" ng-model="vm.submission.session_participant_limit">
-                        <div class="hint">What is the maximum number of participant for a single session</div>
-                    </md-input-container>
-                </div>
-            </div>
-
-            <div layout="row">
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>Requirements</label>
-                    <input ng-model="vm.submission.audience_requirements">
-                </md-input-container>
-            </div>
-
-        </div>
-
-        <h4 class="md-caption">{{ 'TIME' | translate }}</h4>
-        <div class="md-whiteframe-1dp" layout="column" layout-padding>
-            <div>
-                <span>{{ 'AVAILABILITY' | translate }}</span>
-                <div layout="column">
-                    <div layout="row" layout-align="start center">
-                        <span flex class="md-body-1">Day 1</span>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'FROM' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_1_from">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'UNTIL' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_1_until">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                    </div>
-                    <div layout="row"  layout-align="start center">
-                        <span flex class="md-body-1">Day 2</span>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'FROM' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_2_from">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'UNTIL' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_2_until">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                    </div>
-                    <div layout="row" layout-align="start center">
-                        <span flex class="md-body-1">Day 3</span>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'FROM' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_3_from">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{ 'UNTIL' | translate }}</label>
-                            <md-select ng-model="vm.submission.day_3_until">
-                                <md-option ng-repeat="tb in vm.timeBuckets" ng-value="tb">
-                                    {{ tb }}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
-                    </div>
-                </div>
-            </div>
-
-            <div layout="column" layout-padding>
-                <div layout="row" layout-align="space-between center">
-                    <md-switch class="md-primary" ng-model="vm.is_sessionized" aria-label="Limited capacity">
-                        Is your activity split into multiple sessions?
-                    </md-switch>
-                    <div ng-if="vm.is_sessionized">
-                        <md-input-container md-no-float>
-                            <label>Number of Sessions</label>
-                            <input type="number" ng-model="vm.submission.multiple_sessions">
-                        </md-input-container>
-                    </div>
-                </div>
-
-            </div>
-
-            <div layout="row">
-                <md-slider-container>
-                    <span class="md-body-1">Duration</span>
-                    <md-slider md-discrete flex ng-model="vm.activity_duration" min="15" max="240" step="15" aria-label="Activity Duration" class="md-primary">
-                    </md-slider>
-                    <md-input-container>
-                        <input flex type="number" ng-model="vm.activity_duration" aria-label="blue" aria-controls="blue-slider">
-                    </md-input-container>
-                </md-slider-container>
-            </div>
-            <div layout="column" ng-if="vm.submission.format == 'WALK-IN'">
-                <md-slider-container>
-                    <span class="md-body-1">Visit Duration</span>
-                    <md-slider md-discrete flex ng-model="vm.visit_duration" min="15" max="240" step="15" aria-label="Visit Duration" class="md-primary">
-                    </md-slider>
-                    <md-input-container>
-                        <input flex type="number" ng-model="vm.visit_duration" aria-label="blue" aria-controls="blue-slider">
-                    </md-input-container>
-                </md-slider-container>
-                <!--<md-radio-group ng-model="vm.visit_duration" layout="row">-->
-                <!--<md-radio-button ng-value="60">1h</md-radio-button>-->
-                <!--<md-radio-button ng-value="120">2h</md-radio-button>-->
-                <!--<md-radio-button ng-value="240">4h</md-radio-button>-->
-                <!--<md-radio-button ng-value="'other'"> other </md-radio-button>-->
-                <!--</md-radio-group>-->
-
-                <!--<md-input-container class="md-block" ng-if="vm.visit_duration == 'other'" flex-gt-xs>-->
-                <!--<label>Duration</label>-->
-                <!--<input ng-model="vm.custom_visit_duration">-->
-                <!--</md-input-container>-->
-            </div>
-        </div>
-
-        <!--
-        "speaker_name": { "type": "text" },
-                "speaker_email": { "type": "text" },
-                "speaker_bio": { "type": "text" },
-                "associated_hackerspaces": {"type": "text"},
-
-                "collaborators": {
-                    "type": "nested",
-                    "properties": {
-                        "name" : {"type": "text"},
-                        "email" : {"type": "text"}
-                    }
-                },
-
-                "visit_duration_minutes": { "type": "integer" },
-                "duration_minutes": { "type": "integer" },
-
-                "sessions_needed": { "type": "integer" },
-                "max_repeats": { "type": "integer" },
-
-                "presentation_type": { "type": "keyword" },
-                "attendance_type": { "type": "keyword" },
-
-                "participant_cap": { "type": "integer" },
-                "total_group_size": { "type": "integer" },
-                "additional_costs_fixed": { "type": "float" },
-                "additional_costs_per_attendant": { "type": "float" },
-
-                "location": {
-                    "type": "nested",
-                    "properties": {
-                        "location_type": { "type": "keyword" },
-                        "location_requirements": { "type": "keyword" }
-                    }
-                },
-                "audience": {
-                    "type": "nested",
-                    "properties": {
-                        "audience_level": {"type": "keyword"},
-                        "audience_requirements": { "type": "keyword" }
-                    }
-                },
-
-                // anything special orga is to provide
-                "required_from_orga" : {"type": "text"},
-
-
-                // timing
-                //  these should all default to normal content hours
-                "time_available_friday_start": { "type": "integer" },
-                "time_available_friday_stop": { "type": "integer" },
-                "time_available_saturday_start": { "type": "integer" },
-                "time_available_saturday_stop": { "type": "integer" },
-                "time_available_sunday_start": { "type": "integer" },
-                "time_available_sunday_stop": { "type": "integer" }
-        -->
-    </form>
+    </md-sidenav>
 </div>
-</md-content>

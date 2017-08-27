@@ -20,6 +20,7 @@
     "angular-markdown-directive": "^0.3.1",
     "angular-material": "^1.1.4",
     "angular-messages": "^1.6.4",
+    "angular-moment": "^1.0.1",
     "angular-resource": "^1.6.5",
     "angular-route": "^1.6.5",
     "angular-sanitize": "^1.6.5",
@@ -39,6 +40,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "express": "^4.14.0",
+    "moment": "^2.18.1",
     "ng-showdown": "^1.1.0",
     "showdown": "^1.7.2",
     "socket.io": "^2.0.3"

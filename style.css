@@ -78,3 +78,13 @@ md-content.md-default-theme, md-content {
 md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder {
     color: black;
 }
+
+md-sidenav {
+    width: 500px;
+}
+
+@media (min-width: 600px) {
+    md-sidenav {
+        max-width: 500px;
+    }
+}

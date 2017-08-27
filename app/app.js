@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app', ['auth0.auth0', 'ngRoute', 'ngMaterial', 'angular-jwt', 'ngResource', 'ui.ace', 'base64', 'btford.socket-io', 'ng-showdown', 'pascalprecht.translate'])
+    .module('app', ['auth0.auth0', 'ngRoute', 'ngMaterial', 'angular-jwt', 'ngResource', 'ui.ace', 'base64', 'btford.socket-io', 'ng-showdown', 'pascalprecht.translate', 'angularMoment'])
     .config(config);
 
   config.$inject = [
@@ -71,9 +71,8 @@
           templateUrl: 'app/submissions/submission.html',
           controllerAs: 'vm',
           resolve: {
-            submission: [function() {
-              return {};
-            }]
+              comments: [function() { return {}; }],
+              submission: [function() { return {}; }]
           }
       })
       .when('/submission/:id', {
@@ -81,15 +80,18 @@
           templateUrl: 'app/submissions/submission.html',
           controllerAs: 'vm',
           resolve: {
-            submission: ['$route', 'SubmissionService', function($route, SubmissionService) {
-              if ($route.current.params.id) {
-                return SubmissionService.get($route.current.params.id);
-              } else {
-                return {
-                    status: "IN_PREPARATION"
-                };
-              }
-            }]
+              comments: [ '$route', 'CommentsService', function($route, CommentsService) {
+                  return CommentsService.list($route.current.params.id);
+              }],
+              submission: ['$route', 'SubmissionService', function($route, SubmissionService) {
+                  if ($route.current.params.id) {
+                      return SubmissionService.get($route.current.params.id);
+                  } else {
+                      return {
+                          status: "IN_PREPARATION"
+                      };
+                  }
+              }]
           }
       })
       .when('/', {
@@ -153,7 +155,8 @@
           'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
           'FORMINTRO' : 'Submit your proposal for a talk, workshop or other activity on Fri3d Camp 2018.',
           'ASSOCIATED' : 'Hacker- or makerspaces with which you are affiliated',
-          'REPEATS' : 'Maximum nr. of times you want to repeat your activity'
+          'REPEATS' : 'Maximum nr. of times you want to repeat your activity',
+          'MESSAGE': 'Your message'
       });
 
       $translateProvider.translations('nl', {
@@ -178,7 +181,8 @@
           'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?',
           'FORMINTRO' : 'Dien jouw voorstel in voor een talk, workshop of andere activiteit op Fri3d Camp 2018.',
           'ASSOCIATED' : 'Hacker- of makerspaces waar je bijhoort',
-          'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen'
+          'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen',
+          'MESSAGE': 'Jouw bericht'
       });
 
       $translateProvider.preferredLanguage('nl');

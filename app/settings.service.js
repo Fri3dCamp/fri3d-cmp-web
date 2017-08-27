@@ -10,7 +10,8 @@
 
   function Settings($location) {
     let settings = {
-      api: 'https://api.fri3d.be'
+      // api: 'https://api.fri3d.be'
+      api: 'http://localhost:31000'
     };
 
     // var port = $location.protocol() === "http" ? 8080 : 8443;

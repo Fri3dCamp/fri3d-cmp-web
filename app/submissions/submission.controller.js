@@ -6,9 +6,9 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$location', 'submission', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
+    SubmissionController.$inject = ['$location', 'comments', 'submission', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
 
-  function SubmissionController($location, submission, SubmissionService, $translate, $mdToast, $mdDialog) {
+  function SubmissionController($location, comments, submission, SubmissionService, $translate, $mdToast, $mdDialog) {
     let vm = this;
 
       vm.lang = 'nl';
@@ -24,6 +24,7 @@
       };
 
     // -- variables
+      vm.comments = comments;
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
     vm.types = [ "WORKSHOP", "TALK", "GAME", "NOT_IN_LIST" ];
