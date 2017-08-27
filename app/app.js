@@ -146,7 +146,7 @@
           'FULLTIME': 'Attendance from start to end',
           'WALK-IN': 'Walk-in attendance',
           'SUBMISSION_TYPE': 'Type',
-          'ATTENDANCE_TYPE': 'Format',
+          'ACTIVITY_FORMAT': 'Format',
           'SUMMARY': 'Summary',
           'DESCRIPTION': 'Description',
           'INTENDED_AUDIENCE': 'Intended Audience',
@@ -160,19 +160,44 @@
       });
 
       $translateProvider.translations('nl', {
+          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Uitnodiging tot deelname',
+          'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
+          'TYPE_PRESENTATION': 'Presentatie',
+          'TYPE_PRESENTATION_DESC': 'Wil je het verhaal van jouw hacker passie delen met alle deelnemers, jouw Open Source project voorstellen,... Dan hebben wij een volledig uitgeruste zaal klaar staan. Het podium, en alle benodigde ondersteuning is aanwezig!',
+          'TYPE_WORKSHOP': 'Workshop',
+          'TYPE_WORKSHOP_DESC': 'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.',
+          'TYPE_OTHER': 'Andere',
+          'TYPE_OTHER_DESC': 'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties ter beschikking.',
+
+          'DAY_ONE': 'Dag 1',
+          'DAY_TWO': 'Dag 2',
+          'DAY_THREE': 'Dag 3',
+          'FROM': 'Van',
+          'UNTIL': 'Tot',
+
+          'NO_SESSIONS': 'Geen Sessies',
+          'HAS_SESSIONS': 'Meerdere Sessies',
+          'AMOUNT': 'Aantal',
+
+          'NO_LIMIT': 'Geen limiet',
+          'HAS_LIMIT': 'Gelimiteerd',
+
+          'YES': 'Ja',
+          'NO': 'Nee',
+
+
           'GENERAL': 'Algemeen',
           'SPEAKER': 'Spreker',
           'COLLABORATORS': 'Medewerkers',
           'ACTIVITY': 'Activiteit',
           'LOCATION': 'Locatie',
           'AUDIENCE': 'Publiek',
-          'WORKSHOP': 'Workshop',
           'TALK': 'Presentatie',
           'TITLE': 'Titel van je activiteit',
           'FULLTIME': 'Aanwezigheid van begin tot einde',
           'WALK-IN': 'Doorlopende deelname',
           'SUBMISSION_TYPE': 'Type',
-          'ATTENDANCE_TYPE': 'Format',
+          'ACTIVITY_FORMAT': 'Format',
           'SUMMARY': 'Samenvatting',
           'DESCRIPTION': 'Omschrijving',
           'INTENDED_AUDIENCE': 'Doelpubliek',
