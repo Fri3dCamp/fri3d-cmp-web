@@ -134,6 +134,33 @@
     $locationProvider.html5Mode(true);
 
       $translateProvider.translations('en', {
+          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Call for participation',
+          'ACTIVITY_TITLE': 'Your Fri3d activity',
+          'TYPE_PRESENTATION': 'Presentation',
+          'TYPE_PRESENTATION_DESC': 'Do you want to tell your story, and share your hacker passion with the other participants? Do you want to present your Open Source project? Then we have a fully equipped auditorium ready for you. The stage and all required support is present!',
+          'TYPE_WORKSHOP': 'Workshop',
+          'TYPE_WORKSHOP_DESC': 'Will participants of your activity have to roll up their sleeves and get their hands dirty? Will you guide them from a vast nothing to a new creation of their own making? We are here to help you get that workshop on the road.',
+          'TYPE_OTHER': 'Other',
+          'TYPE_OTHER_DESC': 'Do you want to put up a piece of art on the terrain, or do you want to bring entertainment to our stage? Anything is possible. We have a very large camping ground with lots of possibilities and support for lots of activities.',
+
+          'DAY_ONE': 'Day 1',
+          'DAY_TWO': 'Day 2',
+          'DAY_THREE': 'Day 3',
+          'FROM': 'From',
+          'UNTIL': 'Until',
+
+          'NO_SESSIONS': 'No Sessions',
+          'HAS_SESSIONS': 'Multiple Sessions',
+          'AMOUNT': 'Amount',
+
+          'NO_LIMIT': 'No Limit',
+          'HAS_LIMIT': 'Limited',
+
+          'YES': 'Yes',
+          'NO': 'No',
+
+
+
           'GENERAL': 'General',
           'SPEAKER': 'Speaker',
           'COLLABORATORS': 'Collaborators',
