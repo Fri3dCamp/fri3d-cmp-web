@@ -1,7 +1,7 @@
-<md-toolbar class="md-scroll-shrink">
+<md-toolbar md-scroll-shrink class="md-scroll-shrink md-primary">
     <div class="md-toolbar-tools">
-        <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">NL</md-button>
-        <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">EN</md-button>
+        <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">Vertaal naar Nederlands</md-button>
+        <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">Translate to English</md-button>
         <span flex></span>
         <md-button ng-click="vm.save()">Save</md-button>
         <md-button ng-click="vm.publish()">Publish</md-button>
@@ -11,20 +11,23 @@
 
 <div layout="row">
     <md-content flex>
-    <div layout="column" layout-padding layout-align="start center">
-        <form name="userForm">
-            <h1>{{ 'SUBMISSION_CAPTION' | translate }}</h1>
-            <p>
-                TODO: toevoegen van beknopte "CFP tekst", cfr uitgestuurde tekst.
-            </p>
-            <h2>{{ 'ACTIVITY_TITLE' | translate }}</h2>
-
-
-            <section id="type_section" layout="column">
+    <div layout="column" layout-padding layout-margin layout-align="start center">
+        <form name="userForm" layout-margin>
+            <section class="md-whiteframe-1dp" layout-padding>
+                <h1>{{ 'SUBMISSION_CAPTION' | translate }}</h1>
                 <p>
-                    Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn.
-                    We delen ze in in drie grote categorieën:
+                    TODO: toevoegen van beknopte "CFP tekst", cfr uitgestuurde tekst.
                 </p>
+            </section>
+
+            <section id="type_section" layout="column" class="md-whiteframe-1dp">
+                <div layout="column" layout-padding>
+                    <h2>{{ 'ACTIVITY_TITLE' | translate }}</h2>
+                    <p>
+                        Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn.
+                        We delen ze in in drie grote categorieën:
+                    </p>
+                </div>
                 <div layout="row"  layout-padding>
                     <div class="fc-toggle" ng-click="vm.submission.type = 'PRESENTATION'" ng-class="{'selected': vm.submission.type == 'PRESENTATION'}" flex>
                         <h4 class="md-title">{{ 'TYPE_PRESENTATION' | translate }}</h4>
@@ -41,39 +44,29 @@
                 </div>
             </section>
 
-            <section id="title_section">
-                <p>Hoe moeten we jouw activiteit etaleren?</p>
-                <div layout="row" layout-padding>
-                    <md-input-container flex="66">
-                        <label>{{ 'TITLE' | translate }}</label>
-                        <input ng-model="vm.submission.title">
-                    </md-input-container>
+            <section id="basic_info_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout-gt-sm="row">
+                  <md-input-container class="md-block" flex-gt-sm>
+                      <label>{{ 'TITLE' | translate }}</label>
+                      <input ng-model="vm.submission.title">
+                      <div class="hint">Hoe moeten we jouw activiteit etaleren?</div>
+                  </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                  <md-input-container class="md-block" flex-gt-sm>
+                      <label>{{ 'SUMMARY' | translate }}</label>
+                      <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
+                      <div class="hint">Kan je een korte omschrijving geven van de activiteit?</div>
+                  </md-input-container>
                 </div>
             </section>
 
-            <section id="summary_section">
-                <p>Kan je een korte omschrijving geven van de activiteit?</p>
-                <div layout="row" layout-padding>
-                    <md-input-container flex>
-                        <label>{{ 'SUMMARY' | translate }}</label>
-                        <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
-                    </md-input-container>
-                </div>
-            </section>
 
-            <section id="description_section">
-                <p>Kan je een omschrijving geven over wat je precies wil doen?</p>
-                <div layout="row" layout-padding>
-                    <md-input-container flex>
-                        <label>{{ 'DESCRIPTION' | translate }}</label>
-                        <textarea ng-model="vm.submission.description" rows="5"></textarea>
-                    </md-input-container>
+            <section id="speaker_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="row">
+                    <p>Vertel ons wat meer over jezelf.</p>
                 </div>
-            </section>
-
-            <section id="speaker_section">
-                <p>Vertel ons wat meer over jezelf.</p>
-                <div layout="column" layout-padding>
+                <div layout-gt-sm="row">
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>{{ 'NAME' | translate }}</label>
                         <input ng-model="vm.submission.speaker_name">
@@ -83,24 +76,29 @@
                         <label>{{ 'EMAIL' | translate }}</label>
                         <input ng-model="vm.submission.speaker_email">
                     </md-input-container>
-
-                    <md-input-container class="md-block" flex-gt-xs>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
                         <label>{{ 'ASSOCIATED' | translate }}</label>
                         <input ng-model="vm.submission.speaker_associated_hackerspaces">
+                        <div class="hint">Vul de hacker- en makerspaces in die je regelmatig bezoekt.</div>
                     </md-input-container>
 
-                    <md-input-container class="md-block">
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
                         <label>Bio</label>
                         <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
+                        <div class="hint">Welke informatie over jou is voor deelnemers interessant om in te schatten wat voor activiteit je organiseert?</div>
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="availability_section">
-                <p>
-                    Wanneer ben je beschikbaar om deze activiteit te organizeren?
-                </p>
-                <div layout="column" layout-padding>
+            <section id="availability_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="row">
+                    <p>Wanneer ben je beschikbaar om deze activiteit te organizeren?</p>
+                </div>
+                <div layout="column">
                     <div layout="row" layout-align="start center">
                         <span flex class="md-body-1">{{ 'DAY_ONE' | translate }}</span>
                         <md-input-container class="md-block" flex-gt-xs>
@@ -161,24 +159,14 @@
                 </div>
             </section>
 
-            <section id="format_section">
-                <p>Welke format wil je hanteren?</p>
-                <div layout="row" layout-padding>
-                    <md-input-container flex>
-                        <label>{{ 'ACTIVITY_FORMAT' | translate }}</label>
-                        <md-select ng-model="vm.submission.format">
-                            <md-option ng-repeat="type in vm.formatTypes" ng-value="type">
-                                {{ type | translate }}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-                </div>
-            </section>
 
-            <section id="target_audience_section">
-                <p>Wie is je doelpubliek?</p>
-                <div layout="row" layout-padding>
-                    <md-input-container flex>
+            <section id="target_audience_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>Publiek</h2>
+                    <p>Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.</p>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-sm>
                         <label>{{ 'INTENDED_AUDIENCE' | translate }}</label>
                         <md-select ng-model="vm.submission.audience_level" flex>
                             <md-option ng-repeat="level in vm.audienceLevels" ng-value="level">
@@ -187,32 +175,39 @@
                         </md-select>
                     </md-input-container>
                 </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>Zijn er specifieke verwachtingen die je hebt van je publiek?</label>
+                        <input ng-model="vm.submission.audience_requirements">
+                        <div class="hint">Bepaalde voorkennis of vaardigheden, mee te brengen materiaal...</div>
+                    </md-input-container>
+                </div>
             </section>
 
-            <section id="repetition_section">
-                <p>
-                    Zou je deze activiteit meerdere keren willen uitvoeren? Moest dit het geval zijn, wat is dan het maximum aantal keren dat je dit wil doen?
-                </p>
-                <div layout="row" layout-padding>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 0" ng-class="{'selected': vm.submission.maximum_repeats === 0}" flex="33">
+            <section id="repetition_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="row">
+                    <p>
+                        Zou je deze activiteit meerdere keren willen organiseren tijdens het kamp?
+                    </p>
+                </div>
+                <div layout="row">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 0" ng-class="{'selected': vm.submission.maximum_repeats === 0}" flex="50">
                         {{ 'NO' | translate }}
                     </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 1" ng-class="{'selected': vm.submission.maximum_repeats && vm.submission.maximum_repeats !== 0}" flex="33">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 1" ng-class="{'selected': vm.submission.maximum_repeats && vm.submission.maximum_repeats !== 0}" flex="50">
                         {{ 'YES' | translate }}
                     </div>
 
                     <md-input-container class="md-block" ng-if="vm.submission.maximum_repeats && vm.submission.maximum_repeats !== 0" flex="33">
-                        <label>{{ 'AMOUNT' | translate }}</label>
+                        <label>{{ 'AMOUNT_REPEAT' | translate }}</label>
                         <input type="number" ng-model="vm.submission.maximum_repeats">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="location_section">
-                <p>
-                    Waar zou je de activiteit graag willen laten doorgaan? Wat heb je hiervoor precies nodig?
-                </p>
-                <div layout="column" layout-padding>
+            <section id="location_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>Locatie</h2>
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>{{ 'LOCATION' | translate }}</label>
                         <md-select ng-model="vm.submission.location_type">
@@ -222,112 +217,139 @@
                         </md-select>
                     </md-input-container>
                 </div>
-                <p ng-if="vm.submission.location_type == 'ORGA_WORKSHOP' || vm.submission.location_type == 'ORGA_OUTDOOR' ">
-                    Wat heb je hiervoor precies nodig?
-                </p>
-                <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="column">
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_WORKSHOP' || vm.submission.location_type == 'ORGA_OUTDOOR' ">
+                    <p>
+                    Heb je op deze locatie specifieke vereisten?
+                    </p>
+                </div>
+                <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="row">
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                </div>
+                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'">
                     <md-input-container class="md-block" flex-gt-xs>
-                        <label>Special items?</label>
+                        <label>Andere speciale vereisten?</label>
                         <input ng-model="vm.submission.location_req_special">
                     </md-input-container>
                 </div>
-                <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="column">
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
-                    <md-switch class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="row">
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
+                </div>
+                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'">
                     <md-input-container class="md-block" flex-gt-xs>
-                        <label>Special items?</label>
+                        <label>Andere speciale vereisten?</label>
                         <input ng-model="vm.submission.location_req_special">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="audience_requirements_section">
-                <p>
-                    Zijn er specifieke verwachtingen die je hebt van je publiek?
-                </p>
-                <div layout="row" layout-padding>
-                    <md-input-container class="md-block" flex-gt-xs>
-                        <label>Requirements</label>
-                        <input ng-model="vm.submission.audience_requirements">
-                    </md-input-container>
-                </div>
-            </section>
 
-            <section id="audience_activity_capacity_limit">
-                <p>
-                    Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen? Hoeveel zouden dat er dan zijn?
-                </p>
-                <div layout="row" layout-padding>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 0" ng-class="{'selected': vm.submission.activity_participant_limit === 0}" flex="33">
+
+            <section id="audience_activity_capacity_limit" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>Aantal deelnemers</h2>
+                    <p>
+                        Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?
+                    </p>
+                </div>
+                <div layout="row">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 0" ng-class="{'selected': vm.submission.activity_participant_limit === 0}" flex="50">
                         {{ 'NO_LIMIT' | translate }}
                     </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 1" ng-class="{'selected': vm.submission.activity_participant_limit && vm.submission.activity_participant_limit !== 0}" flex="33">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 1" ng-class="{'selected': vm.submission.activity_participant_limit && vm.submission.activity_participant_limit !== 0}" flex="50">
                         {{ 'HAS_LIMIT' | translate }}
                     </div>
 
                     <md-input-container class="md-block" ng-if="vm.submission.activity_participant_limit && vm.submission.activity_participant_limit !== 0" flex="33">
-                        <label>{{ 'AMOUNT' | translate }}</label>
+                        <label>{{ 'AMOUNT_AUDIENCE' | translate }}</label>
                         <input type="number" ng-model="vm.submission.activity_participant_limit">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="sessions_section">
-                <p>
-                    Het is mogelijk om je activiteit op te delen in meerdere sessies. Indien je dit zou willen doen, kan je dan aangeven hoeveel sessies dit zouden zijn?
-                </p>
-                <div layout="row" layout-padding>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 0" ng-class="{'selected': vm.submission.multiple_sessions === 0}" flex="33">
+            <section id="sessions_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>Sessies</h2>
+                    <p>
+                        Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.
+                    </p>
+                </div>
+                <div layout="row">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 0" ng-class="{'selected': vm.submission.multiple_sessions === 0}" flex="50">
                         {{ 'NO_SESSIONS' | translate }}
                     </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 1" ng-class="{'selected': vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0}" flex="33">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 1" ng-class="{'selected': vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0}" flex="50">
                         {{ 'HAS_SESSIONS' | translate }}
                     </div>
 
                     <md-input-container md-no-float ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0" flex="33">
-                        <label>{{ 'AMOUNT' | translate }}</label>
+                        <label>{{ 'AMOUNT_SESSIONS' | translate }}</label>
                         <input type="number" ng-model="vm.submission.multiple_sessions">
                     </md-input-container>
                 </div>
-                <p ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0">
-                    Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen? Hoeveel zouden dat er dan zijn?
-                </p>
                 <div layout="row" layout-padding ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0">
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 0" ng-class="{'selected': vm.submission.session_participant_limit === 0}" flex="33">
+                    <p>
+                        Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?
+                    </p>
+                </div>
+                <div layout="row" layout-padding ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 0" ng-class="{'selected': vm.submission.session_participant_limit === 0}" flex="50">
                         {{ 'NO_LIMIT' | translate }}
                     </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 1" ng-class="{'selected': vm.submission.session_participant_limit && vm.submission.session_participant_limit !== 0}" flex="33">
+                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 1" ng-class="{'selected': vm.submission.session_participant_limit && vm.submission.session_participant_limit !== 0}" flex="50">
                         {{ 'HAS_LIMIT' | translate }}
                     </div>
 
                     <md-input-container class="md-block" ng-if="vm.submission.session_participant_limit && vm.submission.session_participant_limit !== 0" flex="33">
-                        <label>{{ 'AMOUNT' | translate }}</label>
+                        <label>{{ 'AMOUNT_AUDIENCE' | translate }}</label>
                         <input type="number" ng-model="vm.submission.session_participant_limit">
                     </md-input-container>
                 </div>
             </section>
+                        <section id="format_section" class="md-whiteframe-1dp" layout-padding>
+                            <div layout="row">
+                                <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
+                            </div>
+                            <div layout="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>{{ 'ACTIVITY_FORMAT' | translate }}</label>
+                                    <md-select ng-model="vm.submission.format">
+                                        <md-option ng-repeat="type in vm.formatTypes" ng-value="type">
+                                            {{ type | translate }}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </section>
 
-            <section id="collaborators_section">
-                <p>
-                    Zijn er andere personen die mee deze activiteit organizeren?
-                </p>
-                <div layout="row" layout-padding>
+            <section id="collaborators_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>Medewerkers</h2>
+                    <p>
+                        Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.
+                    </p>
+                </div>
+                <div layout="row">
                     <md-list flex>
-                        <md-list-item layout="row" layout-align="start center" layout-padding flex>
-                            <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
-                            <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
-                            <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
-                                <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
+                        <md-list-item layout="row" layout-align="start center" flex >
+                                <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
+                                <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
+                                <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
+                                    <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
+                                </md-button>
+                        </md-list-item>
+                        <md-list-item layout="column" layout-align="center center" ng-if="!vm.submission.collaborators || vm.submission.collaborators.length < 1" >
+                            <md-button class="md-raised md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
+                                Voeg een medewerker toe
                             </md-button>
                         </md-list-item>
-                        <md-list-item layout="row" layout-align="start center" layout-padding ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
+                        <md-list-item layout="row" layout-align="start center" ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
                             <span class="md-body-1" flex>{{ collaborator.name }}</span>
                             <span class="md-body-1" flex>{{ collaborator.email }}</span>
                             <md-button class="md-icon-button md-warn" ng-click="vm.removeCollaborator($event, collaborator)">
@@ -338,31 +360,36 @@
                 </div>
             </section>
 
-            <section id="activity_duration_section">
-                <p>
-                    Hoe lang duurt deze activiteit met al zijn sessies?
-                </p>
-                <div layout="row" layout-padding>
-                    <md-slider-container flex>
-                        <md-slider md-discrete flex ng-model="vm.activity_duration" min="15" max="240" step="15" aria-label="Activity Duration" class="md-primary">
-                        </md-slider>
-                        <md-input-container>
-                            <input flex type="number" ng-model="vm.activity_duration" aria-label="blue" aria-controls="blue-slider">
-                        </md-input-container>
-                    </md-slider-container>
+            <section id="activity_duration_section" class="md-whiteframe-1dp" layout-padding>
+                <div layout-gt-sm="column">
+                    <h2>Hoe lang duurt je activiteit?</h2>
+                    <p>
+                        Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?
+                    </p>
                 </div>
-            </section>
-
-            <section id="visit_duration_section">
-                <p>
-                    Hoe lang duurt het voor een bezoeker om deel te nemen aan de activiteit?
-                </p>
-                <div layout="row" layout-padding>
+                <div layout-gt-sm="row">
                     <md-slider-container flex>
-                        <md-slider md-discrete flex ng-model="vm.visit_duration" min="15" max="240" step="15" aria-label="Visit Duration" class="md-primary">
+                       <md-icon md-font-icon="lnr-clock" class="lnr"></md-icon>
+                      <md-slider md-discrete flex ng-model="vm.activity_duration" min="15" max="240" step="15" aria-label="Activity Duration (in minutes)" class="md-primary" id="slider_total_duration">
+                      </md-slider>
+                      <md-input-container>
+                        <input flex type="number" ng-model="vm.activity_duration" aria-label="Activity Duration (in minutes)" aria-controls="slider_total_duration">
+                      </md-input-container>
+                    </md-slider-container>
+
+                </div>
+                <div layout-gt-sm="column">
+                    <p>
+                        Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?
+                    </p>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-slider-container flex>
+                       <md-icon md-font-icon="lnr-clock" class="lnr"></md-icon>
+                        <md-slider md-discrete ng-model="vm.visit_duration" min="15" max="{{vm.activity_duration}}" step="15" aria-label="Visit Duration (in minutes)" class="md-primary" id="slider_visit_duration">
                         </md-slider>
                         <md-input-container>
-                            <input flex type="number" ng-model="vm.visit_duration" aria-label="blue" aria-controls="blue-slider">
+                            <input flex type="number" ng-model="vm.visit_duration" aria-label="Visit Duration (in minutes)" aria-controls="slider_visit_duration">
                         </md-input-container>
                     </md-slider-container>
                 </div>

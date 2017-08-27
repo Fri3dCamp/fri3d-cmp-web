@@ -49,16 +49,19 @@
       });
 
 
-      //let fri3dMap = $mdThemingProvider.extendPalette('cyan', {
-      //    '600': '#0E98AF'
-      //});
+      let fri3dMap = $mdThemingProvider.extendPalette('cyan', {
+          'contrastDefaultColor' : 'light',
+          '500': '#0E98AF'
+      });
 
       // Register the new color palette map with the name <code>neonRed</code>
-      //$mdThemingProvider.definePalette('fri3d', fri3dMap);
+      $mdThemingProvider.definePalette('fri3d', fri3dMap);
 
       // Use that theme for the primary intentions
-      $mdThemingProvider.theme('default')
-          .primaryPalette('fri3dPalette');
+      $mdThemingProvider.theme('cyan')
+          .primaryPalette('fri3d');
+
+      $mdThemingProvider.setDefaultTheme('cyan');
 
     $routeProvider
       .when('/callback', {
@@ -134,107 +137,99 @@
     $locationProvider.html5Mode(true);
 
       $translateProvider.translations('en', {
-          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Call for participation',
-          'ACTIVITY_TITLE': 'Your Fri3d activity',
-          'TYPE_PRESENTATION': 'Presentation',
-          'TYPE_PRESENTATION_DESC': 'Do you want to tell your story, and share your hacker passion with the other participants? Do you want to present your Open Source project? Then we have a fully equipped auditorium ready for you. The stage and all required support is present!',
-          'TYPE_WORKSHOP': 'Workshop',
-          'TYPE_WORKSHOP_DESC': 'Will participants of your activity have to roll up their sleeves and get their hands dirty? Will you guide them from a vast nothing to a new creation of their own making? We are here to help you get that workshop on the road.',
-          'TYPE_OTHER': 'Other',
-          'TYPE_OTHER_DESC': 'Do you want to put up a piece of art on the terrain, or do you want to bring entertainment to our stage? Anything is possible. We have a very large camping ground with lots of possibilities and support for lots of activities.',
-
-          'DAY_ONE': 'Day 1',
-          'DAY_TWO': 'Day 2',
-          'DAY_THREE': 'Day 3',
-          'FROM': 'From',
-          'UNTIL': 'Until',
-
-          'NO_SESSIONS': 'No Sessions',
-          'HAS_SESSIONS': 'Multiple Sessions',
-          'AMOUNT': 'Amount',
-
-          'NO_LIMIT': 'No Limit',
-          'HAS_LIMIT': 'Limited',
-
-          'YES': 'Yes',
-          'NO': 'No',
-
-
-
-          'GENERAL': 'General',
-          'SPEAKER': 'Speaker',
-          'COLLABORATORS': 'Collaborators',
-          'ACTIVITY': 'Activity',
-          'LOCATION': 'Location',
-          'AUDIENCE': 'Audience',
-          'WORKSHOP': 'Workshop',
-          'TALK': 'Talk',
-          'TITLE': 'Title of your activity',
-          'FULLTIME': 'Attendance from start to end',
-          'WALK-IN': 'Walk-in attendance',
-          'SUBMISSION_TYPE': 'Type',
-          'ACTIVITY_FORMAT': 'Format',
-          'SUMMARY': 'Summary',
-          'DESCRIPTION': 'Description',
-          'INTENDED_AUDIENCE': 'Intended Audience',
-          'NAME': 'Name',
-          'EMAIL': 'E-Mail',
-          'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
-          'FORMINTRO' : 'Submit your proposal for a talk, workshop or other activity on Fri3d Camp 2018.',
-          'ASSOCIATED' : 'Hacker- or makerspaces with which you are affiliated',
-          'REPEATS' : 'Maximum nr. of times you want to repeat your activity',
-          'MESSAGE': 'Your message'
+            'ACTIVITY': 'Activity',
+            'ACTIVITY_FORMAT': 'Format',
+            'ACTIVITY_TITLE': 'Your Fri3d activity',
+            'AMOUNT_AUDIENCE': 'Max. nr of participants',
+            'AMOUNT_REPEAT': 'Max. nr of times',
+            'AMOUNT_SESSIONS': 'Aantal sessies',
+            'ASSOCIATED' : 'Hacker- or makerspaces with which you are affiliated',
+            'AUDIENCE': 'Audience',
+            'COLLABORATORS': 'Collaborators',
+            'DAY_ONE': 'Day 1 (Saturday, August 18)',
+            'DAY_THREE': 'Day 3 (Monday, August 20)',
+            'DAY_TWO': 'Day 2 (Sunday, August 19)',
+            'DESCRIPTION': 'Description',
+            'EMAIL': 'E-Mail',
+            'FORMINTRO' : 'Submit your proposal for a talk, workshop or other activity on Fri3d Camp 2018.',
+            'FROM': 'From',
+            'FULLTIME': 'Attendance from start to end',
+            'GENERAL': 'General',
+            'HAS_LIMIT': 'Limited',
+            'HAS_SESSIONS': 'Multiple Sessions',
+            'INTENDED_AUDIENCE': 'Intended Audience',
+            'LOCATION': 'Preferred location',
+            'MESSAGE': 'Your message',
+            'NAME': 'Name',
+            'NO': 'No',
+            'NO_LIMIT': 'No Limit',
+            'NO_SESSIONS': 'No Sessions',
+            'REPEATS' : 'Maximum nr. of times you want to repeat your activity',
+            'SPEAKER': 'Speaker',
+            'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Call for participation',
+            'SUBMISSION_TYPE': 'Type',
+            'SUMMARY': 'Summary',
+            'TALK': 'Talk',
+            'TITLE': 'Title of your activity',
+            'TYPE_OTHER': 'Other',
+            'TYPE_OTHER_DESC': 'Do you want to put up a piece of art on the terrain, or do you want to bring entertainment to our stage? Anything is possible. We have a very large camping ground with lots of possibilities and support for lots of activities.',
+            'TYPE_PRESENTATION': 'Presentation',
+            'TYPE_PRESENTATION_DESC': 'Do you want to tell your story, and share your hacker passion with the other participants? Do you want to present your Open Source project? Then we have a fully equipped auditorium ready for you. The stage and all required support is present!',
+            'TYPE_WORKSHOP': 'Workshop',
+            'TYPE_WORKSHOP_DESC': 'Will participants of your activity have to roll up their sleeves and get their hands dirty? Will you guide them from a vast nothing to a new creation of their own making? We are here to help you get that workshop on the road.',
+            'UNTIL': 'Until',
+            'WALK-IN': 'Walk-in attendance',
+            'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
+            'WORKSHOP': 'Workshop',
+            'YES': 'Yes'
       });
 
       $translateProvider.translations('nl', {
-          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Uitnodiging tot deelname',
-          'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
-          'TYPE_PRESENTATION': 'Presentatie',
-          'TYPE_PRESENTATION_DESC': 'Wil je het verhaal van jouw hacker passie delen met alle deelnemers, jouw Open Source project voorstellen,... Dan hebben wij een volledig uitgeruste zaal klaar staan. Het podium, en alle benodigde ondersteuning is aanwezig!',
-          'TYPE_WORKSHOP': 'Workshop',
-          'TYPE_WORKSHOP_DESC': 'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.',
-          'TYPE_OTHER': 'Andere',
-          'TYPE_OTHER_DESC': 'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties ter beschikking.',
-
-          'DAY_ONE': 'Dag 1',
-          'DAY_TWO': 'Dag 2',
-          'DAY_THREE': 'Dag 3',
-          'FROM': 'Van',
-          'UNTIL': 'Tot',
-
-          'NO_SESSIONS': 'Geen Sessies',
-          'HAS_SESSIONS': 'Meerdere Sessies',
-          'AMOUNT': 'Aantal',
-
-          'NO_LIMIT': 'Geen limiet',
-          'HAS_LIMIT': 'Gelimiteerd',
-
-          'YES': 'Ja',
-          'NO': 'Nee',
-
-
-          'GENERAL': 'Algemeen',
-          'SPEAKER': 'Spreker',
-          'COLLABORATORS': 'Medewerkers',
           'ACTIVITY': 'Activiteit',
-          'LOCATION': 'Locatie',
+          'ACTIVITY_FORMAT': 'Format',
+          'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
+          'ACTIVITY': 'Activiteit',
+          'AMOUNT_AUDIENCE': 'Max. aantal deelnemers',
+          'AMOUNT_REPEAT': 'Max. aantal keren',
+          'AMOUNT_SESSIONS': 'Aantal sessies',
+          'ASSOCIATED' : 'Hacker- of makerspaces waar je bijhoort',
           'AUDIENCE': 'Publiek',
+          'COLLABORATORS': 'Medewerkers',
+          'DAY_ONE': 'Dag 1 (Zaterdag 18 augustus)',
+          'DAY_THREE': 'Dag 3 (Maandag 20 augustus)',
+          'DAY_TWO': 'Dag 2 (Zondag 19 augustus)',
+          'DESCRIPTION': 'Omschrijving',
+          'EMAIL': 'E-Mail Adres',
+          'FORMINTRO' : 'Dien jouw voorstel in voor een talk, workshop of andere activiteit op Fri3d Camp 2018.',
+          'FROM': 'Van',
+          'FULLTIME': 'Aanwezigheid van begin tot einde',
+          'GENERAL': 'Algemeen',
+          'HAS_LIMIT': 'Gelimiteerd',
+          'HAS_SESSIONS': 'Meerdere Sessies',
+          'INTENDED_AUDIENCE': 'Doelpubliek',
+          'LOCATION': 'Waar zou je de activiteit graag willen laten doorgaan?',
+          'MESSAGE': 'Jouw bericht',
+          'NAME': 'Naam',
+          'NO_LIMIT': 'Geen limiet',
+          'NO_SESSIONS': 'Geen Sessies',
+          'NO': 'Nee',
+          'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen',
+          'SPEAKER': 'Spreker',
+          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Uitnodiging tot deelname',
+          'SUBMISSION_TYPE': 'Type',
+          'SUMMARY': 'Samenvatting',
           'TALK': 'Presentatie',
           'TITLE': 'Titel van je activiteit',
-          'FULLTIME': 'Aanwezigheid van begin tot einde',
+          'TYPE_OTHER_DESC': 'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties ter beschikking.',
+          'TYPE_OTHER': 'Andere',
+          'TYPE_PRESENTATION_DESC': 'Wil je het verhaal van jouw hacker passie delen met alle deelnemers, jouw Open Source project voorstellen,... Dan hebben wij een volledig uitgeruste zaal klaar staan. Het podium, en alle benodigde ondersteuning is aanwezig!',
+          'TYPE_PRESENTATION': 'Presentatie',
+          'TYPE_WORKSHOP_DESC': 'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.',
+          'TYPE_WORKSHOP': 'Workshop',
+          'UNTIL': 'Tot',
           'WALK-IN': 'Doorlopende deelname',
-          'SUBMISSION_TYPE': 'Type',
-          'ACTIVITY_FORMAT': 'Format',
-          'SUMMARY': 'Samenvatting',
-          'DESCRIPTION': 'Omschrijving',
-          'INTENDED_AUDIENCE': 'Doelpubliek',
-          'NAME': 'Naam',
-          'EMAIL': 'E-Mail Adres',
           'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?',
-          'FORMINTRO' : 'Dien jouw voorstel in voor een talk, workshop of andere activiteit op Fri3d Camp 2018.',
-          'ASSOCIATED' : 'Hacker- of makerspaces waar je bijhoort',
-          'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen',
-          'MESSAGE': 'Jouw bericht'
+          'YES': 'Ja',
       });
 
       $translateProvider.preferredLanguage('nl');
