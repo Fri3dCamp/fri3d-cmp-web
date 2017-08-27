@@ -376,7 +376,7 @@
             class="md-sidenav-right"
             md-component-id="right"
             md-is-locked-open="$mdMedia('gt-md')"
-            md-whiteframe="4">
+            md-whiteframe="4" ng-if="vm.comments && vm.comments.data && vm.comments.data.length > 0">
         <md-content flex>
             <md-list class="md-dense" flex>
                 <md-list-item ng-repeat="comment in vm.comments.data" class="md-3-line" >
