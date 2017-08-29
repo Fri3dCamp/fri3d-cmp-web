@@ -48,7 +48,7 @@
                 </div>
             </section>
 
-            <section id="basic_info_section" layout-padding>
+            <section id="basic_info_section" layout-padding ng-if="vm.submission.type">
                 <div layout-gt-sm="row">
                   <md-input-container md-no-float class="md-block" flex-gt-sm>
                       <label class="md-no-float">{{ 'TITLE' | translate }}</label>
@@ -66,7 +66,7 @@
             </section>
 
 
-            <section id="speaker_section" layout-padding>
+            <section id="speaker_section" layout-padding ng-if="vm.submission.type">
                 <div layout="row">
                     <p>Vertel ons wat meer over jezelf.</p>
                 </div>
@@ -97,7 +97,7 @@
                 </div>
             </section>
 
-            <section id="availability_section" layout-padding>
+            <section id="availability_section" layout-padding ng-if="vm.submission.type">
                 <div layout="row">
                     <p>Wanneer ben je beschikbaar om deze activiteit te organizeren?</p>
                 </div>
@@ -162,14 +162,14 @@
                     </div>
                 </div>
 
-                <div layout="row">
+                <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
 
                     <md-switch flex class="md-primary" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions">{{ 'REPETITION_OPTION' | translate }}</md-switch>
                 </div>
             </section>
 
 
-            <section id="target_audience_section" layout-padding>
+            <section id="target_audience_section" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
                     <h2>Publiek</h2>
                     <p>Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.</p>
@@ -205,7 +205,7 @@
                 </div>
             </section>
 
-            <section id="audience_activity_capacity_limit" layout-padding>
+            <section id="audience_activity_capacity_limit" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
                     <h2>Aantal deelnemers</h2>
                     <p>
@@ -215,12 +215,12 @@
                 <div layout="row">
                     <md-input-container md-no-float class="md-block" flex="33">
                         <label class="md-no-float">{{ 'AMOUNT_AUDIENCE' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.activity_participant_limit">
+                        <input type="number" ng-model="vm.submission.activity_participant_limit" min="0">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="sessions_section" layout-padding>
+            <section id="sessions_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
                     <h2>Sessies</h2>
                     <p>
@@ -230,12 +230,12 @@
                 <div layout="row">
                     <md-input-container md-no-float flex="33">
                         <label class="md-no-float">{{ 'AMOUNT_SESSIONS' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.session_count">
+                        <input type="number" ng-model="vm.submission.session_count" min="0">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="format_section" layout-padding>
+            <section id="format_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="row">
                     <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
                 </div>
@@ -246,7 +246,7 @@
                 </div>
             </section>
 
-            <section id="collaborators_section" layout-padding>
+            <section id="collaborators_section" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
                     <h2>Medewerkers</h2>
                     <p>
@@ -280,7 +280,7 @@
                 </div>
             </section>
 
-            <section id="activity_duration_section" layout-padding>
+            <section id="activity_duration_section" layout-padding ng-if="vm.submission.type">
                 <div layout-gt-sm="column">
                     <h2>Hoe lang duurt je activiteit?</h2>
                     <p>
@@ -306,7 +306,7 @@
                 </div>
             </section>
 
-            <section id="general_remarks" layout-padding>
+            <section id="general_remarks" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
                     <h2>{{ 'GENERAL_REMARKS_TITLE' | translate }}</h2>
                     <p>
@@ -321,7 +321,7 @@
                 </div>
             </section>
 
-            <section id="costs" layout-padding>
+            <section id="costs" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
                     <h2>{{ 'COSTS_TITLE' | translate }}</h2>
                     <p>
@@ -330,17 +330,13 @@
                 </div>
                 <div layout="row">
                     <md-input-container md-no-float class="md-block" flex>
-                        <label class="md-no-float">{{ 'COSTS_STATIC' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.costs_static">
-                    </md-input-container>
-                    <md-input-container md-no-float class="md-block" flex>
-                        <label class="md-no-float">{{ 'COSTS_PER_PERSON' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.costs_per_person">
+                        <label class="md-no-float">{{ 'COSTS_DESC' | translate }}</label>
+                        <input type="number" ng-model="vm.submission.costs" min="0">
                     </md-input-container>
                 </div>
             </section>
 
-            <section id="language_support" layout-padding ng-if="vm.lang === 'en'">
+            <section id="language_support" layout-padding ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
                 <div layout="column">
                     <h2>{{ 'LANGUAGE_SUPPORT_TITLE' | translate }}</h2>
                     <p>
@@ -352,7 +348,7 @@
                 </div>
             </section>
 
-            <section id="controls" layout-padding layout="row" layout-align="end stretch">
+            <section id="controls" layout-padding layout="row" layout-align="end stretch" ng-if="vm.submission.type">
                 <div layout="column" layout-align="center center">
                     <md-checkbox ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;">
                         {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
