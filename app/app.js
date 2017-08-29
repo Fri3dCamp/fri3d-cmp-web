@@ -79,6 +79,12 @@
                   return {
                       status: "IN_PREPARATION",
                       activity_participant_limit: 25,
+                      day_1_from: 9,
+                      day_1_until: 21,
+                      day_2_from: 9,
+                      day_2_until: 21,
+                      day_3_from: 9,
+                      day_3_until: 21,
                       session_count: 1
                   };
               }],
@@ -102,6 +108,12 @@
                       return {
                           status: "IN_PREPARATION",
                           activity_participant_limit: 25,
+                          day_1_from: 9,
+                          day_1_until: 21,
+                          day_2_from: 9,
+                          day_2_until: 21,
+                          day_3_from: 9,
+                          day_3_until: 21,
                           session_count: 1
                       };
                   }
