@@ -229,7 +229,7 @@
                     <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
                 </div>
                 <div layout="row">
-                    <md-radio-group ng-model="vm.submission.audience_level">
+                    <md-radio-group ng-model="vm.submission.format">
                         <md-radio-button ng-repeat="type in vm.formatTypes" ng-value="type">{{ type | translate }}</md-radio-button>
                     </md-radio-group>
                 </div>
@@ -275,30 +275,21 @@
                     </p>
                 </div>
                 <div layout-gt-sm="row">
-                    <md-slider-container flex>
-                       <md-icon md-font-icon="lnr-clock" class="lnr"></md-icon>
-                      <md-slider md-discrete flex ng-model="vm.activity_duration" min="15" max="240" step="15" aria-label="Activity Duration (in minutes)" class="md-primary" id="slider_total_duration">
-                      </md-slider>
-                      <md-input-container>
-                        <input flex type="number" ng-model="vm.activity_duration" aria-label="Activity Duration (in minutes)" aria-controls="slider_total_duration">
-                      </md-input-container>
-                    </md-slider-container>
-
+                    <md-input-container flex>
+                        <label>{{ 'ACTIVITY_DURATION_LABEL' | translate }}</label>
+                        <input flex type="number" ng-model="vm.submission.activity_duration" aria-label="Activity Duration (in minutes)" min="0">
+                    </md-input-container>
                 </div>
-                <div layout-gt-sm="column">
+                <div layout-gt-sm="column" ng-if="vm.submission.format && vm.submission.format !== 'FULLTIME'">
                     <p>
                         Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?
                     </p>
                 </div>
-                <div layout-gt-sm="row">
-                    <md-slider-container flex>
-                       <md-icon md-font-icon="lnr-clock" class="lnr"></md-icon>
-                        <md-slider md-discrete ng-model="vm.visit_duration" min="15" max="{{vm.activity_duration}}" step="15" aria-label="Visit Duration (in minutes)" class="md-primary" id="slider_visit_duration">
-                        </md-slider>
-                        <md-input-container>
-                            <input flex type="number" ng-model="vm.visit_duration" aria-label="Visit Duration (in minutes)" aria-controls="slider_visit_duration">
-                        </md-input-container>
-                    </md-slider-container>
+                <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.format !== 'FULLTIME'">
+                    <md-input-container flex>
+                        <label>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
+                        <input flex type="number" ng-model="vm.submission.visit_duration" aria-label="Visit Duration (in minutes)" min="0">
+                    </md-input-container>
                 </div>
             </section>
 
