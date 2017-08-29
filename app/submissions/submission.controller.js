@@ -27,10 +27,8 @@
       vm.comments = comments;
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
-    vm.types = [ "WORKSHOP", "TALK", "GAME", "NOT_IN_LIST" ];
     vm.formatTypes = [ "FULLTIME", "WALK-IN" ];
     vm.audienceLevels = [ "FAMILY", "EXPERT", "NOT_IN_LIST" ];
-    vm.locationTypes = [ "NONE", "ORGA_TALK", "ORGA_WORKSHOP", "ORGA_OUTDOOR", "DRONE", "FOREST", "NOT_IN_LIST"];
     vm.timeBuckets = _generateTimeBuckets();
 
     // -- functions
