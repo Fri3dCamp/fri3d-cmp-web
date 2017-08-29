@@ -189,6 +189,8 @@
             'FAMILY': 'Family',
             'EXPERT': 'Expert',
             'NOT_IN_LIST': 'None of the above',
+            'SUBMISSION_COMPLETE_OPTION' :'My proposal is complete, let\'s go!',
+          'SAVE' :'Save',
       });
 
       $translateProvider.translations('nl', {
@@ -243,6 +245,8 @@
           'FAMILY': 'Familie',
           'EXPERT': 'Expert',
           'NOT_IN_LIST': 'Geen van bovenstaande opties',
+          'SUBMISSION_COMPLETE_OPTION' :'Mijn voorstel is compleet, bekijken maar!',
+          'SAVE' :'Bewaar',
       });
 
       $translateProvider.preferredLanguage('nl');

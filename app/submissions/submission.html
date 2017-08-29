@@ -3,8 +3,6 @@
         <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">Vertaal naar Nederlands</md-button>
         <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">Translate to English</md-button>
         <span flex></span>
-        <md-button ng-click="vm.save()">Save</md-button>
-        <md-button ng-click="vm.publish()">Publish</md-button>
     </div>
 
 </md-toolbar>
@@ -376,6 +374,17 @@
                 </div>
             </section>
 
+            <section id="controls" class="md-whiteframe-1dp" layout-padding layout="row" layout-align="end stretch">
+                <div layout="column" layout-align="center center">
+                    <md-checkbox ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;">
+                        {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
+                    </md-checkbox>
+                </div>
+                <div layout="column" layout-align="center center">
+                    <md-button ng-click="vm.save()">{{ 'SAVE' | translate }}</md-button>
+                </div>
+
+            </section>
         </form>
     </div>
     </md-content>

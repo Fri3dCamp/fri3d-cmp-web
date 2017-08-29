@@ -35,12 +35,15 @@
 
     // -- functions
     vm.save = save;
-    vm.publish = publish;
     vm.showNewCollaboratorDialog = showNewCollaboratorDialog;
     vm.editCollaborator = editCollaborator;
     vm.removeCollaborator = removeCollaborator;
 
     function save() {
+        if (vm.ready_to_publish) {
+            vm.submission.status = "PROPOSED";
+        }
+
       SubmissionService.save(vm.submission).then(function(response) {
           vm.submission.id = response._id;
 
@@ -52,14 +55,6 @@
 
         $location.path("/submission/" + vm.submission.id);
       });
-    }
-
-    function publish() {
-        $mdToast.show(
-            $mdToast.simple()
-                .textContent('Not implemented yet!')
-                .hideDelay(3000)
-        );
     }
 
       function showNewCollaboratorDialog(ev) {
