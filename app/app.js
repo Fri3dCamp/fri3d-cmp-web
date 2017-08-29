@@ -198,6 +198,8 @@
             'COSTS_PER_PERSON' : 'Costs per participant (EUR).',
             'SUBMISSION_COMPLETE_OPTION' :'My proposal is complete, let\'s go!',
           'SAVE' :'Save',
+          'AUDIENCE_REQUIREMENTS_LABEL' :'Are there specific expectations you have towards your audience?',
+          'AUDIENCE_REQUIREMENTS_HINT' :'Certain knowledge or capabilities, materials to bring, ...',
       });
 
       $translateProvider.translations('nl', {
@@ -261,6 +263,8 @@
           'COSTS_PER_PERSON' : 'Kosten per participant (EUR).',
           'SUBMISSION_COMPLETE_OPTION' :'Mijn voorstel is compleet, bekijken maar!',
           'SAVE' :'Bewaar',
+          'AUDIENCE_REQUIREMENTS_LABEL' :'Zijn er specifieke verwachtingen die je hebt van je publiek?',
+          'AUDIENCE_REQUIREMENTS_HINT' :'Bepaalde voorkennis of vaardigheden, mee te brengen materiaal, ...',
       });
 
       $translateProvider.preferredLanguage('nl');
