@@ -165,14 +165,9 @@
                     <p>Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.</p>
                 </div>
                 <div layout="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>{{ 'INTENDED_AUDIENCE' | translate }}</label>
-                        <md-select ng-model="vm.submission.audience_level" flex>
-                            <md-option ng-repeat="level in vm.audienceLevels" ng-value="level">
-                                {{ level | translate }}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
+                    <md-radio-group ng-model="vm.submission.audience_level">
+                        <md-radio-button ng-repeat="level in vm.audienceLevels" ng-value="level">{{ level | translate }}</md-radio-button>
+                    </md-radio-group>
                 </div>
                 <div layout="row">
                     <md-input-container class="md-block" flex-gt-xs>
@@ -311,20 +306,15 @@
             </section>
 
             <section id="format_section" class="md-whiteframe-1dp" layout-padding>
-                            <div layout="row">
-                                <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
-                            </div>
-                            <div layout="row">
-                                <md-input-container class="md-block" flex-gt-sm>
-                                    <label>{{ 'ACTIVITY_FORMAT' | translate }}</label>
-                                    <md-select ng-model="vm.submission.format">
-                                        <md-option ng-repeat="type in vm.formatTypes" ng-value="type">
-                                            {{ type | translate }}
-                                        </md-option>
-                                    </md-select>
-                                </md-input-container>
-                            </div>
-                        </section>
+                <div layout="row">
+                    <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
+                </div>
+                <div layout="row">
+                    <md-radio-group ng-model="vm.submission.audience_level">
+                        <md-radio-button ng-repeat="type in vm.formatTypes" ng-value="type">{{ type | translate }}</md-radio-button>
+                    </md-radio-group>
+                </div>
+            </section>
 
             <section id="collaborators_section" class="md-whiteframe-1dp" layout-padding>
                 <div layout="column">

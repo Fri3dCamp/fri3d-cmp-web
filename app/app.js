@@ -185,6 +185,9 @@
             'LANGUAGE_SUPPORT_TITLE': 'Do you need dutch language support',
             'LANGUAGE_SUPPORT_DESC': '',
             'LANGUAGE_SUPPORT_OPTION': 'Need Dutch language support?',
+            'FAMILY': 'Family',
+            'EXPERT': 'Expert',
+            'NOT_IN_LIST': 'None of the above',
       });
 
       $translateProvider.translations('nl', {
@@ -235,6 +238,9 @@
           'LANGUAGE_SUPPORT_TITLE': 'nvt',
           'LANGUAGE_SUPPORT_DESC': 'nvt',
           'LANGUAGE_SUPPORT_OPTION': 'nvt',
+          'FAMILY': 'Familie',
+          'EXPERT': 'Expert',
+          'NOT_IN_LIST': 'Geen van bovenstaande opties',
       });
 
       $translateProvider.preferredLanguage('nl');
