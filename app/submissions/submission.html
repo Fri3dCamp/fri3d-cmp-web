@@ -178,43 +178,34 @@
                 </div>
             </section>
 
-            <section id="location_section" class="md-whiteframe-1dp" layout-padding>
+            <!-- @todo do we need these after all? -->
+            <section id="location_section" class="md-whiteframe-1dp" layout-padding ng-if="vm.submission.type && vm.submission.type != 'PRESENTATION'">
                 <div layout="column">
                     <h2>Locatie</h2>
-                    <md-input-container class="md-block" flex-gt-xs>
-                        <label>{{ 'LOCATION' | translate }}</label>
-                        <md-select ng-model="vm.submission.location_type">
-                            <md-option ng-repeat="type in vm.locationTypes" ng-value="type">
-                                {{ type | translate }}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-                </div>
-                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_WORKSHOP' || vm.submission.location_type == 'ORGA_OUTDOOR' ">
                     <p>
                     Heb je op deze locatie specifieke vereisten?
                     </p>
                 </div>
-                <div ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'" layout="row">
+                <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'" layout="row">
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_soldering_tools" aria-label="Need Soldering Tools?">Need soldering tools?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
                 </div>
-                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_WORKSHOP'">
+                <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>Andere speciale vereisten?</label>
                         <input ng-model="vm.submission.location_req_special">
                     </md-input-container>
                 </div>
-                <div ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'" layout="row">
+                <div ng-if="vm.submission.type && vm.submission.type == 'OTHER'" layout="row">
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_power" aria-label="Need Power?">Need power?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_beamer" aria-label="Need Beamer?">Need beamer?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_tables" aria-label="Need Tables?">Need tables?</md-switch>
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.location_req_glue_guns" aria-label="Need Glue Guns?">Need glue guns?</md-switch>
                 </div>
-                <div layout="row" ng-if="vm.submission.location_type == 'ORGA_OUTDOOR'">
+                <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'OTHER'">
                     <md-input-container class="md-block" flex-gt-xs>
                         <label>Andere speciale vereisten?</label>
                         <input ng-model="vm.submission.location_req_special">
@@ -359,6 +350,40 @@
                             <input flex type="number" ng-model="vm.visit_duration" aria-label="Visit Duration (in minutes)" aria-controls="slider_visit_duration">
                         </md-input-container>
                     </md-slider-container>
+                </div>
+            </section>
+
+            <section id="general_remarks" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>{{ 'GENERAL_REMARKS_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'GENERAL_REMARKS_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <input ng-model="vm.submission.general_remarks">
+                        <div class="hint">{{ 'GENERAL_REMARKS_HINT' | translate }}</div>
+                    </md-input-container>
+                </div>
+            </section>
+
+            <section id="costs" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>{{ 'COSTS_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'COSTS_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex>
+                        <label>{{ 'COSTS_STATIC' | translate }}</label>
+                        <input type="number" ng-model="vm.submission.costs_static">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>{{ 'COSTS_PER_PERSON' | translate }}</label>
+                        <input type="number" ng-model="vm.submission.costs_per_person">
+                    </md-input-container>
                 </div>
             </section>
 
