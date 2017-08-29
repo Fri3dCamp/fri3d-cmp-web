@@ -85,6 +85,7 @@
                       day_2_until: 21,
                       day_3_from: 9,
                       day_3_until: 21,
+                      costs: 0,
                       session_count: 1
                   };
               }],
@@ -114,6 +115,7 @@
                           day_2_until: 21,
                           day_3_from: 9,
                           day_3_until: 21,
+                          costs: 0,
                           session_count: 1
                       };
                   }
@@ -219,9 +221,7 @@
             'GENERAL_REMARKS_DESC': '',
             'GENERAL_REMARKS_HINT' : 'Any special requirements, words of wisdom, ...',
             'COSTS_TITLE': 'Costs',
-            'COSTS_DESC': '',
-            'COSTS_STATIC': 'Static cost per workshop (EUR).',
-            'COSTS_PER_PERSON' : 'Costs per participant (EUR).',
+            'COSTS_DESC': 'A note about costs',
             'SUBMISSION_COMPLETE_OPTION' :'My proposal is complete, let\'s go!',
           'SAVE' :'Save',
           'AUDIENCE_REQUIREMENTS_LABEL' :'Are there specific expectations you have towards your audience?',
@@ -284,9 +284,7 @@
           'GENERAL_REMARKS_DESC': '',
           'GENERAL_REMARKS_HINT' : 'Enige speciale vereisten, opmerkingen, ...',
           'COSTS_TITLE': 'Kosten',
-          'COSTS_DESC': '',
-          'COSTS_STATIC': 'Vaste kosten per workshop (EUR).',
-          'COSTS_PER_PERSON' : 'Kosten per participant (EUR).',
+          'COSTS_DESC': 'Kosten uitleg',
           'SUBMISSION_COMPLETE_OPTION' :'Mijn voorstel is compleet, bekijken maar!',
           'SAVE' :'Bewaar',
           'AUDIENCE_REQUIREMENTS_LABEL' :'Zijn er specifieke verwachtingen die je hebt van je publiek?',
