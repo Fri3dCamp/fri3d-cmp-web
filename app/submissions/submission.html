@@ -155,6 +155,8 @@
                             </md-select>
                         </md-input-container>
                     </div>
+
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions">{{ 'REPETITION_OPTION' | translate }}</md-switch>
                 </div>
             </section>
 
@@ -174,27 +176,6 @@
                         <label>Zijn er specifieke verwachtingen die je hebt van je publiek?</label>
                         <input ng-model="vm.submission.audience_requirements">
                         <div class="hint">Bepaalde voorkennis of vaardigheden, mee te brengen materiaal...</div>
-                    </md-input-container>
-                </div>
-            </section>
-
-            <section id="repetition_section" class="md-whiteframe-1dp" layout-padding>
-                <div layout="row">
-                    <p>
-                        Zou je deze activiteit meerdere keren willen organiseren tijdens het kamp?
-                    </p>
-                </div>
-                <div layout="row">
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 0" ng-class="{'selected': vm.submission.maximum_repeats === 0}" flex="50">
-                        {{ 'NO' | translate }}
-                    </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.maximum_repeats = 1" ng-class="{'selected': vm.submission.maximum_repeats && vm.submission.maximum_repeats !== 0}" flex="50">
-                        {{ 'YES' | translate }}
-                    </div>
-
-                    <md-input-container class="md-block" ng-if="vm.submission.maximum_repeats && vm.submission.maximum_repeats !== 0" flex="33">
-                        <label>{{ 'AMOUNT_REPEAT' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.maximum_repeats">
                     </md-input-container>
                 </div>
             </section>
