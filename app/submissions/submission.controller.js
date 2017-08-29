@@ -6,22 +6,33 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
+    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
 
-  function SubmissionController($location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog) {
+  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog) {
     let vm = this;
 
       vm.lang = $location.hash();
+      vm.translate = $location.hash() === 'en';
       $translate.use($location.hash());
 
-      vm.languageEn = function() {
-          $location.hash('en');
-          $translate.use($location.hash());
-      };
+      // $scope.$watch('translate', function() {
+      //     if ($scope.translate) {
+      //         $location.hash('en');
+      //     } else {
+      //         $location.hash('nl');
+      //     }
+      // });
 
-      vm.languageNl = function() {
-          $location.hash('nl');
+      $scope.$watch('lang', function() {
           $translate.use($location.hash());
+      });
+
+      vm.toggleLanguage = function() {
+          if (vm.translate) {
+              $location.hash('en');
+          } else {
+              $location.hash('nl');
+          }
       };
 
     // -- variables

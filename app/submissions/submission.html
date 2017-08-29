@@ -1,7 +1,5 @@
-<md-toolbar  class="md-primary" style="background-image:url('/assets/header_forest.jpg')">
+<md-toolbar  class="md-primary md-tall" style="background-image:url('/assets/header_forest.jpg')" >
     <div class="md-toolbar-tools">
-        <md-button ng-if="vm.lang == 'en'" ng-click="vm.languageNl()">Vertaal naar Nederlands</md-button>
-        <md-button ng-if="vm.lang == 'nl'" ng-click="vm.languageEn()">Translate to English</md-button>
         <span flex></span>
     </div>
 
@@ -12,7 +10,15 @@
     <div layout="row" layout-padding layout-margin layout-align="start center" class="mainwrapper">
         <form layout="column" name="userForm" layout-margin md-block>
             <section layout-padding>
-                <h1>{{ 'SUBMISSION_CAPTION' | translate }}</h1>
+                <div layout="row" layout-align="space-between stretch">
+                    <h1>{{ 'SUBMISSION_CAPTION' | translate }}</h1>
+                    <div layout="row" layout-align="">
+                        <span>NL</span>
+                        <md-switch flex class="md-primary" ng-model="vm.translate" ng-change="vm.toggleLanguage()" aria-label="Open for repetitions"></md-switch>
+                        <span>EN</span>
+                    </div>
+                </div>
+
                 <p>
                     TODO: toevoegen van beknopte "CFP tekst", cfr uitgestuurde tekst.
                 </p>
