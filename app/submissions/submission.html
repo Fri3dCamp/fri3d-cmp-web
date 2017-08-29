@@ -209,7 +209,7 @@
                 <div layout="row">
                     <md-input-container md-no-float class="md-block" flex="33">
                         <label class="md-no-float">{{ 'AMOUNT_AUDIENCE' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.activity_participant_limit">
+                        <input type="number" ng-model="vm.submission.activity_participant_limit" min="0">
                     </md-input-container>
                 </div>
             </section>
@@ -224,7 +224,7 @@
                 <div layout="row">
                     <md-input-container md-no-float flex="33">
                         <label class="md-no-float">{{ 'AMOUNT_SESSIONS' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.session_count">
+                        <input type="number" ng-model="vm.submission.session_count" min="0">
                     </md-input-container>
                 </div>
             </section>
@@ -325,7 +325,7 @@
                 <div layout="row">
                     <md-input-container md-no-float class="md-block" flex>
                         <label class="md-no-float">{{ 'COSTS_DESC' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.costs">
+                        <input type="number" ng-model="vm.submission.costs" min="0">
                     </md-input-container>
                 </div>
             </section>
