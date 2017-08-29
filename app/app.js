@@ -75,7 +75,10 @@
           controllerAs: 'vm',
           resolve: {
               comments: [function() { return {}; }],
-              submission: [function() { return {}; }]
+              submission: [function() { return {}; }],
+              language: ['$location', function($location) {
+                  return $location.hash() === 'en' ? 'en' : 'nl';
+              }]
           }
       })
       .when('/submission/:id', {
@@ -94,6 +97,9 @@
                           status: "IN_PREPARATION"
                       };
                   }
+              }],
+              language: ['$location', function($location) {
+                  return $location.hash() === 'en' ? 'en' : 'nl';
               }]
           }
       })

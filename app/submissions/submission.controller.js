@@ -6,21 +6,22 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$location', 'comments', 'submission', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
+    SubmissionController.$inject = ['$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
 
-  function SubmissionController($location, comments, submission, SubmissionService, $translate, $mdToast, $mdDialog) {
+  function SubmissionController($location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog) {
     let vm = this;
 
-      vm.lang = 'nl';
+      vm.lang = $location.hash();
+      $translate.use($location.hash());
 
       vm.languageEn = function() {
-          $translate.use('en');
-          vm.lang = 'en';
+          $location.hash('en');
+          $translate.use($location.hash());
       };
 
       vm.languageNl = function() {
-          $translate.use('nl');
-          vm.lang = 'nl';
+          $location.hash('nl');
+          $translate.use($location.hash());
       };
 
     // -- variables
