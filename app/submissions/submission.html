@@ -202,14 +202,7 @@
                     </p>
                 </div>
                 <div layout="row">
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 0" ng-class="{'selected': vm.submission.activity_participant_limit === 0}" flex="50">
-                        {{ 'NO_LIMIT' | translate }}
-                    </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.activity_participant_limit = 1" ng-class="{'selected': vm.submission.activity_participant_limit && vm.submission.activity_participant_limit !== 0}" flex="50">
-                        {{ 'HAS_LIMIT' | translate }}
-                    </div>
-
-                    <md-input-container class="md-block" ng-if="vm.submission.activity_participant_limit && vm.submission.activity_participant_limit !== 0" flex="33">
+                    <md-input-container class="md-block" flex="33">
                         <label>{{ 'AMOUNT_AUDIENCE' | translate }}</label>
                         <input type="number" ng-model="vm.submission.activity_participant_limit">
                     </md-input-container>
@@ -224,34 +217,9 @@
                     </p>
                 </div>
                 <div layout="row">
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 0" ng-class="{'selected': vm.submission.multiple_sessions === 0}" flex="50">
-                        {{ 'NO_SESSIONS' | translate }}
-                    </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.multiple_sessions = 1" ng-class="{'selected': vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0}" flex="50">
-                        {{ 'HAS_SESSIONS' | translate }}
-                    </div>
-
-                    <md-input-container md-no-float ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0" flex="33">
+                    <md-input-container md-no-float flex="33">
                         <label>{{ 'AMOUNT_SESSIONS' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.multiple_sessions">
-                    </md-input-container>
-                </div>
-                <div layout="row" layout-padding ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0">
-                    <p>
-                        Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?
-                    </p>
-                </div>
-                <div layout="row" layout-padding ng-if="vm.submission.multiple_sessions && vm.submission.multiple_sessions !== 0">
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 0" ng-class="{'selected': vm.submission.session_participant_limit === 0}" flex="50">
-                        {{ 'NO_LIMIT' | translate }}
-                    </div>
-                    <div layout="column" layout-align="center center" class="fc-toggle" ng-click="vm.submission.session_participant_limit = 1" ng-class="{'selected': vm.submission.session_participant_limit && vm.submission.session_participant_limit !== 0}" flex="50">
-                        {{ 'HAS_LIMIT' | translate }}
-                    </div>
-
-                    <md-input-container class="md-block" ng-if="vm.submission.session_participant_limit && vm.submission.session_participant_limit !== 0" flex="33">
-                        <label>{{ 'AMOUNT_AUDIENCE' | translate }}</label>
-                        <input type="number" ng-model="vm.submission.session_participant_limit">
+                        <input type="number" ng-model="vm.submission.session_count">
                     </md-input-container>
                 </div>
             </section>

@@ -75,7 +75,13 @@
           controllerAs: 'vm',
           resolve: {
               comments: [function() { return {}; }],
-              submission: [function() { return {}; }],
+              submission: [function() {
+                  return {
+                      status: "IN_PREPARATION",
+                      activity_participant_limit: 25,
+                      session_count: 1
+                  };
+              }],
               language: ['$location', function($location) {
                   return $location.hash() === 'en' ? 'en' : 'nl';
               }]
@@ -94,7 +100,9 @@
                       return SubmissionService.get($route.current.params.id);
                   } else {
                       return {
-                          status: "IN_PREPARATION"
+                          status: "IN_PREPARATION",
+                          activity_participant_limit: 25,
+                          session_count: 1
                       };
                   }
               }],
@@ -148,7 +156,7 @@
             'ACTIVITY_TITLE': 'Your Fri3d activity',
             'AMOUNT_AUDIENCE': 'Max. nr of participants',
             'AMOUNT_REPEAT': 'Max. nr of times',
-            'AMOUNT_SESSIONS': 'Aantal sessies',
+            'AMOUNT_SESSIONS': 'Number of sessions',
             'ASSOCIATED' : 'Hacker- or makerspaces with which you are affiliated',
             'AUDIENCE': 'Audience',
             'COLLABORATORS': 'Collaborators',
