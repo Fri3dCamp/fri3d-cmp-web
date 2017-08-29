@@ -395,6 +395,18 @@
                 </div>
             </section>
 
+            <section id="language_support" class="md-whiteframe-1dp" layout-padding ng-if="vm.lang === 'en'">
+                <div layout="column">
+                    <h2>{{ 'LANGUAGE_SUPPORT_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'LANGUAGE_SUPPORT_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?">{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</md-switch>
+                </div>
+            </section>
+
         </form>
     </div>
     </md-content>

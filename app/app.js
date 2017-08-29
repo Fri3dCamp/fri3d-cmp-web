@@ -181,14 +181,16 @@
             'WALK-IN': 'Walk-in attendance',
             'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
             'WORKSHOP': 'Workshop',
-            'YES': 'Yes'
+            'YES': 'Yes',
+            'LANGUAGE_SUPPORT_TITLE': 'Do you need dutch language support',
+            'LANGUAGE_SUPPORT_DESC': '',
+            'LANGUAGE_SUPPORT_OPTION': 'Need Dutch language support?',
       });
 
       $translateProvider.translations('nl', {
           'ACTIVITY': 'Activiteit',
           'ACTIVITY_FORMAT': 'Format',
           'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
-          'ACTIVITY': 'Activiteit',
           'AMOUNT_AUDIENCE': 'Max. aantal deelnemers',
           'AMOUNT_REPEAT': 'Max. aantal keren',
           'AMOUNT_SESSIONS': 'Aantal sessies',
@@ -230,6 +232,9 @@
           'WALK-IN': 'Doorlopende deelname',
           'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?',
           'YES': 'Ja',
+          'LANGUAGE_SUPPORT_TITLE': 'nvt',
+          'LANGUAGE_SUPPORT_DESC': 'nvt',
+          'LANGUAGE_SUPPORT_OPTION': 'nvt',
       });
 
       $translateProvider.preferredLanguage('nl');
