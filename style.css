@@ -138,3 +138,14 @@ md-input-container.md-cyan-theme .md-input  {
     transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
     color: #493F3A;
 }
+
+@media (min-width: 700px) {
+    .mainwrapper {
+        padding-left:10%;padding-right:10%
+    }
+}
+@media (min-width: 1200px) {
+    .mainwrapper {
+        padding-left:20%;padding-right:20%
+    }
+}

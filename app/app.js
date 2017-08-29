@@ -166,6 +166,7 @@
 
       $translateProvider.translations('en', {
             'ACTIVITY': 'Activity',
+            'ACTIVITY_DURATION_LABEL': 'Activity duration (in minutes)',
             'ACTIVITY_FORMAT': 'Format',
             'ACTIVITY_TITLE': 'Your Fri3d activity',
             'AMOUNT_AUDIENCE': 'Max. nr of participants',
@@ -206,6 +207,7 @@
             'TYPE_WORKSHOP': 'Workshop',
             'TYPE_WORKSHOP_DESC': 'Will participants of your activity have to roll up their sleeves and get their hands dirty? Will you guide them from a vast nothing to a new creation of their own making? We are here to help you get that workshop on the road.',
             'UNTIL': 'Until',
+            'VISIT_DURATION_LABEL': 'How long does it take for one visitor to participate in the event?',
             'WALK-IN': 'Walk-in attendance',
             'WILLING_TO_REPEAT': 'Are you willing to perform the same activity multiple times?',
             'WORKSHOP': 'Workshop',
@@ -230,6 +232,7 @@
 
       $translateProvider.translations('nl', {
           'ACTIVITY': 'Activiteit',
+          'ACTIVITY_DURATION_LABEL': 'Activiteit duur (in minuten)',
           'ACTIVITY_FORMAT': 'Format',
           'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
           'AMOUNT_AUDIENCE': 'Max. aantal deelnemers',
@@ -270,6 +273,7 @@
           'TYPE_WORKSHOP_DESC': 'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.',
           'TYPE_WORKSHOP': 'Workshop',
           'UNTIL': 'Tot',
+          'VISIT_DURATION_LABEL': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
           'WALK-IN': 'Doorlopende deelname',
           'WILLING_TO_REPEAT': 'Ben je bereid om deze activiteit meerdere keren uit te voeren?',
           'YES': 'Ja',
