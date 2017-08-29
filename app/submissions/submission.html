@@ -383,6 +383,40 @@
                 </div>
             </section>
 
+            <section id="general_remarks" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>{{ 'GENERAL_REMARKS_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'GENERAL_REMARKS_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <input ng-model="vm.submission.general_remarks">
+                        <div class="hint">{{ 'GENERAL_REMARKS_HINT' | translate }}</div>
+                    </md-input-container>
+                </div>
+            </section>
+
+            <section id="costs" class="md-whiteframe-1dp" layout-padding>
+                <div layout="column">
+                    <h2>{{ 'COSTS_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'COSTS_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex>
+                        <label>{{ 'COSTS_STATIC' | translate }}</label>
+                        <input type="number" ng-model="vm.submission.costs_static">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>{{ 'COSTS_PER_PERSON' | translate }}</label>
+                        <input type="number" ng-model="vm.submission.costs_per_person">
+                    </md-input-container>
+                </div>
+            </section>
+
             <section id="language_support" class="md-whiteframe-1dp" layout-padding ng-if="vm.lang === 'en'">
                 <div layout="column">
                     <h2>{{ 'LANGUAGE_SUPPORT_TITLE' | translate }}</h2>

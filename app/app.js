@@ -188,6 +188,13 @@
             'FAMILY': 'Family',
             'EXPERT': 'Expert',
             'NOT_IN_LIST': 'None of the above',
+            'GENERAL_REMARKS_TITLE': 'Remarks',
+            'GENERAL_REMARKS_DESC': '',
+            'GENERAL_REMARKS_HINT' : 'Any special requirements, words of wisdom, ...',
+            'COSTS_TITLE': 'Costs',
+            'COSTS_DESC': '',
+            'COSTS_STATIC': 'Static cost per workshop (EUR).',
+            'COSTS_PER_PERSON' : 'Costs per participant (EUR).',
       });
 
       $translateProvider.translations('nl', {
@@ -241,6 +248,13 @@
           'FAMILY': 'Familie',
           'EXPERT': 'Expert',
           'NOT_IN_LIST': 'Geen van bovenstaande opties',
+          'GENERAL_REMARKS_TITLE': 'Opmerkingen',
+          'GENERAL_REMARKS_DESC': '',
+          'GENERAL_REMARKS_HINT' : 'Enige speciale vereisten, opmerkingen, ...',
+          'COSTS_TITLE': 'Kosten',
+          'COSTS_DESC': '',
+          'COSTS_STATIC': 'Vaste kosten per workshop (EUR).',
+          'COSTS_PER_PERSON' : 'Kosten per participant (EUR).',
       });
 
       $translateProvider.preferredLanguage('nl');
