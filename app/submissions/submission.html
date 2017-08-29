@@ -79,17 +79,16 @@
                 </div>
                 <div layout-gt-sm="row">
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>{{ 'ASSOCIATED' | translate }}</label>
-                        <input ng-model="vm.submission.speaker_associated_hackerspaces">
-                        <div class="hint">Vul de hacker- en makerspaces in die je regelmatig bezoekt.</div>
-                    </md-input-container>
-
-                </div>
-                <div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
                         <label>Bio</label>
                         <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
                         <div class="hint">Welke informatie over jou is voor deelnemers interessant om in te schatten wat voor activiteit je organiseert?</div>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>{{ 'ASSOCIATED' | translate }}</label>
+                        <input ng-model="vm.submission.speaker_associated_hackerspaces">
+                        <div class="hint">Vul de hacker- en makerspaces in die je regelmatig bezoekt.</div>
                     </md-input-container>
                 </div>
             </section>
@@ -249,8 +248,6 @@
                 </div>
             </section>
 
-
-
             <section id="audience_activity_capacity_limit" class="md-whiteframe-1dp" layout-padding>
                 <div layout="column">
                     <h2>Aantal deelnemers</h2>
@@ -312,7 +309,8 @@
                     </md-input-container>
                 </div>
             </section>
-                        <section id="format_section" class="md-whiteframe-1dp" layout-padding>
+
+            <section id="format_section" class="md-whiteframe-1dp" layout-padding>
                             <div layout="row">
                                 <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
                             </div>
