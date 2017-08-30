@@ -204,6 +204,18 @@
                 </div>
             </section>
 
+            <section id="language_support" layout-padding ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
+                <div layout="column">
+                    <h2>{{ 'LANGUAGE_SUPPORT_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'LANGUAGE_SUPPORT_DESC' | translate }}
+                    </p>
+                </div>
+                <div layout="row">
+                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?">{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</md-switch>
+                </div>
+            </section>
+
             <section id="audience_activity_capacity_limit" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
                     <h2>{{ 'CAPACITY_TITLE' | translate }}</h2>
@@ -308,21 +320,6 @@
                 </div>
             </section>
 
-            <section id="general_remarks" layout-padding ng-if="vm.submission.type">
-                <div layout="column">
-                    <h2>{{ 'GENERAL_REMARKS_TITLE' | translate }}</h2>
-                    <p>
-                        {{ 'GENERAL_REMARKS_DESC' | translate }}
-                    </p>
-                </div>
-                <div layout="row">
-                    <md-input-container md-no-float class="md-block" flex-gt-xs>
-                        <input ng-model="vm.submission.general_remarks">
-                        <div class="hint">{{ 'GENERAL_REMARKS_HINT' | translate }}</div>
-                    </md-input-container>
-                </div>
-            </section>
-
             <section id="costs" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
                     <h2>{{ 'COSTS_TITLE' | translate }}</h2>
@@ -338,15 +335,18 @@
                 </div>
             </section>
 
-            <section id="language_support" layout-padding ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
+            <section id="general_remarks" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
-                    <h2>{{ 'LANGUAGE_SUPPORT_TITLE' | translate }}</h2>
+                    <h2>{{ 'GENERAL_REMARKS_TITLE' | translate }}</h2>
                     <p>
-                        {{ 'LANGUAGE_SUPPORT_DESC' | translate }}
+                        {{ 'GENERAL_REMARKS_DESC' | translate }}
                     </p>
                 </div>
                 <div layout="row">
-                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?">{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</md-switch>
+                    <md-input-container md-no-float class="md-block" flex-gt-xs>
+                        <input ng-model="vm.submission.general_remarks">
+                        <div class="hint">{{ 'GENERAL_REMARKS_HINT' | translate }}</div>
+                    </md-input-container>
                 </div>
             </section>
 
