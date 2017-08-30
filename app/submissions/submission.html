@@ -20,7 +20,7 @@
                 </div>
 
                 <p>
-                    TODO: toevoegen van beknopte "CFP tekst", cfr uitgestuurde tekst.
+                    {{ 'SUBMISSION_DESC' | translate }}
                 </p>
             </section>
 
@@ -28,8 +28,7 @@
                 <div layout="column" layout-padding>
                     <h2>{{ 'ACTIVITY_TITLE' | translate }}</h2>
                     <p>
-                        Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn.
-                        We delen ze in in drie grote categorieën:
+                        {{ 'ACTIVITY_DESC' | translate }}
                     </p>
                 </div>
                 <div layout="row"  layout-padding>
@@ -53,14 +52,14 @@
                   <md-input-container md-no-float class="md-block" flex-gt-sm>
                       <label class="md-no-float">{{ 'TITLE' | translate }}</label>
                       <input ng-model="vm.submission.title" >
-                      <div class="hint">Hoe moeten we jouw activiteit etaleren?</div>
+                      <div class="hint">{{ 'TITLE_HINT' | translate }}</div>
                   </md-input-container>
                 </div>
                 <div layout-gt-sm="row">
                   <md-input-container md-no-float class="md-block" flex-gt-sm>
                       <label class="md-no-float">{{ 'SUMMARY' | translate }}</label>
                       <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
-                      <div class="hint">Kan je een korte omschrijving geven van de activiteit?</div>
+                      <div class="hint">{{ 'SUMMARY_HINT' | translate }}</div>
                   </md-input-container>
                 </div>
             </section>
@@ -68,7 +67,7 @@
 
             <section id="speaker_section" layout-padding ng-if="vm.submission.type">
                 <div layout="row">
-                    <p>Vertel ons wat meer over jezelf.</p>
+                    <p>{{ 'SPEAKER' | translate }}</p>
                 </div>
                 <div layout-gt-sm="row">
                     <md-input-container md-no-float class="md-block" flex-gt-xs>
@@ -85,21 +84,21 @@
                     <md-input-container md-no-float class="md-block" flex-gt-sm>
                         <label class="md-no-float">Bio</label>
                         <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
-                        <div class="hint">Welke informatie over jou is voor deelnemers interessant om in te schatten wat voor activiteit je organiseert?</div>
+                        <div class="hint">{{ 'BIO_HINT' | translate }}</div>
                     </md-input-container>
                 </div>
                 <div layout-gt-sm="row">
                     <md-input-container md-no-float class="md-block" flex-gt-sm>
                         <label class="md-no-float">{{ 'ASSOCIATED' | translate }}</label>
                         <input ng-model="vm.submission.speaker_associated_hackerspaces">
-                        <div class="hint">Vul de hacker- en makerspaces in die je regelmatig bezoekt.</div>
+                        <div class="hint">{{ 'HACKERSPACES_HINT' | translate }}</div>
                     </md-input-container>
                 </div>
             </section>
 
             <section id="availability_section" layout-padding ng-if="vm.submission.type">
                 <div layout="row">
-                    <p>Wanneer ben je beschikbaar om deze activiteit te organizeren?</p>
+                    <p>{{ 'AVAILABILITY' | translate }}</p>
                 </div>
                 <div layout="column">
 
@@ -171,8 +170,8 @@
 
             <section id="target_audience_section" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
-                    <h2>Publiek</h2>
-                    <p>Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.</p>
+                    <h2>{{ 'AUDIENCE_TITLE' | translate }}</h2>
+                    <p>{{ 'AUDIENCE_DESC' | translate }}</p>
                 </div>
                 <div layout="row">
                     <md-radio-group ng-model="vm.submission.audience_level" flex-gt-sm >
@@ -191,25 +190,25 @@
 
             <section id="location_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
-                    <h2>Locatie</h2>
+                    <h2>{{ 'LOCATION_TITLE' | translate }}</h2>
                     <p>
-                        Heb je specifieke noden of materiaal nodig tijdens de workshop?
+                        {{ 'LOCATION_DESC' | translate }}
                     </p>
                 </div>
                 <div layout-gt-sm="row">
                     <md-input-container md-no-float class="md-block" flex-gt-sm>
-                        <label class="md-no-float">Requirements</label>
+                        <label class="md-no-float">{{ 'LOCATION_LABEL' | translate }}</label>
                         <textarea ng-model="vm.submission.location_special_requirements" md-maxlength="150" rows="3"></textarea>
-                        <div class="hint">Vereisten qua plaats, benodigd materieel, extra helpers, ...</div>
+                        <div class="hint">{{ 'LOCATION_HINT' | translate }}</div>
                     </md-input-container>
                 </div>
             </section>
 
             <section id="audience_activity_capacity_limit" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
-                    <h2>Aantal deelnemers</h2>
+                    <h2>{{ 'CAPACITY_TITLE' | translate }}</h2>
                     <p>
-                        Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?
+                        {{ 'CAPACITY_DESC' | translate }}
                     </p>
                 </div>
                 <div layout="row">
@@ -222,9 +221,9 @@
 
             <section id="sessions_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <div layout="column">
-                    <h2>Sessies</h2>
+                    <h2>{{ 'SESSIONS_TITLE' | translate }}</h2>
                     <p>
-                        Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.
+                        {{ 'SESSIONS_DESC' | translate }}
                     </p>
                 </div>
                 <div layout="row">
@@ -236,8 +235,11 @@
             </section>
 
             <section id="format_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                <div layout="row">
-                    <p>Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?</p>
+                <div layout="column">
+                    <h2>{{ 'FORMAT_TITLE' | translate }}</h2>
+                    <p>
+                        {{ 'FORMAT_DESC' | translate }}
+                    </p>
                 </div>
                 <div layout="row">
                     <md-radio-group ng-model="vm.submission.format">
@@ -248,9 +250,9 @@
 
             <section id="collaborators_section" layout-padding ng-if="vm.submission.type">
                 <div layout="column">
-                    <h2>Medewerkers</h2>
+                    <h2>{{ 'COLLABORATORS_TITLE' | translate }}</h2>
                     <p>
-                        Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.
+                        {{ 'COLLABORATORS_DESC' | translate }}
                     </p>
                 </div>
                 <div layout="row">
@@ -265,7 +267,7 @@
                         </md-list-item>
                         <md-list-item layout="column" layout-align="center center" ng-if="!vm.submission.collaborators || vm.submission.collaborators.length < 1" >
                             <md-button class="md-raised md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
-                                Voeg een medewerker toe
+                                {{ 'COLLABORATORS_ADD_BUTTON' | translate }}
                             </md-button>
                         </md-list-item>
                         <md-list-item layout="row" layout-align="start center" ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
@@ -282,9 +284,9 @@
 
             <section id="activity_duration_section" layout-padding ng-if="vm.submission.type">
                 <div layout-gt-sm="column">
-                    <h2>Hoe lang duurt je activiteit?</h2>
+                    <h2>{{ 'ACTIVITY_DURATION_TITLE' | translate }}</h2>
                     <p>
-                        Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?
+                        {{ 'ACTIVITY_DURATION_DESC' | translate }}
                     </p>
                 </div>
                 <div layout-gt-sm="row">
@@ -295,7 +297,7 @@
                 </div>
                 <div layout-gt-sm="column" ng-if="vm.submission.format && vm.submission.format !== 'FULLTIME'">
                     <p>
-                        Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?
+                        {{ 'ACTIVITY_DURATION_PER_PARTICIPANT' | translate }}
                     </p>
                 </div>
                 <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.format !== 'FULLTIME'">
@@ -330,7 +332,7 @@
                 </div>
                 <div layout="row">
                     <md-input-container md-no-float class="md-block" flex>
-                        <label class="md-no-float">{{ 'COSTS_DESC' | translate }}</label>
+                        <label class="md-no-float">{{ 'COSTS_LABEL' | translate }}</label>
                         <input type="number" ng-model="vm.submission.costs" min="0">
                     </md-input-container>
                 </div>

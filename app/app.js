@@ -12,7 +12,7 @@
     '$mdThemingProvider',
     '$httpProvider',
     'jwtOptionsProvider',
-      '$translateProvider'
+    '$translateProvider'
   ];
 
   function config(
@@ -165,10 +165,44 @@
     $locationProvider.html5Mode(true);
 
       $translateProvider.translations('en', {
+          'TITLE_HINT': 'Hoe moeten we jouw activiteit etaleren?',
+          'SUMMARY_HINT': 'Kan je een korte omschrijving geven van de activiteit?',
+          'SPEAKER': 'Vertel ons wat meer over jezelf',
+          'BIO_HINT': 'Welke informatie over jou is voor deelnemers interessant om in te schatten wat voor activiteit je organiseert?',
+          'HACKERSPACES_HINT': 'Vul de hacker- en makerspaces in die je regelmatig bezoekt.',
+          'AVAILABILITY': 'Wanneer ben je beschikbaar om deze activiteit te organizeren?',
+          'AUDIENCE_TITLE': 'Publiek',
+          'AUDIENCE_DESC': 'Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.',
+          'LOCATION_TITLE': 'Locatie',
+          'LOCATION_DESC': 'Heb je specifieke noden of materiaal nodig tijdens de workshop?',
+          'LOCATION_LABEL': 'Requirements', // jef votes for removal
+          'LOCATION_HINT': 'Vereisten qua plaats, benodigd materieel, extra helpers, ...',
+          'CAPACITY_TITLE': 'Aantal deelnemers',
+          'CAPACITY_DESC': 'Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?',
+          'SESSIONS_TITLE': 'Sessies',
+          'SESSIONS_DESC': 'Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.',
+          'FORMAT_TITLE': 'Format',
+          'FORMAT_DESC': 'Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?',
+          'COLLABORATORS_TITLE': 'Medewerkers',
+          'COLLABORATORS_DESC': 'Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.',
+          'COLLABORATORS_ADD_BUTTON': 'Voeg een medewerker toe',
+          'ACTIVITY_DURATION_TITLE': 'Hoe lang duurt je activiteit?',
+          'ACTIVITY_DURATION_DESC': 'Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?',
+          'ACTIVITY_DURATION_PER_PARTICIPANT': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
+
+
+
+
+
+
+            'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Call for participation',
+            'SUBMISSION_DESC': 'TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.',
+            'SUBMISSION_TYPE': 'Type',
             'ACTIVITY': 'Activity',
             'ACTIVITY_DURATION_LABEL': 'Activity duration (in minutes)',
             'ACTIVITY_FORMAT': 'Format',
             'ACTIVITY_TITLE': 'Your Fri3d activity',
+            'ACTIVITY_DESC' : 'Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:',
             'AMOUNT_AUDIENCE': 'Max. nr of participants',
             'AMOUNT_REPEAT': 'Max. nr of times',
             'AMOUNT_SESSIONS': 'Number of sessions',
@@ -195,8 +229,6 @@
             'NO_SESSIONS': 'No Sessions',
             'REPEATS' : 'Maximum nr. of times you want to repeat your activity',
             'SPEAKER': 'Speaker',
-            'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Call for participation',
-            'SUBMISSION_TYPE': 'Type',
             'SUMMARY': 'Summary',
             'TALK': 'Talk',
             'TITLE': 'Title of your activity',
@@ -225,16 +257,44 @@
             'COSTS_TITLE': 'Costs',
             'COSTS_DESC': 'A note about costs',
             'SUBMISSION_COMPLETE_OPTION' :'My proposal is complete, let\'s go!',
-          'SAVE' :'Save',
-          'AUDIENCE_REQUIREMENTS_LABEL' :'Are there specific expectations you have towards your audience?',
-          'AUDIENCE_REQUIREMENTS_HINT' :'Certain knowledge or capabilities, materials to bring, ...',
+            'SAVE' :'Save',
+            'AUDIENCE_REQUIREMENTS_LABEL' :'Are there specific expectations you have towards your audience?',
+            'AUDIENCE_REQUIREMENTS_HINT' :'Certain knowledge or capabilities, materials to bring, ...',
       });
 
       $translateProvider.translations('nl', {
+          'TITLE_HINT': 'Hoe moeten we jouw activiteit etaleren?',
+          'SUMMARY_HINT': 'Kan je een korte omschrijving geven van de activiteit?',
+          'SPEAKER': 'Vertel ons wat meer over jezelf',
+          'BIO_HINT': 'Welke informatie over jou is voor deelnemers interessant om in te schatten wat voor activiteit je organiseert?',
+          'HACKERSPACES_HINT': 'Vul de hacker- en makerspaces in die je regelmatig bezoekt.',
+          'AVAILABILITY': 'Wanneer ben je beschikbaar om deze activiteit te organizeren?',
+          'AUDIENCE_TITLE': 'Publiek',
+          'AUDIENCE_DESC': 'Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.',
+          'LOCATION_TITLE': 'Locatie',
+          'LOCATION_DESC': 'Heb je specifieke noden of materiaal nodig tijdens de workshop?',
+          'LOCATION_LABEL': 'Requirements', // jef votes for removal
+          'LOCATION_HINT': 'Vereisten qua plaats, benodigd materieel, extra helpers, ...',
+          'CAPACITY_TITLE': 'Aantal deelnemers',
+          'CAPACITY_DESC': 'Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?',
+          'SESSIONS_TITLE': 'Sessies',
+          'SESSIONS_DESC': 'Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.',
+          'FORMAT_TITLE': 'Format',
+          'FORMAT_DESC': 'Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?',
+          'COLLABORATORS_TITLE': 'Medewerkers',
+          'COLLABORATORS_DESC': 'Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.',
+          'COLLABORATORS_ADD_BUTTON': 'Voeg een medewerker toe',
+          'ACTIVITY_DURATION_TITLE': 'Hoe lang duurt je activiteit?',
+          'ACTIVITY_DURATION_DESC': 'Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?',
+          'ACTIVITY_DURATION_PER_PARTICIPANT': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
+          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Uitnodiging tot deelname',
+          'SUBMISSION_DESC': 'TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.',
+          'SUBMISSION_TYPE': 'Type',
           'ACTIVITY': 'Activiteit',
           'ACTIVITY_DURATION_LABEL': 'Activiteit duur (in minuten)',
           'ACTIVITY_FORMAT': 'Format',
           'ACTIVITY_TITLE': 'Jouw Fri3d activiteit',
+          'ACTIVITY_DESC' : 'Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:',
           'AMOUNT_AUDIENCE': 'Max. aantal deelnemers',
           'AMOUNT_REPEAT': 'Max. aantal keren',
           'AMOUNT_SESSIONS': 'Aantal sessies',
@@ -261,8 +321,6 @@
           'NO': 'Nee',
           'REPEATS' : 'Maximum aantal keren dat je je activiteit wil herhalen',
           'SPEAKER': 'Spreker',
-          'SUBMISSION_CAPTION': 'Fri3d Camp 2018: Uitnodiging tot deelname',
-          'SUBMISSION_TYPE': 'Type',
           'SUMMARY': 'Samenvatting',
           'TALK': 'Presentatie',
           'TITLE': 'Titel van je activiteit',
@@ -289,6 +347,7 @@
           'GENERAL_REMARKS_HINT' : 'Enige speciale vereisten, opmerkingen, ...',
           'COSTS_TITLE': 'Kosten',
           'COSTS_DESC': 'Kosten uitleg',
+          'COSTS_LABEL': 'Kosten uitleg label',
           'SUBMISSION_COMPLETE_OPTION' :'Mijn voorstel is compleet, bekijken maar!',
           'SAVE' :'Bewaar',
           'AUDIENCE_REQUIREMENTS_LABEL' :'Zijn er specifieke verwachtingen die je hebt van je publiek?',
