@@ -231,7 +231,7 @@
         'ACTIVITY_DURATION_PER_PARTICIPANT': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
         'VISIT_DURATION_LABEL': 'How long does it take for one visitor to participate in the event?',
         'COSTS_TITLE': 'Costs',
-        'COSTS_DESC': 'A note about costs',
+        'COSTS_DESC': 'A note about costs, in €',
         'COSTS_LABEL': 'Kosten uitleg label',
         'GENERAL_REMARKS_TITLE': 'Remarks',
         'GENERAL_REMARKS_DESC': '',
@@ -308,7 +308,7 @@
         'ACTIVITY_DURATION_PER_PARTICIPANT': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
         'VISIT_DURATION_LABEL': 'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?',
         'COSTS_TITLE': 'Kosten',
-        'COSTS_DESC': 'Kosten uitleg',
+        'COSTS_DESC': 'Kosten uitleg, in €',
         'COSTS_LABEL': 'Kosten uitleg label',
         'GENERAL_REMARKS_TITLE': 'Opmerkingen',
         'GENERAL_REMARKS_DESC': '',
@@ -319,6 +319,7 @@
       });
 
       $translateProvider.preferredLanguage('nl');
+
   }
 
 })();
