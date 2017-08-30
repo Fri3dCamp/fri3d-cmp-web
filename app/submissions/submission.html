@@ -52,7 +52,7 @@
                 </div>
                 <div layout="row" layout-padding ng-if="!vm.submission.type">
                     <div class="md-accent">
-                        <p>Kies één van de bovenstaande soorten content om de rest van het formulier in te vullen</p>
+                        <p>{{ 'TYPE_SELECT_PROMPT' | translate }}</p>
                     </div>
                 </div>
             </section>
@@ -409,7 +409,7 @@
                 <label class="md-no-float">{{ 'MESSAGE' | translate }}</label>
                 <textarea ng-model="vm.comment" rows="3"></textarea>
             </md-input-container>
-            <md-button>Send</md-button>
+            <md-button>{{ 'BTN_SEND' | translate }}</md-button>
         </div>
     </md-sidenav>
 </div>
