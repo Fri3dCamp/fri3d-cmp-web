@@ -23,20 +23,35 @@
       //     }
       // });
 
+      if (!vm.lang) {
+          vm.lang = 'nl';
+      }
+
+
       $scope.$watch('lang', function() {
           $translate.use($location.hash());
       });
 
-      vm.toggleLanguage = function() {
+      vm.toggleTranslate = function() {
           if (vm.translate) {
               $location.hash('en');
           } else {
               $location.hash('nl');
           }
+
+      };
+      vm.toggleLanguage = function() {
+          if (vm.lang == 'nl') {
+             vm.translate = false;
+             $location.hash('nl');
+          } else {
+             vm.translate = true;
+             $location.hash('en');
+          }
       };
 
     // -- variables
-      vm.comments = comments;
+    vm.comments = comments;
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
     vm.formatTypes = [ "FULLTIME", "WALK-IN" ];

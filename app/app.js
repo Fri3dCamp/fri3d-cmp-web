@@ -25,7 +25,7 @@
     $translateProvider
   ) {
 
-      $mdThemingProvider.definePalette('fri3dPalette', {
+     /* $mdThemingProvider.definePalette('fri3dPalette', {
             '50': 'ff0000',
             '100': 'ff0000',
             '200': 'ff0000',
@@ -46,20 +46,27 @@
             'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
              '200', '300', '400', 'A100'],
             'contrastLightColors': undefined    // could also specify this if default was 'dark'
-      });
+      });*/
 
-
-      let fri3dMap = $mdThemingProvider.extendPalette('cyan', {
+      let fri3dGreen = $mdThemingProvider.extendPalette('cyan', {
           'contrastDefaultColor' : 'light',
-          '500': '#0E98AF'
+          '500': '#0E98AF',
+      })
+
+      let fri3dOrange = $mdThemingProvider.extendPalette('deep-orange', {
+          'contrastDefaultColor' : 'dark',
+          '500': '#DD7222',
+          'A200': '#DD7222',
       });
 
       // Register the new color palette map with the name <code>neonRed</code>
-      $mdThemingProvider.definePalette('fri3d', fri3dMap);
+      $mdThemingProvider.definePalette('fri3dGreen', fri3dGreen);
+      $mdThemingProvider.definePalette('fri3dOrange', fri3dOrange);
 
       // Use that theme for the primary intentions
       $mdThemingProvider.theme('cyan')
-          .primaryPalette('fri3d');
+          .primaryPalette('fri3dGreen')
+          .accentPalette('fri3dOrange');
 
       $mdThemingProvider.setDefaultTheme('cyan');
 
