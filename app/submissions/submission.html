@@ -112,38 +112,44 @@
                 <h1 class="fc-section-title">{{ 'AVAILABILITY_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'AVAILABILITY_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
-                    <div layout="row" layout-align="start center">
-                        <span flex class="md-body-1">{{ 'DAY_ONE' | translate }}</span>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_1_from" min="9" max="21">
-                        </md-input-container>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_1_until" min="9" max="21">
-                        </md-input-container>
+                    <div layout="column" layout-gt-xs="row" layout-align="start start">
+                        <md-switch flex ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
+                        <div layout="row" flex-gt-xs>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'FROM' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_1_from" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_1_until" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
+                            </md-input-container>
+                        </div>
                     </div>
-                    <div layout="row"  layout-align="start center">
-                        <span flex class="md-body-1">{{ 'DAY_TWO' | translate }}</span>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_2_from" min="9" max="21">
-                        </md-input-container>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_2_until" min="9" max="21">
-                        </md-input-container>
+                    <div layout="column"  layout-gt-xs="row" layout-align="start start">
+                        <md-switch flex ng-model="vm.submission.day_2_available">{{ 'DAY_TWO' | translate }}</md-switch>
+                        <div layout="row" flex-gt-xs>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'FROM' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_2_from" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_2_until" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
+                            </md-input-container>
+                        </div>
                     </div>
-                    <div layout="row" layout-align="start center">
-                        <span flex class="md-body-1">{{ 'DAY_THREE' | translate }}</span>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_3_from" min="9" max="21">
-                        </md-input-container>
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                            <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                            <input type="number" ng-model="vm.submission.day_3_until" min="9" max="21">
-                        </md-input-container>
+                    <div layout="column" layout-gt-xs="row" layout-align="start start">
+                        <md-switch flex ng-model="vm.submission.day_3_available">{{ 'DAY_THREE' | translate }}</md-switch>
+                        <div layout="row" flex-gt-xs>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'FROM' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_3_from" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block" flex-gt-xs>
+                                <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
+                                <input type="number" ng-model="vm.submission.day_3_until" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
+                            </md-input-container>
+                        </div>
                     </div>
 
                     <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
@@ -313,40 +319,40 @@
     </div>
     </md-content>
 
-    <md-sidenav
-            class="md-sidenav-right"
-            md-component-id="right"
-            md-is-locked-open="$mdMedia('gt-md')"
-            md-whiteframe="4" ng-if="vm.comments && vm.comments.data && vm.comments.data.length > 0">
-        <md-content flex>
-            <md-list class="md-dense" flex>
-                <md-list-item ng-repeat="comment in vm.comments.data" class="md-3-line" >
-                    <md-icon md-font-icon="lnr-warning" class="lnr md-avatar"></md-icon>
-                    <div class="md-list-item-text" layout="column">
-                        <h4>{{comment.data.message}}</h4>
-                        <span class="md-caption" am-time-ago="comment.data.timestamp | amParse"></span>
-                        <div layout="column">
-                            <div layout="row" ng-repeat="delta in comment.data.diff" layout-align="space-between center">
-                                <span class="md-caption">{{ delta.path.join(', ') }}</span>
-                                <span class="md-caption" ng-if="delta.kind == 'N'"> SET </span>
-                                <span class="md-caption" ng-if="delta.kind == 'D'"> DEL </span>
-                                <span class="md-caption" ng-if="delta.kind == 'E'"> SET </span>
-                                <span class="md-caption" ng-if="delta.kind == 'A'"> ADD </span>
-                                <span class="md-caption" flex>{{ delta.rhs | limitTo:100 }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <md-divider></md-divider>
-                </md-list-item>
-            </md-list>
-        </md-content>
-        <md-divider></md-divider>
-        <div layout="row" layout-align="start stretch" layout-padding>
-            <md-input-container md-no-float flex>
-                <label class="md-no-float">{{ 'MESSAGE' | translate }}</label>
-                <textarea ng-model="vm.comment" rows="3"></textarea>
-            </md-input-container>
-            <md-button>{{ 'BTN_SEND' | translate }}</md-button>
-        </div>
-    </md-sidenav>
+    <!--<md-sidenav-->
+            <!--class="md-sidenav-right"-->
+            <!--md-component-id="right"-->
+            <!--md-is-locked-open="$mdMedia('gt-md')"-->
+            <!--md-whiteframe="4" ng-if="vm.comments && vm.comments.data && vm.comments.data.length > 0">-->
+        <!--<md-content flex>-->
+            <!--<md-list class="md-dense" flex>-->
+                <!--<md-list-item ng-repeat="comment in vm.comments.data" class="md-3-line" >-->
+                    <!--<md-icon md-font-icon="lnr-warning" class="lnr md-avatar"></md-icon>-->
+                    <!--<div class="md-list-item-text" layout="column">-->
+                        <!--<h4>{{comment.data.message}}</h4>-->
+                        <!--<span class="md-caption" am-time-ago="comment.data.timestamp | amParse"></span>-->
+                        <!--<div layout="column">-->
+                            <!--<div layout="row" ng-repeat="delta in comment.data.diff" layout-align="space-between center">-->
+                                <!--<span class="md-caption">{{ delta.path.join(', ') }}</span>-->
+                                <!--<span class="md-caption" ng-if="delta.kind == 'N'"> SET </span>-->
+                                <!--<span class="md-caption" ng-if="delta.kind == 'D'"> DEL </span>-->
+                                <!--<span class="md-caption" ng-if="delta.kind == 'E'"> SET </span>-->
+                                <!--<span class="md-caption" ng-if="delta.kind == 'A'"> ADD </span>-->
+                                <!--<span class="md-caption" flex>{{ delta.rhs | limitTo:100 }}</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<md-divider></md-divider>-->
+                <!--</md-list-item>-->
+            <!--</md-list>-->
+        <!--</md-content>-->
+        <!--<md-divider></md-divider>-->
+        <!--<div layout="row" layout-align="start stretch" layout-padding>-->
+            <!--<md-input-container md-no-float flex>-->
+                <!--<label class="md-no-float">{{ 'MESSAGE' | translate }}</label>-->
+                <!--<textarea ng-model="vm.comment" rows="3"></textarea>-->
+            <!--</md-input-container>-->
+            <!--<md-button>{{ 'BTN_SEND' | translate }}</md-button>-->
+        <!--</div>-->
+    <!--</md-sidenav>-->
 </div>

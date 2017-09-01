@@ -83,18 +83,7 @@
           resolve: {
               comments: [function() { return {}; }],
               submission: [function() {
-                  return {
-                      status: "IN_PREPARATION",
-                      activity_participant_limit: 25,
-                      day_1_from: 9,
-                      day_1_until: 21,
-                      day_2_from: 9,
-                      day_2_until: 21,
-                      day_3_from: 9,
-                      day_3_until: 21,
-                      costs: 0,
-                      session_count: 1
-                  };
+                  return emptySubmission();
               }],
               language: ['$location', function($location) {
                   return $location.hash() === 'en' ? 'en' : 'nl';
@@ -113,18 +102,7 @@
                   if ($route.current.params.id) {
                       return SubmissionService.get($route.current.params.id);
                   } else {
-                      return {
-                          status: "IN_PREPARATION",
-                          activity_participant_limit: 25,
-                          day_1_from: 9,
-                          day_1_until: 21,
-                          day_2_from: 9,
-                          day_2_until: 21,
-                          day_3_from: 9,
-                          day_3_until: 21,
-                          costs: 0,
-                          session_count: 1
-                      };
+                      return emptySubmission();
                   }
               }],
               language: ['$location', function($location) {
@@ -332,6 +310,24 @@
       // });
 
       $translateProvider.preferredLanguage('nl');
+
+      function emptySubmission() {
+          return {
+              status: "IN_PREPARATION",
+              activity_participant_limit: 25,
+              day_1_available: true,
+              day_1_from: 9,
+              day_1_until: 21,
+              day_2_available: true,
+              day_2_from: 9,
+              day_2_until: 21,
+              day_3_available: true,
+              day_3_from: 9,
+              day_3_until: 21,
+              costs: 0,
+              session_count: 1
+          };
+      }
 
   }
 
