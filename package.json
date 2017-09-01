@@ -29,6 +29,7 @@
     "angular-translate": "^2.15.2",
     "angular-ui-ace": "^0.2.3",
     "angular-uuid": "0.0.4",
+    "angular-webstorage": "^0.1.2",
     "auth0-js": "^8.6.0",
     "babel-eslint": "^7.2.3",
     "bootstrap": "^3.3.7",

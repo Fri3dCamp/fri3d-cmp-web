@@ -6,47 +6,24 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog'];
+    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog', 'webStorageService'];
 
-  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog) {
-    let vm = this;
+  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog, webStorageService) {
+      let vm = this;
 
-      vm.lang = $location.hash();
-      vm.translate = $location.hash() === 'en';
-      $translate.use($location.hash());
+      // -- get the search arguments from the url and check if a lang query is available.
+      let searchArgs = $location.search();
+      vm.lang = searchArgs['lang'] || 'nl';
 
-      // $scope.$watch('translate', function() {
-      //     if ($scope.translate) {
-      //         $location.hash('en');
-      //     } else {
-      //         $location.hash('nl');
-      //     }
-      // });
+      vm.translate = vm.lang === 'en';
+      $translate.use(vm.lang);
 
-      if (!vm.lang) {
-          vm.lang = 'nl';
-      }
-
-
-      $scope.$watch('lang', function() {
-          $translate.use($location.hash());
-      });
-
-      vm.toggleTranslate = function() {
-          if (vm.translate) {
-              $location.hash('en');
-          } else {
-              $location.hash('nl');
-          }
-
-      };
       vm.toggleLanguage = function() {
-          if (vm.lang == 'nl') {
-             vm.translate = false;
-             $location.hash('nl');
+          webStorageService.set('pending_submission', vm.submission, false);
+          if (vm.lang === 'nl') {
+              $location.search('lang', 'en').replace();
           } else {
-             vm.translate = true;
-             $location.hash('en');
+              $location.search('lang', 'nl').replace();
           }
       };
 
@@ -57,6 +34,11 @@
     vm.formatTypes = [ "FULLTIME", "WALK-IN" ];
     vm.audienceLevels = [ "FAMILY", "EXPERT", "NOT_IN_LIST" ];
     vm.timeBuckets = _generateTimeBuckets();
+
+    if (webStorageService.get('pending_submission', 'sessionStorage')) {
+        vm.submission = webStorageService.get('pending_submission', 'sessionStorage');
+        webStorageService.remove('pending_submission', 'sessionStorage');
+    }
 
     // -- functions
     vm.save = save;
