@@ -46,6 +46,23 @@
     vm.editCollaborator = editCollaborator;
     vm.removeCollaborator = removeCollaborator;
 
+      vm.toggle = toggle;
+      vm.inList = inList;
+
+      function inList(item, list) {
+          return list.indexOf(item) > -1;
+      }
+
+      function toggle(item, list) {
+          let idx = list.indexOf(item);
+          if (idx > -1) {
+              list.splice(idx, 1);
+          }
+          else {
+              list.push(item);
+          }
+      }
+
     function save() {
         if (vm.ready_to_publish) {
             vm.submission.status = "PROPOSED";

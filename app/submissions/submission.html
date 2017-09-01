@@ -161,11 +161,14 @@
             <section id="target_audience_section" layout-padding ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'AUDIENCE_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'AUDIENCE_SECTION_SUMMARY' | translate }}</p>
-                <div class="fc-section-body">
-                    <div layout="row">
-                        <md-radio-group ng-model="vm.submission.audience_level" flex-gt-sm >
-                            <md-radio-button ng-repeat="level in vm.audienceLevels" ng-value="level">{{ level | translate }}</md-radio-button>
-                        </md-radio-group>
+                <div class="fc-section-body" layout="column">
+                    <div layout="column" layout-gt-xs="row">
+                        <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
+                                     ng-click="vm.toggle(level, vm.submission.audience_level)"
+                                     ng-repeat="level in vm.audienceLevels"
+                                     flex-gt-sm>
+                            {{ level | translate}}
+                        </md-checkbox>
                     </div>
 
                     <div layout="row">
