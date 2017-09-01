@@ -51,7 +51,7 @@
       let fri3dGreen = $mdThemingProvider.extendPalette('cyan', {
           'contrastDefaultColor' : 'light',
           '500': '#0E98AF',
-      })
+      });
 
       let fri3dOrange = $mdThemingProvider.extendPalette('deep-orange', {
           'contrastDefaultColor' : 'dark',
@@ -199,11 +199,7 @@
         'FROM': 'From',
         'UNTIL': 'Until',
         'DAY_TWO': 'Day 2 (Sunday, August 19)',
-        'FROM': 'From',
-        'UNTIL': 'Until',
         'DAY_THREE': 'Day 3 (Monday, August 20)',
-        'FROM': 'From',
-        'UNTIL': 'Until',
         'REPETITION_OPTION': 'Are you open to repeat this activity multiple times?',
         'AUDIENCE_TITLE': 'Publiek',
         'AUDIENCE_DESC': 'Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.',
@@ -231,8 +227,6 @@
         'WALK-IN': 'Walk-in attendance',
         'COLLABORATORS_TITLE': 'Medewerkers',
         'COLLABORATORS_DESC': 'Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.',
-        'NAME': 'Name',
-        'EMAIL': 'E-Mail',
         'COLLABORATORS_ADD_BUTTON': 'Voeg een medewerker toe',
         'ACTIVITY_DURATION_TITLE': 'Hoe lang duurt je activiteit?',
         'ACTIVITY_DURATION_DESC': 'Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?',
@@ -278,11 +272,7 @@
         'FROM': 'Van',
         'UNTIL': 'Tot',
         'DAY_TWO': 'Dag 2 (Zondag 19 augustus)',
-        'FROM': 'Van',
-        'UNTIL': 'Tot',
         'DAY_THREE': 'Dag 3 (Maandag 20 augustus)',
-        'FROM': 'Van',
-        'UNTIL': 'Tot',
         'REPETITION_OPTION': 'Zou je deze activiteit meerdere keren willen organiseren tijdens het kamp?',
         'AUDIENCE_TITLE': 'Publiek',
         'AUDIENCE_DESC': 'Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.',
@@ -310,8 +300,6 @@
         'WALK-IN': 'Doorlopende deelname',
         'COLLABORATORS_TITLE': 'Medewerkers',
         'COLLABORATORS_DESC': 'Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.',
-        'NAME': 'Naam',
-        'EMAIL': 'E-Mail Adres',
         'COLLABORATORS_ADD_BUTTON': 'Voeg een medewerker toe',
         'ACTIVITY_DURATION_TITLE': 'Hoe lang duurt je activiteit?',
         'ACTIVITY_DURATION_DESC': 'Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?',
