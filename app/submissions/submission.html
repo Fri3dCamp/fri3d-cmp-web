@@ -247,18 +247,6 @@
                 <div class="fc-section-body">
                     <md-whiteframe class="md-whiteframe-1dp" flex>
                     <md-list flex>
-                        <md-list-item layout="row" layout-align="start center" flex >
-                                <span class="md-body-2" flex>{{ 'NAME' | translate }}</span>
-                                <span class="md-body-2" flex>{{ 'EMAIL' | translate }}</span>
-                                <md-button class="md-icon-button md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
-                                    <md-icon md-font-icon="lnr-plus-circle" class="lnr"></md-icon>
-                                </md-button>
-                        </md-list-item>
-                        <!--<md-list-item layout="column" layout-align="center center" ng-if="!vm.submission.collaborators || vm.submission.collaborators.length < 1" >-->
-                            <!--<md-button class="md-raised md-primary" ng-click="vm.showNewCollaboratorDialog($event)">-->
-                                <!--{{ 'COLLABORATORS_ADD_BUTTON' | translate }}-->
-                            <!--</md-button>-->
-                        <!--</md-list-item>-->
                         <md-list-item layout="row" layout-align="start center" ng-repeat="collaborator in vm.submission.collaborators" ng-click="vm.editCollaborator($event, collaborator)" flex>
                             <span class="md-body-1" flex>{{ collaborator.name }}</span>
                             <span class="md-body-1" flex>{{ collaborator.email }}</span>
@@ -268,6 +256,13 @@
                         </md-list-item>
                     </md-list>
                 </md-whiteframe>
+                <div class="fc-section-body">
+                  <center>
+                    <md-button class="md-raised md-primary" ng-click="vm.showNewCollaboratorDialog($event)">
+                      {{ 'COLLABORATORS_ADD_BUTTON' | translate }}
+                    </md-button>
+                  </center>
+                </div>
                 </div>
             </section>
 
