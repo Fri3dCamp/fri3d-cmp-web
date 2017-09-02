@@ -4,6 +4,12 @@ body {
   font-weight: 300;
 }
 
+html, 
+body {
+  background-color: #FAFAFA;
+  height: 100%;
+}
+
 .lnr {
   color: #515151;
   font-size: 24px;
