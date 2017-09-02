@@ -327,7 +327,10 @@
               costs: 0,
               session_count: 1,
               audience_level: [],
-              open_for_repetitions: true
+              open_for_repetitions: true,
+              format: true,
+              activity_duration: 60,
+              visit_duration: 15
           };
       }
 

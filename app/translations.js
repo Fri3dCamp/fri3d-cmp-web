@@ -1,6 +1,10 @@
 angular.module('app').constant('translations', {
-    'ACTIVITY_DURATION_LABEL': ['Activiteit duur (in minuten)'],
-    'ACTIVITY_DURATION_PER_PARTICIPANT': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
+    'ACTIVITY_DURATION_LABEL': [
+      'Totale duur (in minuten)'
+    ],
+    'ACTIVITY_DURATION_PER_PARTICIPANT': [
+      'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'
+    ],
     'ACTIVITY_SECTION_TITLE' : [
       "Jouw Fri3d activiteit"
     ],
@@ -31,19 +35,22 @@ angular.module('app').constant('translations', {
     'COLLABORATORS_ADD_BUTTON': ['Voeg een medewerker toe'],
     'COLLABORATORS_SECTION_SUMMARY': ['Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.'],
     'COLLABORATORS_SECTION_TITLE': ['Medewerkers'],
-    'COSTS_LABEL': [],
+    'COSTS_LABEL': [
+      'Kostprijs per deelnemer'
+    ],
     'COSTS_SECTION_SUMMARY': [],
     'COSTS_SECTION_TITLE': ['Kosten'],
     'DAY_ONE': ['Dag 1 (Zaterdag 18 augustus)'],
     'DAY_TWO': ['Dag 2 (Zondag 19 augustus)'],
     'DAY_THREE': ['Dag 3 (Maandag 20 augustus)'],
     'DURATION_SECTION_SUMMARY': ['Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?'],
-    'DURATION_SECTION_TITLE': ['Hoe lang duurt je activiteit?'],
+    'DURATION_SECTION_TITLE': [
+      'Verloop'
+    ],
     'EMAIL': ['E-Mail Adres'],
     'EXPERT': ['Expert'],
     'FAMILY': ['Familie'],
-    'FORMAT_SECTION_SUMMARY': ['Moeten deelnemers jouw activiteit van begin tot einde volgen, of kunnen ze doorlopend aansluiten?'],
-    'FORMAT_SECTION_TITLE': ['Format'],
+    'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],
@@ -61,8 +68,7 @@ angular.module('app').constant('translations', {
       'Ik kan deze activiteit meerdere keren organiseren op kamp, bv. indien er veel interesse is.'
     ],
     'SAVE': ['Bewaar'],
-    'SESSION_SECTION_SUMMARY': ['Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.'],
-    'SESSION_SECTION_TITLE': ['Sessies'],
+    'SESSIONS_LABEL': ['Aantal sessies doorheen het kamp dat de deelnemers moeten deelnemen.'],
     'SPEAKER_SECTION_SUMMARY': [
       '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
     ],
