@@ -170,7 +170,7 @@
                 <div class="fc-section-body" layout="column">
                     <div layout="column" layout-gt-xs="row">
                       <md-input-container md-no-float class="md-block" flex-gt-xs>
-                        <label class="md-no-float">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label>
+                        <label class="md-no-float" style="margin-bottom:4px;">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label>
                         <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
                                      ng-click="vm.toggle(level, vm.submission.audience_level)"
                                      ng-repeat="level in vm.audienceLevels"

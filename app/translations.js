@@ -48,20 +48,38 @@ angular.module('app').constant('translations', {
       'Verloop'
     ],
     'EMAIL': ['E-Mail Adres'],
-    'EXPERT': ['Expert'],
-    'FAMILY': ['Familie'],
     'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_SUMMARY': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_TITLE': ['nvt'],
+    'LEVEL_EXPERT': [
+      'Grondige voorkennis vereist'
+    ],
+    'LEVEL_FAMILY': [
+      'Voor families samen'
+    ],
+    'LEVEL_BEGINNER' : [
+      "Voor beginners"
+    ],
+    'LEVEL_INTERMEDIATE' : [
+      "Voorkennis nodig"
+    ],
+    'LEVEL_CHILD' : [
+      "Specifiek voor kinderen"
+    ],
+    'LEVEL_ADULT' : [
+      "Eigenlijk voor volwassenen"
+    ],
+    'LEVEL_NOT_IN_LIST': [
+      'Geen van bovenstaande opties past'
+    ],
     'LOCATION_LABEL': ['Requirements'],
     'LOCATION_SECTION_SUMMARY': [],
     'LOCATION_SECTION_TITLE': ['Locatie'],
     'MESSAGE': ['Jouw bericht'],
     'NAME': ['Naam'],
-    'NOT_IN_LIST': ['Geen van bovenstaande opties'],
     'REMARKS_SECTION_SUMMARY': [
       'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, kan je ons hieronder verdere informatie bezorgen. Na het doorsturen van je activiteit, zullen we nog via wederzijdse commentaar de activiteit verder verfijnen.'
     ],
