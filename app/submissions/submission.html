@@ -223,7 +223,7 @@
                   </div>
                 </div>
 
-                <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.type == 'WORKSHOP' && vm.submission.format !== 'FULLTIME'">
+                <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.format">
                   <label flex-gt-sm>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
@@ -231,7 +231,7 @@
                   </md-input-container>
                 </div>
 
-                <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.type == 'WORKSHOP'">
+                <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                   <label flex-gt-sm>{{ 'SESSIONS_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
