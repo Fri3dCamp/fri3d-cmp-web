@@ -94,6 +94,7 @@ angular.module('app').constant('translations', {
       'Ik kan deze activiteit meerdere keren organiseren op kamp, bv. indien er veel interesse is.'
     ],
     'SAVE': ['Bewaar'],
+    'SEND': ['Verstuur'],
     'SESSIONS_LABEL': ['Aantal sessies doorheen het kamp dat de deelnemers moeten deelnemen.'],
     'SPEAKER_SECTION_SUMMARY': [
       '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
