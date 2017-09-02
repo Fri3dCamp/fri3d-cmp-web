@@ -14,9 +14,9 @@
 
 <div layout="row">
     <md-content flex>
-    <div layout="row" layout-padding layout-margin layout-align="start center" class="mainwrapper">
+    <div layout="row" layout-margin layout-align="start center" class="mainwrapper">
         <form layout="column" name="userForm" layout-margin md-block flex>
-            <section layout="column" layout-padding>
+            <section layout="column">
                 <div layout="row" layout-align="end center">
                     <div layout="row" layout-align="center center">
                         <span style="margin-right: 10px;">NL</span>
@@ -31,14 +31,14 @@
                 </div>
             </section>
 
-            <section id="type_section" layout="column">
-                <div layout="column" layout-padding>
+            <section id="type_section">
+                <div layout="column">
                     <h1>{{ 'ACTIVITY_TITLE' | translate }}</h1>
                     <p>
                         {{ 'ACTIVITY_DESC' | translate }}
                     </p>
                 </div>
-                <div layout="column" layout-gt-xs="row" layout-padding>
+                <div layout="column" layout-gt-xs="row">
                     <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'PRESENTATION'" ng-class="{'selected': vm.submission.type == 'PRESENTATION'}">
                         <h4 class="md-title">{{ 'TYPE_PRESENTATION' | translate }}</h4>
                         <p>{{ 'TYPE_PRESENTATION_DESC' | translate }}</p>
@@ -57,7 +57,7 @@
                 </md-tooltip>
             </section>
 
-            <section id="basic_info_section" layout-padding ng-if="vm.submission.type">
+            <section id="basic_info_section" ng-if="vm.submission.type">
                 <p class="fc-section-summary">{{ 'BASIC_INFO_SECTION_SUMMARY' | translate }}</p>
 
                 <div class="fc-section-body">
@@ -76,7 +76,7 @@
                 </div>
             </section>
 
-            <section id="speaker_section" layout-padding ng-if="vm.submission.type">
+            <section id="speaker_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'SPEAKER_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'SPEAKER_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -106,7 +106,7 @@
                 </div>
             </section>
 
-            <section id="availability_section" layout-padding ng-if="vm.submission.type">
+            <section id="availability_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'AVAILABILITY_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'AVAILABILITY_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -156,7 +156,7 @@
                 </div>
             </section>
 
-            <section id="target_audience_section" layout-padding ng-if="vm.submission.type">
+            <section id="target_audience_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'AUDIENCE_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'AUDIENCE_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body" layout="column">
@@ -178,7 +178,7 @@
                 </div>
             </section>
 
-            <section id="location_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+            <section id="location_section" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <h1 class="fc-section-title">{{ 'LOCATION_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'LOCATION_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -189,7 +189,7 @@
                 </div>
             </section>
 
-            <section id="language_support" layout-padding ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
+            <section id="language_support" ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
                 <h1 class="fc-section-title">{{ 'LANGUAGE_SUPPORT_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'LANGUAGE_SUPPORT_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -197,7 +197,7 @@
                 </div>
             </section>
 
-            <section id="capacity" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+            <section id="capacity" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <h1 class="fc-section-title">{{ 'CAPACITY_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'CAPACITY_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -208,7 +208,7 @@
                 </div>
             </section>
 
-            <section id="sessions_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+            <section id="sessions_section" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <h1 class="fc-section-title">{{ 'SESSIONS_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'SESSIONS_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -219,7 +219,7 @@
                 </div>
             </section>
 
-            <section id="format_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+            <section id="format_section" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <h1 class="fc-section-title">{{ 'FORMAT_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'FORMAT_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -229,7 +229,7 @@
                 </div>
             </section>
 
-            <section id="collaborators_section" layout-padding ng-if="vm.submission.type">
+            <section id="collaborators_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'COLLABORATORS_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'COLLABORATORS_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -259,7 +259,7 @@
                 </div>
             </section>
 
-            <section id="duration_section" layout-padding ng-if="vm.submission.type">
+            <section id="duration_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'DURATION_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'DURATION_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -283,7 +283,7 @@
                 </div>
             </section>
 
-            <section id="costs_section" layout-padding ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+            <section id="costs_section" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                 <h1 class="fc-section-title">{{ 'COSTS_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'COSTS_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -294,7 +294,7 @@
                 </div>
             </section>
 
-            <section id="remarks_section" layout-padding ng-if="vm.submission.type">
+            <section id="remarks_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'REMARKS_SECTION_TITLE' | translate }}</h1>
                 <p class="fc-section-summary">{{ 'REMARKS_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
@@ -304,7 +304,7 @@
                 </div>
             </section>
 
-            <section id="controls" layout-padding layout="row" layout-align="end stretch" ng-if="vm.submission.type">
+            <section id="controls" layout="row" layout-align="end stretch" ng-if="vm.submission.type">
                 <div layout="column" layout-align="center center">
                     <md-checkbox class="md-primary" ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;">
                         {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
@@ -348,7 +348,7 @@
             <!--</md-list>-->
         <!--</md-content>-->
         <!--<md-divider></md-divider>-->
-        <!--<div layout="row" layout-align="start stretch" layout-padding>-->
+        <!--<div layout="row" layout-align="start stretch">-->
             <!--<md-input-container md-no-float flex>-->
                 <!--<label class="md-no-float">{{ 'MESSAGE' | translate }}</label>-->
                 <!--<textarea ng-model="vm.comment" rows="3"></textarea>-->
