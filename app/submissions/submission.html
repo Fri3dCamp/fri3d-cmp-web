@@ -103,13 +103,7 @@
                             <input ng-model="vm.submission.speaker_associated_hackerspaces">
                         </md-input-container>
                     </div>
-                </div>
-            </section>
 
-            <section id="availability_section" ng-if="vm.submission.type">
-                <h1 class="fc-section-title">{{ 'AVAILABILITY_SECTION_TITLE' | translate }}</h1>
-                <p class="fc-section-summary">{{ 'AVAILABILITY_SECTION_SUMMARY' | translate }}</p>
-                <div class="fc-section-body">
                     <div layout="column" layout-gt-xs="row" layout-align="start start">
                         <md-switch flex ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
                         <div layout="row" flex-gt-xs>
