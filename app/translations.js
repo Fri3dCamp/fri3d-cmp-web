@@ -12,7 +12,9 @@ angular.module('app').constant('translations', {
     'AUDIENCE_REQUIREMENTS_LABEL': ['Zijn er specifieke verwachtingen die je hebt van je publiek?'],
     'AUDIENCE_SECTION_TITLE': ['Publiek'],
     'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.'],
-    'BASIC_INFO_SECTION_SUMMARY': [''],
+    'BASIC_INFO_SECTION_SUMMARY': [
+      'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
+    ],
     'BTN_SEND' : ['Send'],
     'CAPACITY_SECTION_SUMMARY': ['Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?'],
     'CAPACITY_SECTION_TITLE': ['Aantal Deelnemers'],
@@ -46,16 +48,24 @@ angular.module('app').constant('translations', {
     'NOT_IN_LIST': ['Geen van bovenstaande opties'],
     'REMARKS_SECTION_SUMMARY': [],
     'REMARKS_SECTION_TITLE': ["Opmerkingen"],
-    'REPETITION_OPTION': ['Zou je deze activiteit meerdere keren willen organiseren tijdens het kamp?'],
+    'REPETITION_OPTION': [
+      'Ik kan deze activiteit meerdere keren organiseren op kamp, bv. indien er veel interesse is.'
+    ],
     'SAVE': ['Bewaar'],
     'SESSION_SECTION_SUMMARY': ['Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.'],
     'SESSION_SECTION_TITLE': ['Sessies'],
-    'SPEAKER_SECTION_SUMMARY': [],
-    'SPEAKER_SECTION_TITLE': ['Speaker'],
+    'SPEAKER_SECTION_SUMMARY': [
+      'We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.<br>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.<br>Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
+    ],
+    'SPEAKER_SECTION_TITLE': [
+      'Jij'
+    ],
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
     'SUBMISSION_DESC': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.'],
-    'SUMMARY': ['Samenvatting'],
+    'SUMMARY': [
+      'Korte omschrijving'
+    ],
     'TITLE': ['Titel van je activiteit'],
     'TYPE_OTHER': ['Andere'],
     'TYPE_OTHER_DESC': ['Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties ter beschikking.'],
