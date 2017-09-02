@@ -62,8 +62,12 @@ angular.module('app').constant('translations', {
     'MESSAGE': ['Jouw bericht'],
     'NAME': ['Naam'],
     'NOT_IN_LIST': ['Geen van bovenstaande opties'],
-    'REMARKS_SECTION_SUMMARY': [],
-    'REMARKS_SECTION_TITLE': ["Opmerkingen"],
+    'REMARKS_SECTION_SUMMARY': [
+      'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, kan je ons hieronder verdere informatie bezorgen. Na het doorsturen van je activiteit, zullen we nog via wederzijdse commentaar de activiteit verder verfijnen.'
+    ],
+    'REMARKS_SECTION_TITLE': [
+      'Bijkomende informatie'
+    ],
     'REPETITION_OPTION': [
       'Ik kan deze activiteit meerdere keren organiseren op kamp, bv. indien er veel interesse is.'
     ],
