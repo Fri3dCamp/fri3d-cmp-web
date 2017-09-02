@@ -13,7 +13,7 @@ angular.module('app').constant('translations', {
     ],
     'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
     'AMOUNT_SESSIONS': ['Aantal sessies'],
-    'ASSOCIATED': ['Hacker- of makerspaces waar je bijhoort'],
+    'ASSOCIATED': ['Hacker- of makerspaces waar je eventueel bij hoort'],
     'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
     'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
     'AVAILABILITY_SECTION_SUMMARY': [
@@ -99,7 +99,7 @@ angular.module('app').constant('translations', {
       '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
     ],
     'SPEAKER_SECTION_TITLE': [
-      'Jij'
+      'Info over jezelf'
     ],
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
