@@ -174,7 +174,7 @@
                         <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
                                      ng-click="vm.toggle(level, vm.submission.audience_level)"
                                      ng-repeat="level in vm.audienceLevels"
-                                     flex-gt-sm>
+                                     flex-gt-sm class="md-primary">
                             {{ level | translate}}
                         </md-checkbox>
                       </md-input-container>
@@ -189,7 +189,7 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                  <label flex-gt-sm>{{ 'AMOUNT_AUDIENCE' | translate }}</label>                  
+                  <label flex-gt-sm>{{ 'AMOUNT_AUDIENCE' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
                     <input class="fri3d" type="number" ng-model="vm.submission.activity_participant_limit" min="0">
@@ -197,7 +197,7 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                  <label flex-gt-sm>{{ 'COSTS_LABEL' | translate }}</label>                  
+                  <label flex-gt-sm>{{ 'COSTS_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
                     <input class="fri3d" type="number" ng-model="vm.submission.costs" min="0">
@@ -205,12 +205,12 @@
                 </div>
 
               </section>
-              
+
               <section id="duration_section">
                 <h2 class="fc-section-title">{{ 'DURATION_SECTION_TITLE' | translate }}</h2>
 
                 <div layout-gt-sm="row">
-                  <label flex-gt-sm>{{ 'ACTIVITY_DURATION_LABEL' | translate }}</label>                  
+                  <label flex-gt-sm>{{ 'ACTIVITY_DURATION_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
                     <input class="fri3d" flex type="number" ng-model="vm.submission.activity_duration" aria-label="Activity Duration (in minutes)" min="0">
@@ -224,7 +224,7 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.type == 'WORKSHOP' && vm.submission.format !== 'FULLTIME'">
-                  <label flex-gt-sm>{{ 'VISIT_DURATION_LABEL' | translate }}</label>                  
+                  <label flex-gt-sm>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
                     <input class="fri3d" flex type="number" ng-model="vm.submission.visit_duration" aria-label="Visit Duration (in minutes)" min="0">
@@ -232,7 +232,7 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.format && vm.submission.type == 'WORKSHOP'">
-                  <label flex-gt-sm>{{ 'SESSIONS_LABEL' | translate }}</label>                  
+                  <label flex-gt-sm>{{ 'SESSIONS_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
                       <input class="fri3d" type="number" ng-model="vm.submission.session_count" min="0">
