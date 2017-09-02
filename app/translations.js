@@ -1,17 +1,26 @@
 angular.module('app').constant('translations', {
-    'ACTIVITY_TITLE': ['Jouw Fri3d activiteit', 'Your Fri3d activity'],
-    'ACTIVITY_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
     'ACTIVITY_DURATION_LABEL': ['Activiteit duur (in minuten)'],
     'ACTIVITY_DURATION_PER_PARTICIPANT': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
+    'ACTIVITY_SECTION_TITLE' : [
+      "Jouw Fri3d activiteit"
+    ],
+    'ACTIVITY_SECTION_SUMMARY' : [
+      "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,... Als je specifieke noden hebt, beschrijf deze dan zeker, zodat we hier alvast rekening mee kunnen houden."
+    ],
     'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
     'AMOUNT_SESSIONS': ['Aantal sessies'],
     'ASSOCIATED': ['Hacker- of makerspaces waar je bijhoort'],
     'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
-    'AVAILABILITY_SECTION_TITLE': ['Bechikbaarheid'],
-    'AVAILABILITY_SECTION_SUMMARY': [],
-    'AUDIENCE_REQUIREMENTS_LABEL': ['Zijn er specifieke verwachtingen die je hebt van je publiek?'],
+    'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
+    'AVAILABILITY_SECTION_SUMMARY': [
+      'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
+    ],
+    'AUDIENCE_REQUIREMENTS_LABEL': ['Voorbreiding, voorkennis,...'],
     'AUDIENCE_SECTION_TITLE': ['Publiek'],
-    'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is.'],
+    'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'],
+    'AUDIENCE_TYPE_LABEL' : [
+      'Typering'
+    ],
     'BASIC_INFO_SECTION_SUMMARY': [
       'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
     ],
@@ -55,14 +64,16 @@ angular.module('app').constant('translations', {
     'SESSION_SECTION_SUMMARY': ['Een activiteit kan gespreid worden over verschillende sessies. Bijvoorbeeld een theoretische introductie, een praktische workshop en een <em>field trial</em>. Als dat voor jou activiteit het geval is, kan je dit hier aangeven.'],
     'SESSION_SECTION_TITLE': ['Sessies'],
     'SPEAKER_SECTION_SUMMARY': [
-      'We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.<br>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.<br>Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
+      '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
     ],
     'SPEAKER_SECTION_TITLE': [
       'Jij'
     ],
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
-    'SUBMISSION_DESC': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.'],
+    'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
+    'SUBMISSION_INTRO': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.'],
+    'SUBMISSION_TITLE': ['Jouw voorstel voor Fri3d Camp 2018', 'Your proposal for Fri3d Camp 2018'],
     'SUMMARY': [
       'Korte omschrijving'
     ],
