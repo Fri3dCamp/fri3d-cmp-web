@@ -33,6 +33,10 @@ angular.module('app').constant('translations', {
     'CAPACITY_SECTION_TITLE': ['Aantal Deelnemers'],
     'COLLABORATORS': ['Medewerkers'],
     'COLLABORATORS_ADD_BUTTON': ['Voeg een medewerker toe'],
+    'COLLABORATORS_REMOVE_DIALOG_CONTENTS' : [ 'Wil je {{collab_name}} verwijderen?' ],
+    'COLLABORATORS_REMOVE_DIALOG_HEADER' : [ 'Medewerker verwijderen' ],
+    'COLLABORATORS_REMOVE_DIALOG_CANCEL' : [ 'Afbreken' ],
+    'COLLABORATORS_REMOVE_DIALOG_CONFIRM' : [ 'Verwijderen' ],
     'COLLABORATORS_SECTION_SUMMARY': ['Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.'],
     'COLLABORATORS_SECTION_TITLE': ['Medewerkers'],
     'COSTS_LABEL': [

@@ -120,12 +120,13 @@
 
       function removeCollaborator(ev, collaborator) {
           var confirm = $mdDialog.confirm()
-              .title('Remove Collaborator?')
-              .textContent('Do you want to remove ' + collaborator.name + ' from the list of collaborators?')
-              .ariaLabel('Remove Collaborator')
+              .title($translate.instant('COLLABORATORS_REMOVE_DIALOG_HEADER'))
+              .textContent($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONTENTS', { collab_name : collaborator.name }))
+              .ariaLabel($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONTENTS', { collab_name : collaborator.name }))
               .targetEvent(ev)
-              .ok('Remove')
-              .cancel('Cancel');
+              .ok($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONFIRM'))
+              .cancel($translate.instant('COLLABORATORS_REMOVE_DIALOG_CANCEL'));
+
 
           $mdDialog.show(confirm).then(function() {
               vm.submission.collaborators.splice(vm.submission.collaborators.indexOf(collaborator), 1);
