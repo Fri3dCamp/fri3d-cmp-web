@@ -67,6 +67,9 @@
             vm.submission.status = "PROPOSED";
         }
 
+      // patch meta info into form
+      vm.submission.form_language = vm.lang;
+
       SubmissionService.save(vm.submission).then(function(response) {
           vm.submission.id = response._id;
 
