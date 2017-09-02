@@ -149,3 +149,8 @@ md-input-container.md-cyan-theme .md-input  {
         padding-left:20%;padding-right:20%
     }
 }
+
+INPUT.fri3d, TEXTAREA.fri3d {
+  background-color: #E4F1F5;
+  border: 0px;
+}

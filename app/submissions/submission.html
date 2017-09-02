@@ -64,13 +64,13 @@
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block"flex-gt-sm>
                           <label class="md-no-float">{{ 'TITLE' | translate }}</label>
-                          <input ng-model="vm.submission.title" >
+                          <input class="fri3d" ng-model="vm.submission.title" >
                       </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block" style="margin:0px;" flex-gt-sm>
                           <label class="md-no-float">{{ 'SUMMARY' | translate }}</label>
-                          <textarea ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
+                          <textarea class="fri3d" ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
                       </md-input-container>
                     </div>
                 </div>
@@ -88,24 +88,24 @@
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" flex-gt-xs>
                             <label class="md-no-float">{{ 'NAME' | translate }}</label>
-                            <input ng-model="vm.submission.speaker_name">
+                            <input class="fri3d" ng-model="vm.submission.speaker_name">
                         </md-input-container>
 
                         <md-input-container md-no-float class="md-block" flex-gt-xs>
                             <label class="md-no-float">{{ 'EMAIL' | translate }}</label>
-                            <input ng-model="vm.submission.speaker_email">
+                            <input class="fri3d" ng-model="vm.submission.speaker_email">
                         </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-sm>
                             <label class="md-no-float">Bio</label>
-                            <textarea ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
+                            <textarea class="fri3d" ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
                         </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" style="margin:0px;" flex-gt-sm>
                             <label class="md-no-float">{{ 'ASSOCIATED' | translate }}</label>
-                            <input ng-model="vm.submission.speaker_associated_hackerspaces">
+                            <input class="fri3d" ng-model="vm.submission.speaker_associated_hackerspaces">
                         </md-input-container>
                     </div>
 
@@ -118,11 +118,11 @@
                         <div layout="row" flex-gt-xs>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_1_from" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_1_from" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
                             </md-input-container>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_1_until" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_1_until" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
                             </md-input-container>
                         </div>
                     </div>
@@ -131,11 +131,11 @@
                         <div layout="row" flex-gt-xs>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_2_from" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_2_from" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
                             </md-input-container>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_2_until" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_2_until" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
                             </md-input-container>
                         </div>
                     </div>
@@ -144,11 +144,11 @@
                         <div layout="row" flex-gt-xs>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'FROM' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_3_from" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_3_from" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
                             </md-input-container>
                             <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-xs>
                                 <label class="md-no-float">{{ 'UNTIL' | translate }}</label>
-                                <input type="number" ng-model="vm.submission.day_3_until" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
+                                <input class="fri3d" type="number" ng-model="vm.submission.day_3_until" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
                             </md-input-container>
                         </div>
                     </div>
@@ -184,7 +184,7 @@
                 <div class="fc-section-body">
                   <md-input-container md-no-float class="md-block" flex-gt-xs>
                     <label class="md-no-float">{{ 'AUDIENCE_REQUIREMENTS_LABEL' | translate }}</label>
-                    <textarea ng-model="vm.submission.audience_requirements" rows="3"  md-maxlength="150"></textarea>
+                    <textarea class="fri3d" ng-model="vm.submission.audience_requirements" rows="3"  md-maxlength="150"></textarea>
                   </md-input-container>
                 </div>
 
@@ -192,7 +192,7 @@
                   <label flex-gt-sm>{{ 'AMOUNT_AUDIENCE' | translate }}</label>                  
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
-                    <input type="number" ng-model="vm.submission.activity_participant_limit" min="0">
+                    <input class="fri3d" type="number" ng-model="vm.submission.activity_participant_limit" min="0">
                   </md-input-container>
                 </div>
 
@@ -200,7 +200,7 @@
                   <label flex-gt-sm>{{ 'COSTS_LABEL' | translate }}</label>                  
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
-                    <input type="number" ng-model="vm.submission.costs" min="0">
+                    <input class="fri3d" type="number" ng-model="vm.submission.costs" min="0">
                   </md-input-container>
                 </div>
 
@@ -213,7 +213,7 @@
                   <label flex-gt-sm>{{ 'ACTIVITY_DURATION_LABEL' | translate }}</label>                  
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>
-                    <input flex type="number" ng-model="vm.submission.activity_duration" aria-label="Activity Duration (in minutes)" min="0">
+                    <input class="fri3d" flex type="number" ng-model="vm.submission.activity_duration" aria-label="Activity Duration (in minutes)" min="0">
                   </md-input-container>
                 </div>
 
@@ -227,7 +227,7 @@
                   <label flex-gt-sm>{{ 'VISIT_DURATION_LABEL' | translate }}</label>                  
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
-                    <input flex type="number" ng-model="vm.submission.visit_duration" aria-label="Visit Duration (in minutes)" min="0">
+                    <input class="fri3d" flex type="number" ng-model="vm.submission.visit_duration" aria-label="Visit Duration (in minutes)" min="0">
                   </md-input-container>
                 </div>
 
@@ -235,7 +235,7 @@
                   <label flex-gt-sm>{{ 'SESSIONS_LABEL' | translate }}</label>                  
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
-                      <input type="number" ng-model="vm.submission.session_count" min="0">
+                      <input class="fri3d" type="number" ng-model="vm.submission.session_count" min="0">
                   </md-input-container>
                 </div>
 
@@ -276,7 +276,7 @@
                 <p class="fc-section-summary">{{ 'REMARKS_SECTION_SUMMARY' | translate }}</p>
                 <div class="fc-section-body">
                     <md-input-container md-no-float class="md-block" flex-gt-xs>
-                      <textarea ng-model="vm.submission.general_remarks" rows="3"  md-maxlength="150"></textarea>
+                      <textarea class="fri3d" ng-model="vm.submission.general_remarks" rows="3"  md-maxlength="150"></textarea>
                     </md-input-container>
                 </div>
             </section>
