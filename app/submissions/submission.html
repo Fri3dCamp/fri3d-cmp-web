@@ -78,7 +78,7 @@
 
             <section id="speaker_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title">{{ 'SPEAKER_SECTION_TITLE' | translate }}</h1>
-                <p class="fc-section-summary">{{ 'SPEAKER_SECTION_SUMMARY' | translate }}</p>
+                <p class="fc-section-summary" ng-bind-html="'SPEAKER_SECTION_SUMMARY' | translate"></p>
                 <div class="fc-section-body">
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" flex-gt-xs>
