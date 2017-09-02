@@ -52,11 +52,9 @@
                         <p>{{ 'TYPE_OTHER_DESC' | translate }}</p>
                     </div>
                 </div>
-                <div layout="row" layout-padding ng-if="!vm.submission.type">
-                    <div class="md-accent" style="width:100%">
-                        <p style="text-align:center">{{ 'TYPE_SELECT_PROMPT' | translate }}</p>
-                    </div>
-                </div>
+                <md-tooltip md-delay="demo.delayTooltip" ng-if="!vm.submission.type">
+                  {{ 'TYPE_SELECT_PROMPT' | translate }}
+                </md-tooltip>
             </section>
 
             <section id="basic_info_section" layout-padding ng-if="vm.submission.type">
