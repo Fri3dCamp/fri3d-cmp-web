@@ -84,12 +84,18 @@
     }
 
       function showNewCollaboratorDialog(ev) {
+          function afterShowDialog(scope, element, options) {
+              var element = window.document.getElementById('collab_dialog_add_name');
+              if (element)
+                  element.focus();
+          }
           $mdDialog.show({
               controller: 'CollaboratorDialogController',
               templateUrl: '/app/submissions/collaborator-dialog.html',
               parent: angular.element(document.body),
               targetEvent: ev,
               clickOutsideToClose:true,
+              onComplete: afterShowDialog,
               locals: {
                   collaborator: {}
               }
@@ -120,12 +126,12 @@
 
       function removeCollaborator(ev, collaborator) {
           var confirm = $mdDialog.confirm()
-              .title($translate.instant('COLLABORATORS_REMOVE_DIALOG_HEADER'))
-              .textContent($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONTENTS', { collab_name : collaborator.name }))
-              .ariaLabel($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONTENTS', { collab_name : collaborator.name }))
+              .title($translate.instant('COLLABORATORS_DIALOG_REMOVE_HEADER'))
+              .textContent($translate.instant('COLLABORATORS_DIALOG_REMOVE_CONTENTS', { collab_name : collaborator.name }))
+              .ariaLabel($translate.instant('COLLABORATORS_DIALOG_REMOVE_CONTENTS', { collab_name : collaborator.name }))
               .targetEvent(ev)
-              .ok($translate.instant('COLLABORATORS_REMOVE_DIALOG_CONFIRM'))
-              .cancel($translate.instant('COLLABORATORS_REMOVE_DIALOG_CANCEL'));
+              .ok($translate.instant('COLLABORATORS_DIALOG_REMOVE_CONFIRM'))
+              .cancel($translate.instant('COLLABORATORS_DIALOG_REMOVE_CANCEL'));
 
 
           $mdDialog.show(confirm).then(function() {
