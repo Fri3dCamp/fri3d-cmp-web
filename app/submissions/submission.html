@@ -25,31 +25,27 @@
                     </div>
                 </div>
                 <div layout-gt-sm="row">
-                    <p>
-                        {{ 'SUBMISSION_INTRO' | translate }}
-                    </p>
+                  <p ng-bind-html="'SUBMISSION_INTRO' | translate"></p>
                 </div>
             </section>
 
             <section id="type_section">
                 <div layout="column">
-                    <h1>{{ 'SUBMISSION_TITLE' | translate }}</h1>
-                    <p>
-                        {{ 'SUBMISSION_DESC' | translate }}
-                    </p>
+                  <h1>{{ 'SUBMISSION_TITLE' | translate }}</h1>
+                  <p ng-bind-html="'SUBMISSION_DESC' | translate"></p>
                 </div>
                 <div layout="column" layout-gt-xs="row">
                     <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'PRESENTATION'" ng-class="{'selected': vm.submission.type == 'PRESENTATION'}">
-                        <h4 class="md-title" style="margin:0px;">{{ 'TYPE_PRESENTATION' | translate }}</h4>
-                        <p>{{ 'TYPE_PRESENTATION_DESC' | translate }}</p>
+                      <h4 class="md-title" style="margin:0px;">{{ 'TYPE_PRESENTATION' | translate }}</h4>
+                      <p ng-bind-html="'TYPE_PRESENTATION_DESC' | translate"></p>
                     </div>
                     <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'WORKSHOP'" ng-class="{'selected': vm.submission.type == 'WORKSHOP'}">
-                        <h4 class="md-title" style="margin:0px;">{{ 'TYPE_WORKSHOP' | translate }}</h4>
-                        <p>{{ 'TYPE_WORKSHOP_DESC' | translate }}</p>
+                      <h4 class="md-title" style="margin:0px;">{{ 'TYPE_WORKSHOP' | translate }}</h4>
+                      <p ng-bind-html="'TYPE_WORKSHOP_DESC' | translate"></p>
                     </div>
                     <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'OTHER'" ng-class="{'selected': vm.submission.type == 'OTHER'}">
-                        <h4 class="md-title" style="margin:0px;">{{ 'TYPE_OTHER' | translate }}</h4>
-                        <p>{{ 'TYPE_OTHER_DESC' | translate }}</p>
+                      <h4 class="md-title" style="margin:0px;">{{ 'TYPE_OTHER' | translate }}</h4>
+                      <p ng-bind-html="'TYPE_OTHER_DESC' | translate"></p>
                     </div>
                 </div>
                 <md-tooltip md-delay="demo.delayTooltip" ng-if="!vm.submission.type">
@@ -58,8 +54,7 @@
             </section>
 
             <section id="basic_info_section" ng-if="vm.submission.type">
-                <p class="fc-section-summary">{{ 'BASIC_INFO_SECTION_SUMMARY' | translate }}</p>
-
+                <p class="fc-section-summary" ng-bind-html="'BASIC_INFO_SECTION_SUMMARY' | translate"></p>
                 <div class="fc-section-body">
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block"flex-gt-sm>
@@ -111,7 +106,7 @@
 
                   <section id="availability_subsection" ng-if="vm.submission.type">
                     <h2 class="fc-section-title" style="margin-top:0px;">{{ 'AVAILABILITY_SECTION_TITLE' | translate }}</h2>
-                    <p class="fc-section-summary">{{ 'AVAILABILITY_SECTION_SUMMARY' | translate }}</p>
+                    <p class="fc-section-summary" ng-bind-html="'AVAILABILITY_SECTION_SUMMARY' | translate"></p>
 
                     <div layout="column" layout-gt-xs="row" layout-align="start start">
                         <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
@@ -162,11 +157,12 @@
 
             <section id="activity_section" ng-if="vm.submission.type">
               <h1 class="fc-section-title" style="margin-top:0px;">{{ 'ACTIVITY_SECTION_TITLE' | translate }}</h1>
-              <p class="fc-section-summary">{{ 'ACTIVITY_SECTION_SUMMARY' | translate }}</p>
+              <p class="fc-section-summary" ng-bind-html="'ACTIVITY_SECTION_SUMMARY' | translate"></p>
 
               <section id="target_audience_section">
                 <h2 class="fc-section-title">{{ 'AUDIENCE_SECTION_TITLE' | translate }}</h2>
-                <p class="fc-section-summary">{{ 'AUDIENCE_SECTION_SUMMARY' | translate }}</p>
+                <p class="fc-section-summary" ng-bind-html="'AUDIENCE_SECTION_SUMMARY' | translate"></p>
+
                 <div class="fc-section-body" layout="column">
                     <div layout="column" layout-gt-xs="row">
                       <md-input-container md-no-float class="md-block" flex-gt-xs>
@@ -243,7 +239,7 @@
 
             <section id="collaborators_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title" style="margin-top:0px;">{{ 'COLLABORATORS_SECTION_TITLE' | translate }}</h1>
-                <p class="fc-section-summary">{{ 'COLLABORATORS_SECTION_SUMMARY' | translate }}</p>
+                <p class="fc-section-summary" ng-bind-html="'COLLABORATORS_SECTION_SUMMARY' | translate"></p>
                 <div class="fc-section-body">
                     <md-whiteframe class="md-whiteframe-1dp" flex>
                     <md-list flex>
@@ -268,7 +264,7 @@
 
             <section id="remarks_section" ng-if="vm.submission.type">
                 <h1 class="fc-section-title" style="margin-top:0px;">{{ 'REMARKS_SECTION_TITLE' | translate }}</h1>
-                <p class="fc-section-summary">{{ 'REMARKS_SECTION_SUMMARY' | translate }}</p>
+                <p class="fc-section-summary" ng-bind-html="'REMARKS_SECTION_SUMMARY' | translate"></p>
                 <div class="fc-section-body">
                     <md-input-container md-no-float class="md-block" flex-gt-xs>
                       <textarea class="fri3d" ng-model="vm.submission.general_remarks" rows="3"  md-maxlength="150"></textarea>
