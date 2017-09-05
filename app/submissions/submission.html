@@ -215,7 +215,10 @@
 
                 <div class="fc-section-body">
                   <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                    <md-switch flex style="margin:0px;" class="md-primary" ng-model="vm.submission.format" aria-label="Attendance format">{{ 'ACTIVITY_FORMAT_LABEL' | translate }}</md-switch>
+                      <md-radio-group class="md-primary" ng-model="vm.submission.format">
+                        <md-radio-button ng-value="false">{{ 'ACTIVITY_FORMAT_FIXED' | translate }}</md-radio-button>
+                        <md-radio-button ng-value="true">{{ 'ACTIVITY_FORMAT_FLEX' | translate }}</md-radio-button>
+                      </md-radio-group>
                   </div>
                 </div>
 

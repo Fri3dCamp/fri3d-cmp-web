@@ -5,6 +5,9 @@ angular.module('app').constant('translations', {
     'ACTIVITY_DURATION_PER_PARTICIPANT': [
       'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'
     ],
+    'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
+    'ACTIVITY_FORMAT_FIXED' : ['Deelnemers moeten de activiteit van begin tot einde volgen'],
+    'ACTIVITY_FORMAT_FLEX' : ['Deelnemers kunnen doorlopend instappen'],
     'ACTIVITY_SECTION_TITLE' : [
       "Jouw Fri3d activiteit"
     ],
@@ -14,16 +17,16 @@ angular.module('app').constant('translations', {
     'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
     'AMOUNT_SESSIONS': ['Aantal sessies'],
     'ASSOCIATED': ['Hacker- of makerspaces waar je eventueel bij hoort'],
-    'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
-    'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
-    'AVAILABILITY_SECTION_SUMMARY': [
-      'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
-    ],
     'AUDIENCE_REQUIREMENTS_LABEL': ['Voorbreiding, voorkennis,...'],
     'AUDIENCE_SECTION_TITLE': ['Publiek'],
     'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'],
     'AUDIENCE_TYPE_LABEL' : [
       'Typering'
+    ],
+    'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
+    'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
+    'AVAILABILITY_SECTION_SUMMARY': [
+      'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
     ],
     'BASIC_INFO_SECTION_SUMMARY': [
       'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
@@ -54,7 +57,6 @@ angular.module('app').constant('translations', {
       'Verloop'
     ],
     'EMAIL': ['E-Mail Adres'],
-    'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],
@@ -107,7 +109,7 @@ angular.module('app').constant('translations', {
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
     'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
-    'SUBMISSION_INTRO': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.'],
+    'SUBMISSION_INTRO': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.','Short intro'],
     'SUBMISSION_TITLE': ['Jouw voorstel voor Fri3d Camp 2018', 'Your proposal for Fri3d Camp 2018'],
     'SUMMARY': [
       'Korte omschrijving'
@@ -122,5 +124,5 @@ angular.module('app').constant('translations', {
     'TYPE_WORKSHOP_DESC': ['Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.'],
     'UNTIL': ['Tot'],
     'VISIT_DURATION_LABEL': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
-    'WALK-IN': ['Doorlopende deelname'],
+    'WALK-IN': ['Doorlopende deelname']
 });
