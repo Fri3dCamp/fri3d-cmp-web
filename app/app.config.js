@@ -325,6 +325,7 @@
               day_3_from: 9,
               day_3_until: 21,
               costs: 0,
+              multiple_sessions: false,
               session_count: 1,
               audience_level: [],
               open_for_repetitions: true,
