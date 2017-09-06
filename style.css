@@ -79,6 +79,11 @@ h4 {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
 md-content > form > div {
   background-color: white;
 }
@@ -88,7 +93,7 @@ md-input-container {
     padding-bottom: 8px;
 }
 
-md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder, md-input-container.md-cyan-theme label, md-input-container label {
+md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder, md-input-container.md-cyan-theme label, md-input-container label, md-input-container.md-cyan-theme:not(.md-input-invalid).md-input-has-value label {
     color:black;
 }
 
@@ -136,9 +141,10 @@ layout-padding>p, .layout-padding>p  {
     margin-bottom: 1em;
 }
 
-md-input-container.md-cyan-theme .md-input  {
-    border-color:rgba(0,0,0,0.6);
-}
+/*md-input-container .md-input, .md-input.fri3d, textarea.md-input.fri3d, input.md-input.fri3d  {
+    border-color:#0E98AF;
+    border:2px solid;
+}*/
 .hint {
     position: absolute;
     left: 2px;
@@ -161,10 +167,32 @@ md-input-container.md-cyan-theme .md-input  {
     }
 }
 
-input.fri3d, textarea.fri3d {
+input.fri3d, textarea.fri3d, md-input-container .md-input.fri3d, md-input-container textarea.md-input.fri3d, md-input-container input.md-input.fri3d, md-input-container.md-cyan-theme:not(.md-input-invalid).md-input-focused .md-input.fri3d {
   background-color: #E4F1F5;
   border: 0px;
+  padding:4px;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-width: 2px;
+  border-color: #E9F1F7;
 }
+
+.md-input-invalid input.fri3d, textarea.fri3d,  md-input-container .md-input.ng-invalid.ng-dirty {
+    border-color: rgb(221,44,0);
+    border-left: 2px solid rgb(221,44,0);
+    border-top: 2px solid rgb(221,44,0);
+    border-bottom: 2px solid rgb(221,44,0);
+    border-right: 2px solid rgb(221,44,0);
+    border-width: 2px;
+    padding-bottom:4px;
+}
+
+md-input-container .md-errors-spacer {
+  min-height: 0;
+}
+
 
 md-input-container .md-errors-spacer {
   min-height: 0;
