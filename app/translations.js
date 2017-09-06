@@ -122,7 +122,7 @@ angular.module('app').constant('translations', {
       'Info over jezelf'
     ],
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
-    'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
+    'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, ik wil dit nu versturen!'],
     'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
     'SUBMISSION_INTRO': [
       'TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.\
