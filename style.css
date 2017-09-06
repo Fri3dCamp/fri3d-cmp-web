@@ -4,7 +4,7 @@ body {
   font-weight: 300;
 }
 
-html, 
+html,
 body {
   background-color: #FAFAFA;
   height: 100%;
@@ -83,6 +83,11 @@ md-content > form > div {
   background-color: white;
 }
 
+md-input-container {
+    padding: 0;
+    padding-bottom: 8px;
+}
+
 md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder, md-input-container.md-cyan-theme label, md-input-container label {
     color:black;
 }
@@ -132,7 +137,7 @@ layout-padding>p, .layout-padding>p  {
 }
 
 md-input-container.md-cyan-theme .md-input  {
-    border-color:rgba(0,0,0,0.6)
+    border-color:rgba(0,0,0,0.6);
 }
 .hint {
     position: absolute;
@@ -156,7 +161,7 @@ md-input-container.md-cyan-theme .md-input  {
     }
 }
 
-INPUT.fri3d, TEXTAREA.fri3d {
+input.fri3d, textarea.fri3d {
   background-color: #E4F1F5;
   border: 0px;
 }
