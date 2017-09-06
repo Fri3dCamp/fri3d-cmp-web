@@ -104,6 +104,10 @@
                         </md-input-container>
                     </div>
 
+                  <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+                      <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions">{{ 'REPETITION_OPTION' | translate }}</md-switch>
+                  </div>
+
                   <div class="fc-section-body">
                     <div layout="row" ng-if="vm.submission.type">
                       <md-switch flex style="margin:0px;" class="md-primary" ng-model="vm.submission.always_available" aria-label="Multiple sessions">{{ 'AVAILABILITY_ALWAYS' | translate }}</md-switch>
@@ -156,11 +160,6 @@
 
                   </section>
                 </div>
-
-                <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                    <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions">{{ 'REPETITION_OPTION' | translate }}</md-switch>
-                </div>
-
             </section>
 
             <section id="activity_section" ng-if="vm.submission.type">
