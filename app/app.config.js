@@ -313,8 +313,10 @@
 
       function emptySubmission() {
           return {
+              affiliated: false,
               status: "IN_PREPARATION",
               activity_participant_limit: 25,
+              always_available: true,
               day_1_available: true,
               day_1_from: 9,
               day_1_until: 21,
@@ -325,10 +327,12 @@
               day_3_from: 9,
               day_3_until: 21,
               costs: 0,
+              multiple_sessions: false,
               session_count: 1,
+              open_for_all: true,
               audience_level: [],
               open_for_repetitions: true,
-              format: true,
+              format: false,
               activity_duration: 60,
               visit_duration: 15
           };

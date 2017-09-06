@@ -11,19 +11,28 @@ angular.module('app').constant('translations', {
     'ACTIVITY_SECTION_SUMMARY' : [
       "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,... Als je specifieke noden hebt, beschrijf deze dan zeker, zodat we hier alvast rekening mee kunnen houden."
     ],
+    'AFFILIATED' : [
+      "Ik ben verbonden aan een hackerspace."
+    ],
     'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
     'AMOUNT_SESSIONS': ['Aantal sessies'],
-    'ASSOCIATED': ['Hacker- of makerspaces waar je eventueel bij hoort'],
+    'ASSOCIATED': ['Hacker- of makerspaces waar je bij hoort'],
     'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
     'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
     'AVAILABILITY_SECTION_SUMMARY': [
       'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
+    ],
+    'AUDIENCE_ALL' : [
+      'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
     ],
     'AUDIENCE_REQUIREMENTS_LABEL': ['Voorbreiding, voorkennis,...'],
     'AUDIENCE_SECTION_TITLE': ['Publiek'],
     'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'],
     'AUDIENCE_TYPE_LABEL' : [
       'Typering'
+    ],
+    'AVAILABILITY_ALWAYS' : [
+      'Ik ben gedurende het hele weekend beschikbaar om mijn activiteit te organiseren.'
     ],
     'BASIC_INFO_SECTION_SUMMARY': [
       'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
@@ -44,6 +53,9 @@ angular.module('app').constant('translations', {
     'COSTS_LABEL': [
       'Kostprijs per deelnemer'
     ],
+    'COSTS_REQUIRED' : [
+      'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost verbonden aan deze workshop.'
+    ],
     'COSTS_SECTION_SUMMARY': [],
     'COSTS_SECTION_TITLE': ['Kosten'],
     'DAY_ONE': ['Dag 1 (Zaterdag 18 augustus)'],
@@ -54,9 +66,14 @@ angular.module('app').constant('translations', {
       'Verloop'
     ],
     'EMAIL': ['E-Mail Adres'],
-    'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
+    'ACTIVITY_FORMAT_LABEL': [
+      'Deelnemers aan mijn activiteit dienen niet de hele tijd aanwezig te zijn en kunnen in de loop ervan langskomen om deel te nemen.'
+    ],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
+    'LANGUAGE_PROMPT' : [
+      "Looking for an English version of the form? Switch here!"
+    ],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_SUMMARY': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_TITLE': ['nvt'],
@@ -98,6 +115,9 @@ angular.module('app').constant('translations', {
     'SAVE': ['Bewaar'],
     'SEND': ['Verstuur'],
     'SESSIONS_LABEL': ['Aantal sessies doorheen het kamp dat de deelnemers moeten deelnemen.'],
+    'ACTIVITY_SESSIONS_MULTIPLE' : [
+      "Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend."
+    ],
     'SPEAKER_SECTION_SUMMARY': [
       '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
     ],
@@ -105,9 +125,18 @@ angular.module('app').constant('translations', {
       'Info over jezelf'
     ],
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
-    'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, bekijken maar!'],
+    'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, ik wil dit nu versturen!'],
     'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
-    'SUBMISSION_INTRO': ['TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.'],
+    'SUBMISSION_INTRO': [
+      '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
+      \
+      <h3>Instructies</h3> \
+      <ul>\
+      <li>Vul zoveel mogelijk informatie in.</li>\
+      <li>Je kan meerdere malen opslaan en als je klaar bent, kan je doorsturen.</li>\
+      <li>We gaan dan samen met jou in dialoog om alles in detail perfect te maken.</li>\
+      </ul>'
+    ],
     'SUBMISSION_TITLE': ['Jouw voorstel voor Fri3d Camp 2018', 'Your proposal for Fri3d Camp 2018'],
     'SUMMARY': [
       'Korte omschrijving'
