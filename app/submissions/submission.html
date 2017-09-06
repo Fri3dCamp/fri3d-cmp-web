@@ -97,7 +97,12 @@
                             <textarea class="fri3d" ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
                         </md-input-container>
                     </div>
-                    <div layout-gt-sm="row">
+
+                    <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+                        <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.affiliated" aria-label="Affiliated">{{ 'AFFILIATED' | translate }}</md-switch>
+                    </div>
+                    
+                    <div layout-gt-sm="row" ng-if="vm.submission.affiliated">
                         <md-input-container md-no-float class="md-block" style="margin:0px;" flex-gt-sm>
                             <label class="md-no-float">{{ 'ASSOCIATED' | translate }}</label>
                             <input class="fri3d" ng-model="vm.submission.speaker_associated_hackerspaces">

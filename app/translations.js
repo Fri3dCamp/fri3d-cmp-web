@@ -11,9 +11,12 @@ angular.module('app').constant('translations', {
     'ACTIVITY_SECTION_SUMMARY' : [
       "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,... Als je specifieke noden hebt, beschrijf deze dan zeker, zodat we hier alvast rekening mee kunnen houden."
     ],
+    'AFFILIATED' : [
+      "Ik ben verbonden aan een hackerspace."
+    ],
     'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
     'AMOUNT_SESSIONS': ['Aantal sessies'],
-    'ASSOCIATED': ['Hacker- of makerspaces waar je eventueel bij hoort'],
+    'ASSOCIATED': ['Hacker- of makerspaces waar je bij hoort'],
     'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
     'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
     'AVAILABILITY_SECTION_SUMMARY': [

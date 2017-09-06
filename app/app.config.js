@@ -313,6 +313,7 @@
 
       function emptySubmission() {
           return {
+              affiliated: false,
               status: "IN_PREPARATION",
               activity_participant_limit: 25,
               always_available: true,
