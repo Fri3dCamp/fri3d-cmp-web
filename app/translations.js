@@ -124,16 +124,14 @@ angular.module('app').constant('translations', {
     'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, ik wil dit nu versturen!'],
     'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
-    'SUBMISSION_INTRO': [
-      '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
+    'SUBMISSION_INTRO': ['<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
       \
       <h3>Instructies</h3> \
       <ul>\
       <li>Vul zoveel mogelijk informatie in.</li>\
       <li>Je kan meerdere malen opslaan en als je klaar bent, kan je doorsturen.</li>\
       <li>We gaan dan samen met jou in dialoog om alles in detail perfect te maken.</li>\
-      </ul>'
-    ],
+      </ul>'],
     'SUBMISSION_TITLE': ['Jouw voorstel voor Fri3d Camp 2018', 'Your proposal for Fri3d Camp 2018'],
     'SUMMARY': [
       'Korte omschrijving'
@@ -148,5 +146,5 @@ angular.module('app').constant('translations', {
     'TYPE_WORKSHOP_DESC': ['Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.'],
     'UNTIL': ['Tot'],
     'VISIT_DURATION_LABEL': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
-    'WALK-IN': ['Doorlopende deelname'],
+    'WALK-IN': ['Doorlopende deelname']
 });
