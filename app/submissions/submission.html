@@ -207,7 +207,11 @@ md-input-container .md-errors-spacer {
                   </md-input-container>
                 </div>
 
-                <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+                <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+                    <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.requires_pay" aria-label="Open for all">{{ 'COSTS_REQUIRED' | translate }}</md-switch>
+                </div>
+
+                <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.requires_pay">
                   <label flex-gt-sm>{{ 'COSTS_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin:0px;" flex-gt-sm>

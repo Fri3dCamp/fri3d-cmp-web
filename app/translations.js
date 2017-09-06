@@ -50,6 +50,9 @@ angular.module('app').constant('translations', {
     'COSTS_LABEL': [
       'Kostprijs per deelnemer'
     ],
+    'COSTS_REQUIRED' : [
+      'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost verbonden aan deze workshop.'
+    ],
     'COSTS_SECTION_SUMMARY': [],
     'COSTS_SECTION_TITLE': ['Kosten'],
     'DAY_ONE': ['Dag 1 (Zaterdag 18 augustus)'],
