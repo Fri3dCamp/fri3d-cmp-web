@@ -19,6 +19,9 @@ angular.module('app').constant('translations', {
     'AVAILABILITY_SECTION_SUMMARY': [
       'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
     ],
+    'AUDIENCE_ALL' : [
+      'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
+    ],
     'AUDIENCE_REQUIREMENTS_LABEL': ['Voorbreiding, voorkennis,...'],
     'AUDIENCE_SECTION_TITLE': ['Publiek'],
     'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'],
