@@ -108,7 +108,7 @@ md-input-container .md-errors-spacer {
                         </md-input-container>
                     </div>
 
-                    <div layout="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
+                    <div layout="row" ng-if="vm.submission.type">
                         <md-switch flex class="md-primary" style="margin-top:0px;" ng-model="vm.submission.affiliated" aria-label="Affiliated">{{ 'AFFILIATED' | translate }}</md-switch>
                     </div>
                     
