@@ -51,7 +51,7 @@ angular.module('app').constant('translations', {
     'COLLABORATORS_SECTION_SUMMARY': ['Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.'],
     'COLLABORATORS_SECTION_TITLE': ['Medewerkers'],
     'COSTS_LABEL': [
-      'Kostprijs per deelnemer'
+      'Kostprijs per deelnemer in €'
     ],
     'COSTS_REQUIRED' : [
       'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost verbonden aan deze workshop.'
