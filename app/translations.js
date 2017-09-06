@@ -54,7 +54,9 @@ angular.module('app').constant('translations', {
       'Verloop'
     ],
     'EMAIL': ['E-Mail Adres'],
-    'ACTIVITY_FORMAT_LABEL': ['Deelnemers dienen de activiteit bij te wonen van begin tot einde volgen. Indien niet, dan kunnen ze gedurende jouw activiteit op verschillende tijdstippen jou vervoegen.'],
+    'ACTIVITY_FORMAT_LABEL': [
+      'Deelnemers aan mijn activiteit dienen niet de hele tijd aanwezig te zijn en kunnen in de loop ervan langskomen om deel te nemen.'
+    ],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],

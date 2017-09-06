@@ -329,7 +329,7 @@
               session_count: 1,
               audience_level: [],
               open_for_repetitions: true,
-              format: true,
+              format: false,
               activity_duration: 60,
               visit_duration: 15
           };
