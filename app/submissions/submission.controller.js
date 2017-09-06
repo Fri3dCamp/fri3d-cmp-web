@@ -28,6 +28,10 @@
       };
 
     // -- variables
+    vm.promptLanguage = true;
+    setTimeout(function(){
+      vm.promptLanguage = false;
+    }, 2500);
     vm.comments = comments;
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];

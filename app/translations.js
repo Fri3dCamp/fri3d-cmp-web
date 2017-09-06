@@ -71,6 +71,9 @@ angular.module('app').constant('translations', {
     ],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
+    'LANGUAGE_PROMPT' : [
+      "Looking for an English version of the form? Switch here!"
+    ],
     'LANGUAGE_SUPPORT_OPTION': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_SUMMARY': ['nvt'],
     'LANGUAGE_SUPPORT_SECTION_TITLE': ['nvt'],
@@ -125,7 +128,8 @@ angular.module('app').constant('translations', {
     'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, ik wil dit nu versturen!'],
     'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
     'SUBMISSION_INTRO': [
-      'TODO: toevoegen van beknopte CFP text cfr uitgestuurde text.\
+      '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
+      \
       <h3>Instructies</h3> \
       <ul>\
       <li>Vul zoveel mogelijk informatie in.</li>\
