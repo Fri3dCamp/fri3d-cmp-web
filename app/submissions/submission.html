@@ -110,7 +110,13 @@ md-input-container .md-errors-spacer {
                         </md-input-container>
                     </div>
 
-                  <section id="availability_subsection" ng-if="vm.submission.type">
+                  <div class="fc-section-body">
+                    <div layout="row" ng-if="vm.submission.type">
+                      <md-switch flex style="margin:0px;" class="md-primary" ng-model="vm.submission.always_available" aria-label="Multiple sessions">{{ 'AVAILABILITY_ALWAYS' | translate }}</md-switch>
+                    </div>
+                  </div>
+
+                  <section id="availability_subsection" ng-if="vm.submission.type && ! vm.submission.always_available">
                     <h2 class="fc-section-title" style="margin-top:0px;">{{ 'AVAILABILITY_SECTION_TITLE' | translate }}</h2>
                     <p class="fc-section-summary" ng-bind-html="'AVAILABILITY_SECTION_SUMMARY' | translate"></p>
 

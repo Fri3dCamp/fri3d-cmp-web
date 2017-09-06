@@ -25,6 +25,9 @@ angular.module('app').constant('translations', {
     'AUDIENCE_TYPE_LABEL' : [
       'Typering'
     ],
+    'AVAILABILITY_ALWAYS' : [
+      'Ik ben gedurende het hele weekend beschikbaar om mijn activiteit te organiseren.'
+    ],
     'BASIC_INFO_SECTION_SUMMARY': [
       'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
     ],

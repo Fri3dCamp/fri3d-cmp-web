@@ -315,6 +315,7 @@
           return {
               status: "IN_PREPARATION",
               activity_participant_limit: 25,
+              always_available: true,
               day_1_available: true,
               day_1_from: 9,
               day_1_until: 21,
