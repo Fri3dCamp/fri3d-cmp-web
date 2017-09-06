@@ -160,3 +160,7 @@ INPUT.fri3d, TEXTAREA.fri3d {
   background-color: #E4F1F5;
   border: 0px;
 }
+
+md-input-container .md-errors-spacer {
+  min-height: 0;
+}
