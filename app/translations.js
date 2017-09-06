@@ -95,9 +95,6 @@ angular.module('app').constant('translations', {
     'LEVEL_ADULT' : [
       "Eigenlijk voor volwassenen"
     ],
-    'LEVEL_NOT_IN_LIST': [
-      'Geen van bovenstaande opties past'
-    ],
     'LOCATION_LABEL': ['Requirements'],
     'LOCATION_SECTION_SUMMARY': [],
     'LOCATION_SECTION_TITLE': ['Locatie'],

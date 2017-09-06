@@ -34,7 +34,7 @@
     vm.comments = comments;
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
-    vm.audienceLevels = [ "LEVEL_BEGINNER", "LEVEL_INTERMEDIATE", "LEVEL_EXPERT", "LEVEL_FAMILY", "LEVEL_CHILD", "LEVEL_ADULT", "LEVEL_NOT_IN_LIST" ];
+    vm.audienceLevels = [ "LEVEL_BEGINNER", "LEVEL_INTERMEDIATE", "LEVEL_EXPERT", "LEVEL_FAMILY", "LEVEL_CHILD", "LEVEL_ADULT" ];
     vm.timeBuckets = _generateTimeBuckets();
 
     if (webStorageService.get('pending_submission', 'sessionStorage')) {
