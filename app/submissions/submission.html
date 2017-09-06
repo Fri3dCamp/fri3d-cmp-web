@@ -16,18 +16,22 @@
     <md-content flex>
     <div layout="row" layout-margin layout-align="start center" class="mainwrapper">
         <form layout="column" name="userForm" layout-margin md-block flex>
-            <section layout="column">
-                <div layout="row" layout-align="end center">
-                    <div layout="row" layout-align="center center">
-                        <span style="margin-right: 10px;">NL</span>
-                        <md-switch flex class="md-primary" ng-change="vm.toggleLanguage()" ng-model="vm.translate" aria-label="Translate form to English"></md-switch>
-                        <span style="margin-left: 10px;">EN</span>
-                    </div>
-                </div>
-                <div layout-gt-sm="row">
-                  <p ng-bind-html="'SUBMISSION_INTRO' | translate"></p>
-                </div>
-            </section>
+
+          <div>
+            <div style="float:right;width:115px;margin-top:20px">
+              <span style="position:relative;top:-10px;display:inline-block;">NL</span>
+              <md-switch flex class="md-primary" ng-change="vm.toggleLanguage()" ng-model="vm.translate" aria-label="Select form language"
+                         style="width:45px;display:inline-block;margin-bottom:0px;margin-top:0px"
+              ></md-switch>
+              <span style="position:relative;top:-10px;display:inline-block;">EN</span>
+            <md-tooltip md-visible="vm.promptLanguage">
+              {{ 'LANGUAGE_PROMPT' | translate }}
+            </md-tooltip>
+
+            </div>            
+
+            <p ng-bind-html="'SUBMISSION_INTRO' | translate"></p>
+          </div>
 
             <section id="type_section">
                 <div layout="column">
