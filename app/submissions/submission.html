@@ -137,7 +137,7 @@
                     <div layout="column" layout-gt-xs="row" layout-align="start start">
                         <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
                         <div layout="row" flex-gt-xs>
-                            <md-input-container class="md-block" style="margin-top:0px;" flex-gt-xs>
+                            <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                 <label class="">{{ 'FROM' | translate }}</label>
                                 <input class="fri3d" type="number" ng-model="vm.submission.day_1_from" min="9" max="21" ng-disabled="!vm.submission.day_1_available">
                             </md-input-container>
@@ -150,11 +150,11 @@
                     <div layout="column"  layout-gt-xs="row" layout-align="start start">
                         <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_2_available">{{ 'DAY_TWO' | translate }}</md-switch>
                         <div layout="row" flex-gt-xs>
-                            <md-input-container class="md-block" style="margin-top:0px;" flex-gt-xs>
+                            <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                 <label class="">{{ 'FROM' | translate }}</label>
                                 <input class="fri3d" type="number" ng-model="vm.submission.day_2_from" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
                             </md-input-container>
-                            <md-input-container class="md-block" style="margin-top:0px;" flex-gt-xs>
+                            <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                 <label class="">{{ 'UNTIL' | translate }}</label>
                                 <input class="fri3d" type="number" ng-model="vm.submission.day_2_until" min="9" max="21" ng-disabled="!vm.submission.day_2_available">
                             </md-input-container>
@@ -163,7 +163,7 @@
                     <div layout="column" layout-gt-xs="row" layout-align="start start">
                         <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_3_available">{{ 'DAY_THREE' | translate }}</md-switch>
                         <div layout="row" flex-gt-xs>
-                            <md-input-container class="md-block" style="margin-top:0px;" flex-gt-xs>
+                            <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                 <label class="">{{ 'FROM' | translate }}</label>
                                 <input class="fri3d" type="number" ng-model="vm.submission.day_3_from" min="9" max="21" ng-disabled="!vm.submission.day_3_available">
                             </md-input-container>
