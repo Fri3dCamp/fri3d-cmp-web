@@ -328,6 +328,7 @@
               costs: 0,
               multiple_sessions: false,
               session_count: 1,
+              open_for_all: true,
               audience_level: [],
               open_for_repetitions: true,
               format: false,
