@@ -110,8 +110,8 @@
                     </div>
 
                     <div layout-gt-sm="row" ng-if="vm.submission.affiliated" class="extended info">
-                        <md-input-container md-no-float class="md-block" flex-gt-sm>
-                            <label class="md-no-float">{{ 'ASSOCIATED' | translate }}</label>
+                        <md-input-container md-no-float class="md-block" flex-gt-sm style="margin-top:-5px;">
+                            <label class="md-no-float"></label>{{ 'ASSOCIATED' | translate }}</label>
                             <input class="fri3d" ng-model="vm.submission.speaker_associated_hackerspaces">
                         </md-input-container>
                     </div>
@@ -215,7 +215,7 @@
                         </md-input-container>
                       </div>
 
-                    <md-input-container md-no-float class="md-block" flex-gt-xs>
+                    <md-input-container md-no-float class="md-block" flex-gt-xs style="margin-top:-5px;">
                       <label class="md-no-float">{{ 'AUDIENCE_REQUIREMENTS_LABEL' | translate }}</label>
                       <textarea class="fri3d" ng-model="vm.submission.audience_requirements" md-maxlength="250" rows="3"></textarea>
                     </md-input-container>
