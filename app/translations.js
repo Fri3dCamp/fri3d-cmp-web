@@ -147,5 +147,13 @@ angular.module('app').constant('translations', {
     'TYPE_WORKSHOP_DESC': ['Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.'],
     'UNTIL': ['Tot'],
     'VISIT_DURATION_LABEL': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
-    'WALK-IN': ['Doorlopende deelname']
+    'WALK-IN': ['Doorlopende deelname'],
+	// intro.html
+	'INTRO_CAPTION' : [ 'Uitnodiging tot deelname' ],
+	'INTRO_INTRO' : [
+		'De derde editie van <a href="http://fri3d.be">Fri3d Camp</a> komt dichterbij! Vanaf nu kan jij ook <b>jouw voorstel voor een activiteit</b> insturen.'
+	],
+	'INTRO_LAUNCH_BUTTON' : [ 'Lees en beantwoord de Fri3d Camp 2018 CFP' ],
+	'INTRO_TITLE' : [ 'Dit wordt Fri3d Camp 2018!' ],
+
 });

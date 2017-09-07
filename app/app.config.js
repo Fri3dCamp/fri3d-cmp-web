@@ -53,7 +53,7 @@
         templateUrl: 'app/callback/callback.html',
         controllerAs: 'vm'
       })
-      .when('/submission', {
+      .when('/cfp', {
           controller: 'SubmissionController',
           templateUrl: 'app/submissions/submission.html',
           controllerAs: 'vm',
@@ -67,7 +67,7 @@
               }]
           }
       })
-      .when('/submission/:id', {
+      .when('/cfp/:id', {
           controller: 'SubmissionController',
           templateUrl: 'app/submissions/submission.html',
           controllerAs: 'vm',
@@ -88,13 +88,18 @@
           }
       })
       .when('/', {
-          redirectTo: '/submission'
-        // controller: 'HomeController',
-        // templateUrl: 'app/home/home.html',
-        // controllerAs: 'vm'
+          templateUrl: 'app/intro/intro.html',
+          controller: 'IntroController',
+          controllerAs: 'vm',
+          resolve: {
+              language: ['$location', function($location) {
+                  return $location.hash() === 'en' ? 'en' : 'nl';
+              }]
+          }
+
       })
       .otherwise({
-        redirectTo: '/submission'
+        redirectTo: '/'
       });
 
       $mdThemingProvider.theme('default')

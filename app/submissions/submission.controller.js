@@ -103,7 +103,7 @@
                 .hideDelay(3000)
         );
 
-        $location.path("/submission/" + vm.submission.id);
+        $location.path("/cfp/" + vm.submission.id);
       });
     }
 
