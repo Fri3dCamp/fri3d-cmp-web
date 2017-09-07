@@ -43,6 +43,12 @@
     }
 
     // -- functions
+    vm.select_type = function select_type(type) {
+      vm.submission.type = type;
+      // delayed due to still-to-appear field at first selection
+      setTimeout(function() { document.getElementById("submission_title").focus(); }, 100);
+    };
+
     vm.save = save;
     vm.showNewCollaboratorDialog = showNewCollaboratorDialog;
     vm.editCollaborator = editCollaborator;

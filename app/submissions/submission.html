@@ -38,15 +38,15 @@
                   <p ng-bind-html="'SUBMISSION_DESC' | translate"></p>
                 </div>
                 <div layout="column" layout-gt-xs="row">
-                    <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'PRESENTATION'" ng-class="{'selected': vm.submission.type == 'PRESENTATION'}">
+                    <div layout="column" class="fc-toggle" ng-click="vm.select_type('PRESENTATION')" ng-class="{'selected': vm.submission.type == 'PRESENTATION'}">
                       <h4 class="md-title" style="margin:0px;">{{ 'TYPE_PRESENTATION' | translate }}</h4>
                       <p ng-bind-html="'TYPE_PRESENTATION_DESC' | translate"></p>
                     </div>
-                    <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'WORKSHOP'" ng-class="{'selected': vm.submission.type == 'WORKSHOP'}">
+                    <div layout="column" class="fc-toggle" ng-click="vm.select_type('WORKSHOP')" ng-class="{'selected': vm.submission.type == 'WORKSHOP'}">
                       <h4 class="md-title" style="margin:0px;">{{ 'TYPE_WORKSHOP' | translate }}</h4>
                       <p ng-bind-html="'TYPE_WORKSHOP_DESC' | translate"></p>
                     </div>
-                    <div layout="column" class="fc-toggle" ng-click="vm.submission.type = 'OTHER'" ng-class="{'selected': vm.submission.type == 'OTHER'}">
+                    <div layout="column" class="fc-toggle" ng-click="vm.select_type('OTHER')" ng-class="{'selected': vm.submission.type == 'OTHER'}">
                       <h4 class="md-title" style="margin:0px;">{{ 'TYPE_OTHER' | translate }}</h4>
                       <p ng-bind-html="'TYPE_OTHER_DESC' | translate"></p>
                     </div>
@@ -62,7 +62,7 @@
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block"flex-gt-sm>
                           <label class="md-no-float">{{ 'TITLE' | translate }}</label>
-                          <input class="fri3d" ng-model="vm.submission.title" required >
+                          <input id="submission_title" class="fri3d" ng-model="vm.submission.title" >
                       </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
