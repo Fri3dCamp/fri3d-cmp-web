@@ -68,7 +68,7 @@
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block" style="margin:0px;" flex-gt-sm>
                           <label class="md-no-float">{{ 'SUMMARY' | translate }}</label>
-                          <textarea class="fri3d" ng-model="vm.submission.summary" md-maxlength="150" rows="2"></textarea>
+                          <textarea class="fri3d" ng-model="vm.submission.summary" md-maxlength="250" rows="3"></textarea>
                       </md-input-container>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" style="margin-top:0px;" flex-gt-sm>
                             <label class="md-no-float">Bio</label>
-                            <textarea class="fri3d" ng-model="vm.submission.speaker_bio" md-maxlength="150" rows="3"></textarea>
+                            <textarea class="fri3d" ng-model="vm.submission.speaker_bio" md-maxlength="250" rows="3"></textarea>
                         </md-input-container>
                     </div>
 
@@ -215,7 +215,7 @@
 
                   <md-input-container md-no-float class="md-block" flex-gt-xs>
                     <label class="md-no-float">{{ 'AUDIENCE_REQUIREMENTS_LABEL' | translate }}</label>
-                    <textarea class="fri3d" ng-model="vm.submission.audience_requirements" rows="3"  md-maxlength="150"></textarea>
+                    <textarea class="fri3d" ng-model="vm.submission.audience_requirements" md-maxlength="250" rows="3"></textarea>
                   </md-input-container>
                 </div>
 
@@ -310,7 +310,7 @@
                 <p class="fc-section-summary" ng-bind-html="'REMARKS_SECTION_SUMMARY' | translate"></p>
                 <div class="fc-section-body">
                     <md-input-container md-no-float class="md-block" flex-gt-xs>
-                      <textarea class="fri3d" aria-label="{{ 'REMARKS_SECTION_TITLE' | translate }}" ng-model="vm.submission.general_remarks" rows="3"  md-maxlength="150"></textarea>
+                      <textarea class="fri3d" aria-label="{{ 'REMARKS_SECTION_TITLE' | translate }}" ng-model="vm.submission.general_remarks" md-maxlength="250" rows="3"></textarea>
                     </md-input-container>
                 </div>
             </section>
