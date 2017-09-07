@@ -132,7 +132,7 @@ angular.module('app').constant('translations', {
     'Publiek'
   ],
   'AMOUNT_AUDIENCE': [
-    'Maximaal aantal deelnemers dat je kan begeleiden.'
+    'Maximaal aantal deelnemers dat je kan begeleiden. Denk hier aan het totaal aantal, niet eventuele groepen. (e.g. Als een kind best begeleid wordt door een ouder, zijn dat twee deelnemers.)'
   ],
   'AUDIENCE_ALL' : [
     'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
@@ -183,7 +183,7 @@ angular.module('app').constant('translations', {
     'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit? (in minuten)'
   ],
   'ACTIVITY_SESSIONS_MULTIPLE' : [
-    'Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend.'
+    'Mijn activiteit bestaat uit verschillende, opeenvolgende delen en moet gepland worden over meerdere sessies gedurende het weekend.'
   ],
   'SESSIONS_LABEL': [
     'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
