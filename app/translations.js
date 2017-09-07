@@ -6,8 +6,8 @@ angular.module('app').constant('translations', {
 
   // LANGUAGE PROMPT
   'LANGUAGE_PROMPT' : [
-    "Looking for an English version of the form?",
-    "Zoek je een Nederlandstalige versie van dit formulier?"
+    'Looking for an English version of the form?',
+    'Zoek je een Nederlandstalige versie van dit formulier?'
   ],
 
   // INTRODUCTION
@@ -70,7 +70,7 @@ angular.module('app').constant('translations', {
   'LANGUAGE_SUPPORT_OPTION': [
     'nvt'
   ],
-  
+
   // SPEAKER
   'SPEAKER_SECTION_TITLE': [
     'Info over jezelf'
@@ -88,7 +88,7 @@ angular.module('app').constant('translations', {
     'Bio'
   ],
   'AFFILIATED' : [
-    "Ik bezoek af en toe al een hackerspace."
+    'Ik bezoek af en toe al een hackerspace.'
   ],
   'ASSOCIATED': [
     'Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in het spotlicht zetten in een heus Belgisch Hacker Spaces track.'
@@ -120,13 +120,13 @@ angular.module('app').constant('translations', {
   'DAY_THREE': [
     'Dag 3 (Maandag 20 augustus)'
   ],
-  
+
   // ACTIVITY
   'ACTIVITY_SECTION_TITLE' : [
-    "Jouw Fri3d activiteit"
+    'Jouw Fri3d activiteit'
   ],
   'ACTIVITY_SECTION_SUMMARY' : [
-    "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,..."
+    'Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,...'
   ],
   'AUDIENCE_SECTION_TITLE': [
     'Publiek'
@@ -144,10 +144,10 @@ angular.module('app').constant('translations', {
     'Deze activiteit is gericht op...'
   ],
   'LEVEL_BEGINNER' : [
-    "Beginners"
+    'Beginners'
   ],
   'LEVEL_INTERMEDIATE' : [
-    "Deelnemers met enige voorkennis"
+    'Deelnemers met enige voorkennis'
   ],
   'LEVEL_EXPERT': [
     'Deelnemers met reeds een grondige voorkennis omtrent het onderwerp'
@@ -156,10 +156,10 @@ angular.module('app').constant('translations', {
     'Families (e.g. een kind begeleid door een ouder)'
   ],
   'LEVEL_CHILD' : [
-    "Kinderen alleen"
+    'Kinderen alleen'
   ],
   'LEVEL_ADULT' : [
-    "Volwassenen"
+    'Volwassenen'
   ],
   'AUDIENCE_REQUIREMENTS_LABEL': [
     'Vereiste voorbreiding, voorkennis,...'
@@ -183,7 +183,7 @@ angular.module('app').constant('translations', {
     'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit? (in minuten)'
   ],
   'ACTIVITY_SESSIONS_MULTIPLE' : [
-    "Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend."
+    'Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend.'
   ],
   'SESSIONS_LABEL': [
     'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
