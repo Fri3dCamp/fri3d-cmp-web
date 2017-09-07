@@ -170,7 +170,8 @@ layout-padding>p, .layout-padding>p  {
 input.fri3d, textarea.fri3d, md-input-container .md-input.fri3d, md-input-container textarea.md-input.fri3d, md-input-container input.md-input.fri3d, md-input-container.md-cyan-theme:not(.md-input-invalid).md-input-focused .md-input.fri3d, md-input-container.md-cyan-theme .md-input[disabled] {
   background-color: #E4F1F5;
   border: 0px;
-  padding:4px;
+  padding-left:4px;
+  padding-right:4px;
   border-left: 2px solid;
   border-top: 2px solid;
   border-bottom: 2px solid;
