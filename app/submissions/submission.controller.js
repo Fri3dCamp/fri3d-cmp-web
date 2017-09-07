@@ -131,6 +131,14 @@
       }
 
       function editCollaborator(ev, collaborator) {
+        function afterShowDialog(scope, element, options) {
+            var element = window.document.getElementById('collab_dialog_add_name');
+            if (element) {
+              element.focus();
+              element.setSelectionRange(0, element.value.length)
+            }
+        }
+
         var idx = vm.submission.collaborators.indexOf(collaborator);
 
           $mdDialog.show({
@@ -139,6 +147,7 @@
               parent: angular.element(document.body),
               targetEvent: ev,
               clickOutsideToClose:true,
+              onComplete: afterShowDialog,
               locals: {
                   collaborator: collaborator
               }
