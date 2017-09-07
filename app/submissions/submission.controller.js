@@ -15,6 +15,7 @@
       let searchArgs = $location.search();
       vm.lang = searchArgs['lang'] || 'nl';
 
+      vm.scope = $scope;
       vm.translate = vm.lang === 'en';
       $translate.use(vm.lang);
 
@@ -47,6 +48,7 @@
     vm.showNewCollaboratorDialog = showNewCollaboratorDialog;
     vm.editCollaborator = editCollaborator;
     vm.removeCollaborator = removeCollaborator;
+    vm.validityToString = validityToString;
 
       vm.toggle = toggle;
       vm.inList = inList;
@@ -63,6 +65,25 @@
           else {
               list.push(item);
           }
+      }
+
+      function validityToString(validity) {
+          let res = [];
+          if (! validity) return res;
+
+          if (validity.badInput) res.push('invalid');
+          if (validity.customError) res.push('custom');
+          if (validity.patternMismatch) res.push('pattern');
+          if (validity.rangeOverflow) res.push('min');
+          if (validity.rangeUnderflow) res.push('max');
+          if (validity.stepMismatch) res.push('step');
+          if (validity.tooLong) res.push('maxlength');
+          if (validity.tooShort) res.push('minlength');
+          if (validity.typeMismatch) res.push('type');
+          if (validity.valid) res.push('valid');
+          if (validity.valueMissing) res.push('required');
+
+          return res;
       }
 
     function save() {

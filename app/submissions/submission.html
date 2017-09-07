@@ -15,7 +15,7 @@
 <div layout="row">
     <md-content flex>
     <div layout="row" layout-margin layout-align="start center" class="mainwrapper">
-        <form layout="column" name="userForm" layout-margin md-block flex>
+        <form layout="column" name="userForm" layout-margin md-block flex novalidate>
 
           <div>
             <div style="float:right;width:115px;margin-top:20px">
@@ -62,7 +62,7 @@
                     <div layout-gt-sm="row">
                       <md-input-container md-no-float class="md-block"flex-gt-sm>
                           <label class="md-no-float">{{ 'TITLE' | translate }}</label>
-                          <input class="fri3d" ng-model="vm.submission.title" >
+                          <input class="fri3d" ng-model="vm.submission.title" required >
                       </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
@@ -88,12 +88,12 @@
                     <div layout-gt-sm="row">
                         <md-input-container md-no-float class="md-block" flex-gt-xs style="padding-right:10px;">
                             <label class="md-no-float">{{ 'NAME' | translate }}</label>
-                            <input class="fri3d" ng-model="vm.submission.speaker_name">
+                            <input class="fri3d" ng-model="vm.submission.speaker_name" required>
                         </md-input-container>
 
                         <md-input-container md-no-float class="md-block" flex-gt-xs>
                             <label class="md-no-float">{{ 'EMAIL' | translate }}</label>
-                            <input class="fri3d" ng-model="vm.submission.speaker_email">
+                            <input type="email" class="fri3d" ng-model="vm.submission.speaker_email" required>
                         </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
@@ -315,16 +315,22 @@
                 </div>
             </section>
 
-            <section id="controls" layout="row" layout-align="end stretch" ng-if="vm.submission.type">
-                <div layout="column" layout-align="center center">
-                    <md-checkbox class="md-primary" ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;">
-                        {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
-                    </md-checkbox>
+            <section id="controls" layout="column" layout-align="end stretch" ng-if="vm.submission.type">
+                <div layout="row" layout-align="start stretch" layout-padding class="md-warn" ng-if="userForm.$invalid">
+                    <md-icon md-font-icon="lnr-warning" class="lnr md-warn"></md-icon>
+                    <span class="md-warn" style="color: rgb(255,87,34); vertical-align: center" flex>{{ 'INVALID_FORM' | translate }}</span>
                 </div>
-                <span flex></span>
-                <div layout="column" layout-align="center center">
-                    <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="! vm.ready_to_publish">{{ 'SAVE' | translate }}</md-button>
-                    <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="vm.ready_to_publish">{{ 'SEND' | translate }}</md-button>
+                <div layout="row">
+                    <div layout="column" layout-align="center center">
+                        <md-checkbox class="md-primary" ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;" ng-disabled="userForm.$invalid">
+                            {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
+                        </md-checkbox>
+                    </div>
+                    <span flex></span>
+                    <div layout="column" layout-align="center center">
+                        <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="! vm.ready_to_publish" ng-disabled="userForm.$invalid">{{ 'SAVE' | translate }}</md-button>
+                        <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="vm.ready_to_publish" ng-disabled="userForm.$invalid">{{ 'SEND' | translate }}</md-button>
+                    </div>
                 </div>
 
             </section>

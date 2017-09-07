@@ -71,6 +71,7 @@ angular.module('app').constant('translations', {
     ],
     'FROM': ['Van'],
     'FULLTIME': ['Aanwezigheid van begin tot einde'],
+    'INVALID_FORM': ['Het formulier bevat nog fout of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en vul de gegevens correct in.'],
     'LANGUAGE_PROMPT' : [
       "Looking for an English version of the form? Switch here!"
     ],
