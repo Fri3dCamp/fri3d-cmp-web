@@ -76,7 +76,7 @@
                 <div class="fc-section-body" ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
                     <md-switch flex="50" class="md-primary" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?"
                                style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                    <span style="position:relative;top:-10px;">{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</span>
+                    <span>{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</span>
                 </div>
 
             </section>
@@ -106,7 +106,7 @@
                     <div ng-if="vm.submission.type">
                         <md-switch flex class="md-primary" ng-model="vm.submission.affiliated" aria-label="Affiliated"
                                    style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                        <span style="position:relative;top:-10px;">{{ 'AFFILIATED' | translate }}</span>
+                        <span>{{ 'AFFILIATED' | translate }}</span>
                     </div>
 
                     <div layout-gt-sm="row" ng-if="vm.submission.affiliated" class="extended info">
@@ -119,14 +119,14 @@
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                       <md-switch flex class="md-primary" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions"
                                  style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                      <span style="position:relative;top:-10px;">{{ 'REPETITION_OPTION' | translate }}</span>
+                      <span>{{ 'REPETITION_OPTION' | translate }}</span>
                   </div>
 
                   <div class="fc-section-body">
                     <div ng-if="vm.submission.type">
                       <md-switch flex class="md-primary" ng-model="vm.submission.always_available" aria-label="Multiple sessions"
                                 style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                      <span style="position:relative;top:-10px;">{{ 'AVAILABILITY_ALWAYS' | translate }}</span>
+                      <span>{{ 'AVAILABILITY_ALWAYS' | translate }}</span>
                     </div>
                   </div>
 
@@ -184,8 +184,7 @@
               <p class="fc-section-summary" ng-bind-html="'ACTIVITY_SECTION_SUMMARY' | translate"></p>
 
               <section id="target_audience_section">
-                <h2 class="fc-section-title">{{ 'AUDIENCE_SECTION_TITLE' | translate }}</h2>
-
+                <h2 class="fc-section-title">{{ 'AUDIENCE_SECTION_TITLE' | translate }}</h2>                
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                     <md-input-container flex>
                         <label class="md-no-float">{{ 'AMOUNT_AUDIENCE' | translate }}</label>
@@ -197,7 +196,7 @@
                 <div>
                   <md-switch flex class="md-primary" ng-model="vm.submission.open_for_all" aria-label="Open for all"
                              style="display:inline-block;margin:0px;"></md-switch>
-                  <span style="position:relative;top:-10px;">{{ 'AUDIENCE_ALL' | translate }}</span>
+                  <span>{{ 'AUDIENCE_ALL' | translate }}</span>
                 </div>
 
                 <div class="extended info">
@@ -225,7 +224,7 @@
                 <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                     <md-switch flex class="md-primary" ng-model="vm.submission.requires_pay" aria-label="Open for all"
                                style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                    <span style="position:relative;top:-10px;">{{ 'COSTS_REQUIRED' | translate }}</span>
+                    <span>{{ 'COSTS_REQUIRED' | translate }}</span>
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.requires_pay" class="extended info">
@@ -252,7 +251,7 @@
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                     <md-switch flex class="md-primary" ng-model="vm.submission.format" aria-label="Attendance format"
                                style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                    <span style="position:relative;top:-10px;">{{ 'ACTIVITY_FORMAT_LABEL' | translate }}</span>
+                    <span>{{ 'ACTIVITY_FORMAT_LABEL' | translate }}</span>
                   </div>
                 </div>
 
@@ -268,7 +267,7 @@
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
                     <md-switch flex class="md-primary" ng-model="vm.submission.multiple_sessions" aria-label="Multiple sessions"
                                style="width:45px;display:inline-block;margin:0px;"></md-switch>
-                    <span style="position:relative;top:-10px;">{{ 'ACTIVITY_SESSIONS_MULTIPLE' | translate }}</span>
+                    <span>{{ 'ACTIVITY_SESSIONS_MULTIPLE' | translate }}</span>
                   </div>
                 </div>
 
