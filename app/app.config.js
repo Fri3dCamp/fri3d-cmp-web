@@ -204,7 +204,7 @@
               day_3_until: 21,
               costs: 0,
               multiple_sessions: false,
-              session_count: 1,
+              session_count: 2,
               open_for_all: true,
               audience_level: [],
               open_for_repetitions: true,
