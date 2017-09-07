@@ -1,9 +1,12 @@
 import json
+import re
+
+regex = r"\/\/ [A-Za-z 0-9-_]+" # comment lines in json
 
 with open('app/translations.js') as data_file:
-    clean_json_txt = data_file.read().replace(");","")
-    clean_json_txt = clean_json_txt.replace("angular.module('app').constant('translations', ","").replace("'","\"").replace("\\","").replace("</","").replace("<","").replace(">","").replace("\n","").replace("\r","")
-    #print(clean_json_txt)
+    clean_json_txt = data_file.read()
+    clean_json_txt = re.sub(regex,"",clean_json_txt).replace("angular.module('app').constant('translations', ","").replace("\"","").replace("'","\"").replace("\\","").replace("</","").replace("<","").replace(">","").replace("\n","").replace("\r","").replace(");","")
+    print(clean_json_txt)
     data = json.loads(clean_json_txt)
 
 keyslist = dict()
