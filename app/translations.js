@@ -226,6 +226,10 @@ angular.module('app').constant('translations', {
     'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, dan kan je ons hieronder verdere informatie bezorgen.'
   ],
 
+  'INVALID_FORM' : [
+    'Het formulier bevat nog fouten of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en corrigeer de fouten of vul de ontbrekende gegevens aan.'
+  ],
+
   'SUBMISSION_COMPLETE_OPTION': [
     'Mijn voorstel is compleet, ik wil dit nu versturen!'
   ],
