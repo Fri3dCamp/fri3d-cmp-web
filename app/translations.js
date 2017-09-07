@@ -132,7 +132,7 @@ angular.module('app').constant('translations', {
     'Publiek'
   ],
   'AMOUNT_AUDIENCE': [
-    'Maximaal aantal deelnemers dat je kan begeleiden.'
+    'Maximaal aantal deelnemers dat je kan begeleiden. Denk hier aan het totaal aantal, niet eventuele groepen. (e.g. Als een kind best begeleid wordt door een ouder, zijn dat twee deelnemers.)'
   ],
   'AUDIENCE_ALL' : [
     'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
