@@ -248,4 +248,16 @@ angular.module('app').constant('translations', {
   'BTN_SEND' : [
     'Verstuur'
   ],
+  'INTRO_CAPTION' : [
+    'Uitnodiging tot deelname'
+   ],
+   'INTRO_TITLE' : [
+     'Dit wordt Fri3d Camp 2018!'
+   ],
+  'INTRO_INTRO' : [
+    'De derde editie van <a href="http://fri3d.be">Fri3d Camp</a> komt dichterbij!<br>Vanaf nu kan jij ook <b>jouw voorstel voor een activiteit</b> insturen.'
+  ],
+  'INTRO_LAUNCH_BUTTON' : [
+    'Beantwoord onze uitnodiging'
+  ]
 });
