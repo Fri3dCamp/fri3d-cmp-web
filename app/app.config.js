@@ -87,7 +87,7 @@
               }]
           }
       })
-      .when('/', {
+      .when('/intro', {
           templateUrl: 'app/intro/intro.html',
           controller: 'IntroController',
           controllerAs: 'vm',
@@ -99,7 +99,7 @@
 
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/intro'
       });
 
       $mdThemingProvider.theme('default')
