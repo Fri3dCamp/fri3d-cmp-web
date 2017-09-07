@@ -183,7 +183,7 @@ angular.module('app').constant('translations', {
     'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit? (in minuten)'
   ],
   'ACTIVITY_SESSIONS_MULTIPLE' : [
-    "Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend."
+    "Mijn activiteit bestaat uit verschillende, opeenvolgende delen en moet gepland worden over meerdere sessies gedurende het weekend."
   ],
   'SESSIONS_LABEL': [
     'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
