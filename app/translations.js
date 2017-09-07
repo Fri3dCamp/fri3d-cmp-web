@@ -1,159 +1,247 @@
 angular.module('app').constant('translations', {
-    'ACTIVITY_DURATION_LABEL': [
-      'Totale duur (in minuten)'
-    ],
-    'ACTIVITY_DURATION_PER_PARTICIPANT': [
-      'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'
-    ],
-    'ACTIVITY_SECTION_TITLE' : [
-      "Jouw Fri3d activiteit"
-    ],
-    'ACTIVITY_SECTION_SUMMARY' : [
-      "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,... Als je specifieke noden hebt, beschrijf deze dan zeker, zodat we hier alvast rekening mee kunnen houden."
-    ],
-    'AFFILIATED' : [
-      "Ik ben verbonden aan een hackerspace."
-    ],
-    'AMOUNT_AUDIENCE': ['Max. aantal deelnemers'],
-    'AMOUNT_SESSIONS': ['Aantal sessies'],
-    'ASSOCIATED': ['Hacker- of makerspaces waar je bij hoort'],
-    'AVAILABILITY': ['Wanneer ben je beschikbaar om deze activiteit te organizeren?'],
-    'AVAILABILITY_SECTION_TITLE': ['Jouw bechikbaarheid'],
-    'AVAILABILITY_SECTION_SUMMARY': [
-      'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, kan je ons dit ook laten weten. We proberen hier dan zo goed mogelijk rekening mee te houden in de planning van het programma. Ook indien je de activiteit niet meerdere keren kan of wil geven, geef je dit best even aan.'
-    ],
-    'AUDIENCE_ALL' : [
-      'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
-    ],
-    'AUDIENCE_REQUIREMENTS_LABEL': ['Voorbreiding, voorkennis,...'],
-    'AUDIENCE_SECTION_TITLE': ['Publiek'],
-    'AUDIENCE_SECTION_SUMMARY': ['Fri3d Camp trekt een breed publiek aan. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'],
-    'AUDIENCE_TYPE_LABEL' : [
-      'Typering'
-    ],
-    'AVAILABILITY_ALWAYS' : [
-      'Ik ben gedurende het hele weekend beschikbaar om mijn activiteit te organiseren.'
-    ],
-    'BASIC_INFO_SECTION_SUMMARY': [
-      'De titel en de korte omschrijving zijn dé manier om deelnemers een zo goed mogelijk beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat is.'
-    ],
-    'BTN_SEND' : ['Send'],
-    'CAPACITY_SECTION_SUMMARY': ['Staat er een limiet op het aantal personen dat aan deze activiteit kan deelnemen?'],
-    'CAPACITY_SECTION_TITLE': ['Aantal Deelnemers'],
-    'COLLABORATORS': ['Medewerkers'],
-    'COLLABORATORS_ADD_BUTTON': ['Voeg een medewerker toe'],
-    'COLLABORATORS_DIALOG_ADD_CANCEL' : [ 'Afbreken' ],
-    'COLLABORATORS_DIALOG_ADD_CONFIRM' : [ 'Toevoegen' ],
-    'COLLABORATORS_DIALOG_REMOVE_CONTENTS' : [ 'Wil je {{collab_name}} verwijderen?' ],
-    'COLLABORATORS_DIALOG_REMOVE_HEADER' : [ 'Medewerker verwijderen' ],
-    'COLLABORATORS_DIALOG_REMOVE_CANCEL' : [ 'Afbreken' ],
-    'COLLABORATORS_DIALOG_REMOVE_CONFIRM' : [ 'Verwijderen' ],
-    'COLLABORATORS_SECTION_SUMMARY': ['Organiseer je deze activiteit samen met anderen? Dan kan je hun namen hier toevoegen.'],
-    'COLLABORATORS_SECTION_TITLE': ['Medewerkers'],
-    'COSTS_LABEL': [
-      'Kostprijs per deelnemer in €'
-    ],
-    'COSTS_REQUIRED' : [
-      'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost verbonden aan deze workshop.'
-    ],
-    'COSTS_SECTION_SUMMARY': [],
-    'COSTS_SECTION_TITLE': ['Kosten'],
-    'DAY_ONE': ['Dag 1 (Zaterdag 18 augustus)'],
-    'DAY_TWO': ['Dag 2 (Zondag 19 augustus)'],
-    'DAY_THREE': ['Dag 3 (Maandag 20 augustus)'],
-    'DURATION_SECTION_SUMMARY': ['Hoe lang duurt deze activiteit in totaal, alle sessies inbegrepen, in minuten?'],
-    'DURATION_SECTION_TITLE': [
-      'Verloop'
-    ],
-    'EMAIL': ['E-Mail Adres'],
-    'ACTIVITY_FORMAT_LABEL': [
-      'Deelnemers aan mijn activiteit dienen niet de hele tijd aanwezig te zijn en kunnen in de loop ervan langskomen om deel te nemen.'
-    ],
-    'FROM': ['Van'],
-    'FULLTIME': ['Aanwezigheid van begin tot einde'],
-    'INVALID_FORM': ['Het formulier bevat nog fout of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en vul de gegevens correct in.'],
-    'LANGUAGE_PROMPT' : [
-      "Looking for an English version of the form? Switch here!"
-    ],
-    'LANGUAGE_SUPPORT_OPTION': ['nvt'],
-    'LANGUAGE_SUPPORT_SECTION_SUMMARY': ['nvt'],
-    'LANGUAGE_SUPPORT_SECTION_TITLE': ['nvt'],
-    'LEVEL_EXPERT': [
-      'Grondige voorkennis vereist'
-    ],
-    'LEVEL_FAMILY': [
-      'Voor families samen'
-    ],
-    'LEVEL_BEGINNER' : [
-      "Voor beginners"
-    ],
-    'LEVEL_INTERMEDIATE' : [
-      "Voorkennis nodig"
-    ],
-    'LEVEL_CHILD' : [
-      "Specifiek voor kinderen"
-    ],
-    'LEVEL_ADULT' : [
-      "Eigenlijk voor volwassenen"
-    ],
-    'LOCATION_LABEL': ['Requirements'],
-    'LOCATION_SECTION_SUMMARY': [],
-    'LOCATION_SECTION_TITLE': ['Locatie'],
-    'MESSAGE': ['Jouw bericht'],
-    'NAME': ['Naam'],
-    'REMARKS_SECTION_SUMMARY': [
-      'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, kan je ons hieronder verdere informatie bezorgen. Na het doorsturen van je activiteit, zullen we nog via wederzijdse commentaar de activiteit verder verfijnen.'
-    ],
-    'REMARKS_SECTION_TITLE': [
-      'Bijkomende informatie'
-    ],
-    'REPETITION_OPTION': [
-      'Ik kan deze activiteit meerdere keren organiseren op kamp, bv. indien er veel interesse is.'
-    ],
-    'SAVE': ['Bewaar'],
-    'SEND': ['Verstuur'],
-    'SESSIONS_LABEL': ['Aantal sessies doorheen het kamp dat de deelnemers moeten deelnemen.'],
-    'ACTIVITY_SESSIONS_MULTIPLE' : [
-      "Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend."
-    ],
-    'SPEAKER_SECTION_SUMMARY': [
-      '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal naast de titel en korte omschrijving van hierboven, ook in de communicatie omtrent je activiteit gebruikt worden.</p><p>Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in de spotlight zetten in een heus Belgisch Hacker Spaces track.</p>'
-    ],
-    'SPEAKER_SECTION_TITLE': [
-      'Info over jezelf'
-    ],
-    'SUBMISSION_CAPTION': ['Uitnodiging tot deelname'],
-    'SUBMISSION_COMPLETE_OPTION': ['Mijn voorstel is compleet, ik wil dit nu versturen!'],
-    'SUBMISSION_DESC': ['Activiteiten op Fri3d Camp kunnen zeer uiteen lopend van aard zijn. We delen ze in in drie grote categorieën:'],
-    'SUBMISSION_INTRO': ['<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
-      \
-      <h3>Instructies</h3> \
-      <ul>\
-      <li>Vul zoveel mogelijk informatie in.</li>\
-      <li>Je kan meerdere malen opslaan en als je klaar bent, kan je doorsturen.</li>\
-      <li>We gaan dan samen met jou in dialoog om alles in detail perfect te maken.</li>\
-      </ul>'],
-    'SUBMISSION_TITLE': ['Jouw voorstel voor Fri3d Camp 2018', 'Your proposal for Fri3d Camp 2018'],
-    'SUMMARY': [
-      'Korte omschrijving'
-    ],
-    'TITLE': ['Titel van je activiteit'],
-    'TYPE_OTHER': ['Andere'],
-    'TYPE_OTHER_DESC': ['Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties ter beschikking.'],
-    'TYPE_PRESENTATION': ['Presentatie'],
-    'TYPE_PRESENTATION_DESC': ['Wil je het verhaal van jouw hacker passie delen met alle deelnemers, jouw Open Source project voorstellen,... Dan hebben wij een volledig uitgeruste zaal klaar staan. Het podium, en alle benodigde ondersteuning is aanwezig!'],
-    'TYPE_SELECT_PROMPT' : ['Kies één van de bovenstaande soorten content om de rest van het formulier in te vullen'],
-    'TYPE_WORKSHOP': ['Workshop'],
-    'TYPE_WORKSHOP_DESC': ['Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.'],
-    'UNTIL': ['Tot'],
-    'VISIT_DURATION_LABEL': ['Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'],
-    'WALK-IN': ['Doorlopende deelname'],
-	// intro.html
-	'INTRO_CAPTION' : [ 'Uitnodiging tot deelname' ],
-	'INTRO_INTRO' : [
-		'De derde editie van <a href="http://fri3d.be">Fri3d Camp</a> komt dichterbij! Vanaf nu kan jij ook <b>jouw voorstel voor een activiteit</b> insturen.'
-	],
-	'INTRO_LAUNCH_BUTTON' : [ 'Lees en beantwoord de Fri3d Camp 2018 CFP' ],
-	'INTRO_TITLE' : [ 'Dit wordt Fri3d Camp 2018!' ],
+  'SUBMISSION_CAPTION': [
+    'Uitnodiging tot deelname'
+  ],
 
+  'LANGUAGE_PROMPT' : [
+    "Looking for an English version of the form?",
+    "Zoek je een Nederlandstalige versie van dit formulier?"
+  ],
+
+  'SUBMISSION_INTRO': [
+    '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
+    <div class="download pdf"><a href="/assets/utd-2018.pdf" target="_blank"><img src="/assets/fri3d-pdf.png"><br><br>Download de volledige uitnodiging.</a></div>\
+    <p>Fri3d Camp brengt mensen met uiteenlopende interesses samen om vol enthousiasme van elkaar te leren. Gedurende <strong>drie dagen</strong> (en nachten) komen verschillende <strong>technologie- en wetenschap gerelateerde activiteiten</strong> aan bod. Tijdens Fri3d Camp staat het hacker & maker motto centraal : "be excellent to each other".</p>\
+    <p>De beste manier om deel te nemen aan Fri3d Camp is door <strong>zelf activiteiten</strong te organiseren. We nodigen daarom <strong>iedereen</strong> uit om voorstellen te doen. <strong>We zoeken jullie</strong>: hackers, makers, artiesten, knutselaars, wetenschappers, ingenieurs, ouders en kinderen. We zoeken mensen die willen komen vertellen over wat hen boeit en waarom ze er door gepassioneerd zijn: elektronica, drones, LEGO, 3D scannen & printen, het internet der dingen, radiografie, knutselen met papier, beveiliging, grafische vormgeving, programmeren, muziek, bier brouwen, fimo kunst, … en nog veel meer.</p>\
+    <p>Als je graag je steentje wil bijdragen aan Fri3d Camp en een <strong>presentatie</strong> wil geven over jouw passie, of een <strong>workshop</strong> wil inrichten om jouw kennis en kunde te delen met anderen, of op het terrein een <strong>kunstinstallatie</strong> wil uitwerken, een <strong>bosspel</strong> wil inrichten of gewoon het podium wil beklimmen en het beste van jezelf geven, … Laat van je horen en beantwoord deze uitnodiging tot deelname!</p>\
+    <p>Het thema voor deze editie is <strong>Robots</strong>, en we hopen ze in alle mogelijk vormen en gedaanten te mogen verwelkomen. Naast robots zijn er nog enorm veel andere interessante onderwerpen die aan bod komen op Fri3d Camp, getuige de grote diversiteit in het programma tijdens de voorgaande edities.</p>\
+    <p><strong>BELANGRIJK</strong>: De <strong>deadline</strong> voor antwoorden op deze uitnodiging is <strong>28 februari 2018</strong>. Op 1 mei maken we dan het programma met geselecteerde activiteiten bekend.</p>\
+    <p>Geselecteerde sprekers, workshop hosts,… krijgen tevens een <strong>korting</strong> voor hun ticket voor de dag van hun activiteit en zijn <strong>zeker van hun tickets</strong> en die voor hun gezin.</p>\
+    <p>Heb je vragen over deze uitnodiging? Neem contact op met Team Content (<a href="mailto:content@fri3d.be">content@fri3d.be</a>).</p>\
+    <h2>Enkele hints bij het invullen van het formulier:</h2> \
+    <ul>\
+    <li>Kies één van de drie activiteit types hieronder.</li>\
+    <li>Vul zoveel mogelijk informatie in.</li>\
+    <li>Je kan je werk meerdere malen tussentijds bewaren en als je klaar bent, kan je doorsturen.</li>\
+    <li>We gaan dan samen met jou in dialoog om alles in detail perfect te maken.</li>\
+    </ul>'],
+  'SUBMISSION_TITLE': [
+    'Jouw voorstel voor Fri3d Camp 2018',
+    'Your proposal for Fri3d Camp 2018'
+  ],
+  'SUBMISSION_DESC': [
+    'Activiteiten op Fri3d Camp zijn zeer uiteen lopend van aard. Er zijn drie grote categorieën:'
+  ],
+
+  'TYPE_SELECT_PROMPT' : [
+    'Kies één van de onderstaande content types om de rest van het formulier in te vullen.'
+  ],
+  'TYPE_PRESENTATION': [
+    'Presentatie'
+  ],
+  'TYPE_PRESENTATION_DESC': [
+    'Wil je het verhaal van jouw hacker passie delen met alle deelnemers, jouw Open Source of onderzoeksproject voorstellen? Dan hebben wij een volledig uitgeruste zaal klaar staan. Het podium en alle benodigde ondersteuning is aanwezig!'
+  ],
+  'TYPE_WORKSHOP': [
+    'Workshop'
+  ],
+  'TYPE_WORKSHOP_DESC': [
+    'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.'
+  ],
+  'TYPE_OTHER': [
+    'Andere'
+  ],
+  'TYPE_OTHER_DESC': [
+    'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties helemaal voor jou klaar staan.'
+  ],
+
+  'BASIC_INFO_SECTION_SUMMARY': [
+    'De titel en de korte omschrijving zijn dé manier om deelnemers een goed beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat zal zijn.'
+  ],
+  'TITLE': [
+    'Titel van je activiteit'
+  ],
+  'SUMMARY': [
+    'Korte omschrijving'
+  ],
+  'LANGUAGE_SUPPORT_OPTION': [
+    'nvt'
+  ],
+  
+  
+  'SPEAKER_SECTION_TITLE': [
+    'Info over jezelf'
+  ],
+  'SPEAKER_SECTION_SUMMARY': [
+    '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal, naast de titel en korte omschrijving, ook in de communicatie omtrent je activiteit gebruikt worden.</p>'
+  ],
+  'NAME': [
+    'Naam'
+  ],
+  'EMAIL': [
+    'E-Mail Adres'
+  ],
+  'BIO' : [
+    'Bio'
+  ],
+  'AFFILIATED' : [
+    "Ik bezoek af en toe al een hackerspace."
+  ],
+  'ASSOCIATED': [
+    'Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in het spotlicht zetten in een heus Belgisch Hacker Spaces track.'
+  ],
+  'REPETITION_OPTION': [
+    'Ik kan deze activiteit meerdere keren organiseren tijdens het kamp, bv. indien er veel interesse is.'
+  ],
+  'AVAILABILITY_ALWAYS' : [
+    'Ik ben gedurende het hele weekend beschikbaar om mijn activiteit te organiseren.'
+  ],
+  'AVAILABILITY_SECTION_TITLE': [
+    'Jouw bechikbaarheid'
+  ],
+  'AVAILABILITY_SECTION_SUMMARY': [
+    'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, laat ons weten wanneer dit wel kan. We proberen hier zo goed mogelijk rekening mee te houden, bij het opstellen van het programma.'
+  ],
+  'FROM': [
+    'Van'
+  ],
+  'UNTIL': [
+    'Tot'
+  ],
+  'DAY_ONE': [
+    'Dag 1 (Zaterdag 18 augustus)'
+  ],
+  'DAY_TWO': [
+    'Dag 2 (Zondag 19 augustus)'
+  ],
+  'DAY_THREE': [
+    'Dag 3 (Maandag 20 augustus)'
+  ],
+  
+
+  'ACTIVITY_SECTION_TITLE' : [
+    "Jouw Fri3d activiteit"
+  ],
+  'ACTIVITY_SECTION_SUMMARY' : [
+    "Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,..."
+  ],
+  'AUDIENCE_SECTION_TITLE': [
+    'Publiek'
+  ],
+  'AMOUNT_AUDIENCE': [
+    'Maximaal aantal deelnemers dat je kan begeleiden.'
+  ],
+  'AUDIENCE_ALL' : [
+    'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
+  ],
+  'AUDIENCE_SECTION_SUMMARY': [
+    'Fri3d Camp heeft typisch een publiek met verschillende voorkennis. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...'
+  ],
+  'AUDIENCE_TYPE_LABEL' : [
+    'Deze activiteit is gericht op...'
+  ],
+  'LEVEL_BEGINNER' : [
+    "Beginners"
+  ],
+  'LEVEL_INTERMEDIATE' : [
+    "Deelnemers met enige voorkennis"
+  ],
+  'LEVEL_EXPERT': [
+    'Deelnemers met reeds een grondige voorkennis omtrent het onderwerp'
+  ],
+  'LEVEL_FAMILY': [
+    'Families (e.g. een kind begeleid door een ouder)'
+  ],
+  'LEVEL_CHILD' : [
+    "Kinderen alleen"
+  ],
+  'LEVEL_ADULT' : [
+    "Volwassenen"
+  ],
+  'AUDIENCE_REQUIREMENTS_LABEL': [
+    'Vereiste voorbreiding, voorkennis,...'
+  ],
+  'COSTS_REQUIRED' : [
+    'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost aan verbonden.'
+  ],
+  'COSTS_LABEL': [
+    'Kostprijs per deelnemer (in €)'
+  ],
+  'DURATION_SECTION_TITLE': [
+    'Verloop van de activiteit'
+  ],
+  'ACTIVITY_DURATION_LABEL': [
+    'Totale duur (in minuten)'
+  ],
+  'ACTIVITY_FORMAT_LABEL': [
+    'Deelnemers kunnen gedurende de activiteit langskomen voor hun deel. Ze moeten dus niet de hele tijd aanwezig te zijn.'
+  ],
+  'VISIT_DURATION_LABEL': [
+    'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit? (in minuten)'
+  ],
+  'ACTIVITY_SESSIONS_MULTIPLE' : [
+    "Mijn activiteit moet gespreid worden over meerdere sessies gedurende het weekend."
+  ],
+  'SESSIONS_LABEL': [
+    'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
+  ],
+
+
+  'COLLABORATORS_SECTION_TITLE': [
+    'Medewerkers'
+  ],
+  'COLLABORATORS_SECTION_SUMMARY': [
+    'Organiseer je deze activiteit samen met anderen? Dan kan je hun gegevens hier toevoegen.'
+  ],
+  'COLLABORATORS': [
+    'Medewerkers'
+  ],
+  'COLLABORATORS_ADD_BUTTON': [
+    'Voeg een medewerker toe'
+  ],
+  'COLLABORATORS_DIALOG_ADD_CANCEL' : [
+    'Afbreken'
+  ],
+  'COLLABORATORS_DIALOG_ADD_CONFIRM' : [
+    'Toevoegen'
+  ],
+  'COLLABORATORS_DIALOG_REMOVE_HEADER' : [
+    'Medewerker verwijderen'
+  ],
+  'COLLABORATORS_DIALOG_REMOVE_CONTENTS' : [
+    'Wil je {{collab_name}} verwijderen?'
+  ],
+  'COLLABORATORS_DIALOG_REMOVE_CANCEL' : [
+    'Afbreken'
+  ],
+  'COLLABORATORS_DIALOG_REMOVE_CONFIRM' : [
+    'Verwijderen'
+  ],
+
+
+  'REMARKS_SECTION_TITLE': [
+    'Bijkomende informatie'
+  ],
+  'REMARKS_SECTION_SUMMARY': [
+    'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, dan kan je ons hieronder verdere informatie bezorgen.'
+  ],
+
+  'SUBMISSION_COMPLETE_OPTION': [
+    'Mijn voorstel is compleet, ik wil dit nu versturen!'
+  ],
+
+  'SAVE': [
+    'Bewaar'
+  ],
+  'SEND': [
+    'Verstuur'
+  ],
+
+
+  'MESSAGE': [
+    'Jouw bericht'
+  ],
+  'BTN_SEND' : [
+    'Verstuur'
+  ],
 });

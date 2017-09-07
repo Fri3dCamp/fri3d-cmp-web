@@ -202,3 +202,15 @@ md-input-container .md-errors-spacer {
 div.extended.info {
   margin-left: 50px;
 }
+
+div.download.pdf {
+  font-size: 75%;
+  text-align: center;
+  float: right;
+  margin: 15px;
+  width: 110px;
+}
+
+A {
+  color: #006E7F;
+}
