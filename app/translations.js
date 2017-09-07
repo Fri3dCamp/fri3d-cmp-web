@@ -1,13 +1,16 @@
 angular.module('app').constant('translations', {
+  // HEADER
   'SUBMISSION_CAPTION': [
     'Uitnodiging tot deelname'
   ],
 
+  // LANGUAGE PROMPT
   'LANGUAGE_PROMPT' : [
     "Looking for an English version of the form?",
     "Zoek je een Nederlandstalige versie van dit formulier?"
   ],
 
+  // INTRODUCTION
   'SUBMISSION_INTRO': [
     '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
     <div class="download pdf"><a href="/assets/utd-2018.pdf" target="_blank"><img src="/assets/fri3d-pdf.png"><br><br>Download de volledige uitnodiging.</a></div>\
@@ -68,7 +71,7 @@ angular.module('app').constant('translations', {
     'nvt'
   ],
   
-  
+  // SPEAKER
   'SPEAKER_SECTION_TITLE': [
     'Info over jezelf'
   ],
@@ -118,7 +121,7 @@ angular.module('app').constant('translations', {
     'Dag 3 (Maandag 20 augustus)'
   ],
   
-
+  // ACTIVITY
   'ACTIVITY_SECTION_TITLE' : [
     "Jouw Fri3d activiteit"
   ],
@@ -186,7 +189,7 @@ angular.module('app').constant('translations', {
     'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
   ],
 
-
+  // COLLABORATORS
   'COLLABORATORS_SECTION_TITLE': [
     'Medewerkers'
   ],
@@ -218,7 +221,7 @@ angular.module('app').constant('translations', {
     'Verwijderen'
   ],
 
-
+  // REMARKS
   'REMARKS_SECTION_TITLE': [
     'Bijkomende informatie'
   ],
@@ -226,14 +229,15 @@ angular.module('app').constant('translations', {
     'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, dan kan je ons hieronder verdere informatie bezorgen.'
   ],
 
+  // VALIDATION
   'INVALID_FORM' : [
     'Het formulier bevat nog fouten of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en corrigeer de fouten of vul de ontbrekende gegevens aan.'
   ],
 
+  // SUBMISSION
   'SUBMISSION_COMPLETE_OPTION': [
     'Mijn voorstel is compleet, ik wil dit nu versturen!'
   ],
-
   'SAVE': [
     'Bewaar'
   ],
@@ -241,13 +245,15 @@ angular.module('app').constant('translations', {
     'Verstuur'
   ],
 
-
+  // COMMENTS
   'MESSAGE': [
     'Jouw bericht'
   ],
   'BTN_SEND' : [
     'Verstuur'
   ],
+
+  // LANDING PAGE
   'INTRO_CAPTION' : [
     'Uitnodiging tot deelname'
    ],
