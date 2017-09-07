@@ -36,7 +36,6 @@
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
     vm.audienceLevels = [ "LEVEL_BEGINNER", "LEVEL_INTERMEDIATE", "LEVEL_EXPERT", "LEVEL_FAMILY", "LEVEL_CHILD", "LEVEL_ADULT" ];
-    vm.timeBuckets = _generateTimeBuckets();
 
     if (webStorageService.get('pending_submission', 'sessionStorage')) {
         vm.submission = webStorageService.get('pending_submission', 'sessionStorage');
@@ -172,17 +171,5 @@
           });
       }
 
-    function _generateTimeBuckets() {
-        let res = [];
-
-        for (let x = 0; x < 24; x++) {
-            res.push(x + ":00");
-            res.push(x + ":15");
-            res.push(x + ":30");
-            res.push(x + ":45");
-        }
-
-        return res;
-    }
   }
 })();
