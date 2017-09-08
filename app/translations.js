@@ -33,11 +33,8 @@ angular.module('app').constant('translations', {
     'Your proposal for Fri3d Camp 2018'
   ],
   'SUBMISSION_DESC': [
-    'Activiteiten op Fri3d Camp zijn zeer uiteen lopend van aard. Er zijn drie grote categorieën:'
-  ],
-
-  'TYPE_SELECT_PROMPT' : [
-    'Kies één van de onderstaande content types om de rest van het formulier in te vullen.'
+    'Activiteiten op Fri3d Camp zijn zeer uiteen lopend van aard. Er zijn drie types: presentaties, workshops en andere.<br>\
+    Kies hieronder één daarvan. Daarna kan je overeenkomstig de rest van het formulier in vullen.'
   ],
   'TYPE_PRESENTATION': [
     'Presentatie'
