@@ -206,7 +206,9 @@
                           <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
                                        ng-click="vm.toggle(level, vm.submission.audience_level)"
                                        ng-repeat="level in vm.audienceLevels"
-                                       flex-gt-sm class="md-primary">
+                                       flex-gt-sm
+                                       class="md-primary"
+                                       style="display:block;">
                               {{ level | translate}}
                           </md-checkbox>
                         </md-input-container>
