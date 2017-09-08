@@ -231,3 +231,9 @@ A {
 .mainwrapper.layout-margin.layout-align-start-center.layout-row {
   margin: 0px;
 }
+
+@-moz-document url-prefix() {
+  div.header.caption {
+    margin-top: 18px;
+  }
+}
