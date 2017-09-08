@@ -228,7 +228,7 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.requires_pay" class="extended info">
-                    <md-input-container flex>
+                    <md-input-container flex style="margin-top:0px">
                         <label class="md-no-float">{{ 'COSTS_LABEL' | translate }}</label>
                         <input class="fri3d" type="number" ng-model="vm.submission.costs" min="0">
                     </md-input-container>
