@@ -262,5 +262,22 @@ angular.module('app').constant('translations', {
   ],
   'INTRO_LAUNCH_BUTTON' : [
     'Beantwoord onze uitnodiging'
-  ]
+  ],
+
+  // SAVED DIALOG
+  'SAVED_DIALOG_HEADER_IN_PREPARATION' : [
+      "Je voorstel is opgeslagen!",
+  ],
+  'SAVED_DIALOG_HEADER_PROPOSED' : [
+      "Je voorstel is verstuurd!",
+  ],
+  'SAVED_DIALOG_CONTENTS_IN_PREPARATION' : [
+      "Je kan deze pagina bookmarken (we mailen je ook een linkje) om je voorstel nog te wijzigen en uiteindelijk door te sturen zodat we het kunnen bekijken.",
+  ],
+  'SAVED_DIALOG_CONTENTS_PROPOSED' : [
+      "We kijken er zo spoedig mogelijk naar. Je kan deze pagina bookmarken (we mailen je ook een linkje) om je voorstel nog te bekijken en/of wijzigen.",
+  ],
+  'SAVED_DIALOG_OK' : [
+      "Ok!",
+  ],
 });

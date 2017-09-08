@@ -58,6 +58,23 @@
       vm.toggle = toggle;
       vm.inList = inList;
 
+      // if save() noticed this is the first time this submission
+      // is saved, tell the user what's going on
+      if (webStorageService.get('submission_first_save')) {
+          webStorageService.remove('submission_first_save');
+          $mdDialog.show($mdDialog.alert()
+            .title($translate.instant(
+              (vm.submission.status == 'PROPOSED') ?
+                'SAVED_DIALOG_HEADER_PROPOSED' :
+                'SAVED_DIALOG_HEADER_IN_PREPARATION'))
+            .textContent($translate.instant(
+              (vm.submission.status == 'PROPOSED') ?
+                'SAVED_DIALOG_CONTENTS_PROPOSED' :
+                'SAVED_DIALOG_CONTENTS_IN_PREPARATION'))
+            .ok($translate.instant('SAVED_DIALOG_OK'))
+          );
+      }
+
       function inList(item, list) {
           return list.indexOf(item) > -1;
       }
@@ -98,6 +115,12 @@
 
       // patch meta info into form
       vm.submission.form_language = vm.lang;
+
+      // is this the first time we save this submission, or if this
+      // submission just got published, remember so we can guide user
+      if (vm.submission_id == undefined) {
+        webStorageService.set('submission_first_save', true);
+      }
 
       SubmissionService.save(vm.submission).then(function(response) {
           vm.submission.id = response._id;
