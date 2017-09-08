@@ -257,7 +257,6 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.format" class="extended info">
-                  <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container flex-gt-sm style="margin-top:0">
                     <label class="md-no-float"m>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
                     <input class="fri3d" flex type="number" ng-model="vm.submission.visit_duration" min="0">
@@ -275,7 +274,6 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.multiple_sessions" class="extended info">
-                  <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
                       <label flex-gt-sm for="session_count">{{ 'SESSIONS_LABEL' | translate }}</label>
                       <input class="fri3d" type="number" id="session_count" ng-model="vm.submission.session_count" min="2" aria-label="{{ 'SESSIONS_LABEL' | translate }}">
