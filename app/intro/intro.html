@@ -18,7 +18,7 @@
     <div layout="row" layout-margin layout-align="start center" class="mainwrapper">
         <form layout="column" name="userForm" layout-margin md-block flex novalidate>
 
-          <div>
+          <div class="fc-landingpage">
             <div style="float:right;width:115px;margin-top:20px">
               <span style="position:relative;top:-10px;display:inline-block;">NL</span>
               <md-switch flex class="md-primary" ng-change="vm.toggleLanguage()" ng-model="vm.translate" aria-label="Select form language"
@@ -31,10 +31,11 @@
             </div>
 
             <h1 class="fc-section-title">{{ 'INTRO_TITLE' | translate }}</h1>
-            <p ng-bind-html="'INTRO_INTRO' | translate"></p>
+            <div ng-bind-html="'INTRO_INTRO' | translate"></div>
             <center>
                 <md-button class="md-raised md-primary" href="/cfp">{{ 'INTRO_LAUNCH_BUTTON' | translate }}</md-button>
             </center>
+            <p ng-bind-html="'INTRO_GET_INVITE' | translate"></p>
           </div>
 
         </form>

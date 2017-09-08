@@ -261,13 +261,16 @@ angular.module('app').constant('translations', {
     'Uitnodiging tot deelname'
    ],
    'INTRO_TITLE' : [
-     'Dit wordt Fri3d Camp 2018!'
+     'Dien je voorstel in voor een activiteit'
    ],
   'INTRO_INTRO' : [
-    'De derde editie van <a href="http://fri3d.be">Fri3d Camp</a> komt dichterbij!<br>Vanaf nu kan jij ook <b>jouw voorstel voor een activiteit</b> insturen.'
+    '<p>Van 18 tem. 20 augustus 2018 vindt <a href="http://www.fri3d.be">Fri3d Camp</a> plaats in De Kluis in St-Joris-Weert.</p><p>Op deze site kan je <strong>jouw voorstel insturen</strong>.</p>'
   ],
   'INTRO_LAUNCH_BUTTON' : [
-    'Beantwoord onze uitnodiging'
+    'Dien je voorstel in'
+  ],
+  'INTRO_GET_INVITE' : [
+    '<a href="/assets/utd-2018.pdf" target="_blank">Download de volledige uitnodiging</a>'
   ],
 
   // SAVED DIALOG
