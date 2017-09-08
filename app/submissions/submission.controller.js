@@ -116,9 +116,9 @@
       // patch meta info into form
       vm.submission.form_language = vm.lang;
 
-      // is this the first time we save this submission, or if this
-      // submission just got published, remember so we can guide user
-      if (vm.submission_id == undefined) {
+      // is this the first time we save this submission, remember
+	  // so we can inform the user what to expect
+      if (vm.submission.id == undefined) {
         webStorageService.set('submission_first_save', true);
       }
 
