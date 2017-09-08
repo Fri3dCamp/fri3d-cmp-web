@@ -227,3 +227,7 @@ md-switch + span {
 A {
   color: #006E7F;
 }
+
+.mainwrapper.layout-margin.layout-align-start-center.layout-row {
+  margin: 0px;
+}
