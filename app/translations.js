@@ -183,13 +183,19 @@ angular.module('app').constant('translations', {
     'Deelnemers kunnen gedurende de activiteit langskomen voor hun deel. Ze moeten dus niet de hele tijd aanwezig te zijn.'
   ],
   'VISIT_DURATION_LABEL': [
-    'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit? (in minuten)'
+    'Duur per deelnemer (in minuten)'
+  ],
+  'VISIT_DURATION_HINT': [
+    'Hoe lang duurt het voor één bezoeker om deel te nemen aan de activiteit?'
   ],
   'ACTIVITY_SESSIONS_MULTIPLE' : [
     'Mijn activiteit bestaat uit verschillende, opeenvolgende delen en moet gepland worden over meerdere sessies gedurende het weekend.'
   ],
   'SESSIONS_LABEL': [
-    'Aantal sessies, doorheen het kamp, dat de deelnemers moeten deelnemen.'
+    'Aantal aparte sessies'
+  ],
+  'SESSIONS_HINT': [
+    'Bijvoorbeeld een voorbereiding \'s ochtends, en een uitwerking in de namiddag'
   ],
 
   // COLLABORATORS

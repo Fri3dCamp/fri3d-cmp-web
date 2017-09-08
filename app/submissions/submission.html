@@ -88,7 +88,6 @@
                             <label class="md-no-float">{{ 'NAME' | translate }}</label>
                             <input class="fri3d" ng-model="vm.submission.speaker_name" required>
                         </md-input-container>
-
                         <md-input-container md-no-float class="md-block fc-right" flex-gt-xs>
                             <label class="md-no-float">{{ 'EMAIL' | translate }}</label>
                             <input type="email" class="fri3d" ng-model="vm.submission.speaker_email" required>
@@ -258,11 +257,13 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.format" class="extended info">
-                  <label flex-gt-sm>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
-                  <md-input-container style="margin-top:0px;" flex-gt-sm>
-                    <input class="fri3d" flex type="number" ng-model="vm.submission.visit_duration" aria-label="Visit Duration (in minutes)" min="0">
+                  <md-input-container flex-gt-sm style="margin-top:0">
+                    <label class="md-no-float"m>{{ 'VISIT_DURATION_LABEL' | translate }}</label>
+                    <input class="fri3d" flex type="number" ng-model="vm.submission.visit_duration" min="0">
+                    <div class="fc-hint">{{ 'VISIT_DURATION_HINT' | translate }}</div>
                   </md-input-container>
+                  <div hide-xs hide-sm flex><!-- Spacer //--></div>
                 </div>
 
                 <div class="fc-section-body">
@@ -274,11 +275,13 @@
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.multiple_sessions" class="extended info">
-                  <label flex-gt-sm for="session_count">{{ 'SESSIONS_LABEL' | translate }}</label>
                   <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
+                      <label flex-gt-sm for="session_count">{{ 'SESSIONS_LABEL' | translate }}</label>
                       <input class="fri3d" type="number" id="session_count" ng-model="vm.submission.session_count" min="2" aria-label="{{ 'SESSIONS_LABEL' | translate }}">
+                      <div class="fc-hint">{{ 'SESSIONS_HINT' | translate }}</div>
                   </md-input-container>
+                  <div hide-xs hide-sm flex><!-- Spacer //--></div>
                 </div>
 
             </section>
