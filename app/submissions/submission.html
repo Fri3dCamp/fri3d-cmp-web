@@ -201,8 +201,8 @@
                   <div class="fc-section-body" layout="column" ng-if="! vm.submission.open_for_all" class="extended info">
                     <p class="fc-section-summary" ng-bind-html="'AUDIENCE_SECTION_SUMMARY' | translate"></p>
                       <div layout="column" layout-gt-xs="row">
-                        <md-input-container md-no-float class="md-block" flex-gt-xs>
-                          <label class="md-no-float" style="margin-bottom:4px;">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label>
+                        <md-input-container md-no-float class="md-block" flex-gt-xs style="margin-top: 0px;margin-bottom:0px;">
+                          <label class="md-no-float" style="margin-bottom:15px;">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label><br><br>
                           <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
                                        ng-click="vm.toggle(level, vm.submission.audience_level)"
                                        ng-repeat="level in vm.audienceLevels"
@@ -214,9 +214,9 @@
                         </md-input-container>
                       </div>
 
-                    <md-input-container md-no-float class="md-block" flex-gt-xs style="margin-top:-5px;">
+                    <md-input-container md-no-float class="md-block" flex-gt-xs style="margin-top:0px;">
                       <label class="md-no-float">{{ 'AUDIENCE_REQUIREMENTS_LABEL' | translate }}</label>
-                      <textarea class="fri3d" ng-model="vm.submission.audience_requirements" md-maxlength="250" rows="3"></textarea>
+                      <textarea class="fri3d" ng-model="vm.submission.audience_requirements" md-maxlength="250" rows="3" style="margin-top:5px;"></textarea>
                     </md-input-container>
                   </div>
                 </div>
