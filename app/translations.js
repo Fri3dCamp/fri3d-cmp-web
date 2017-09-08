@@ -88,7 +88,10 @@ angular.module('app').constant('translations', {
     'Ik bezoek af en toe al een hackerspace.'
   ],
   'ASSOCIATED': [
-    'Indien je reeds met anderen aan de slag gaat in een hacker of maker space, vermeld deze ook. Deze editie willen we de vele, goeie Belgische hacker spaces in het spotlicht zetten in een heus Belgisch Hacker Spaces track.'
+    'Vermeld de hackerspaces die je bezoekt'
+  ],
+  'ASSOCIATED_HINT': [
+    'Deze editie willen we de vele, goeie Belgische hacker spaces in het spotlicht zetten in een heus Belgisch Hacker Spaces track.'
   ],
   'REPETITION_OPTION': [
     'Ik kan deze activiteit meerdere keren organiseren tijdens het kamp, bv. indien er veel interesse is.'
@@ -129,7 +132,10 @@ angular.module('app').constant('translations', {
     'Publiek'
   ],
   'AMOUNT_AUDIENCE': [
-    'Maximaal aantal deelnemers dat je kan begeleiden. Denk hier aan het totaal aantal, niet eventuele groepen. (e.g. Als een kind best begeleid wordt door een ouder, zijn dat twee deelnemers.)'
+    'Maximaal aantal deelnemers dat je kan begeleiden.'
+  ],
+  'AMOUNT_AUDIENCE_HINT': [
+    'Denk hier aan het totaal aantal, niet eventuele groepen. (e.g. Als een kind best begeleid wordt door een ouder, zijn dat twee deelnemers.)'
   ],
   'AUDIENCE_ALL' : [
     'Mijn activiteit kan door iedereen gevolgd worden, er is geen echte voorkennis nodig, noch voorbereiding.'
