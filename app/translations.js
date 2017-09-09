@@ -1,7 +1,11 @@
 angular.module('app').constant('translations', {
   // HEADER
+  'DOMAIN_CAPTION' : [
+    'Team Content',
+    'Team Content'
+  ],
   'SUBMISSION_CAPTION': [
-    'Uitnodiging tot deelname'
+    'Team Content - Uitnodiging tot deelname'
   ],
 
   // LANGUAGE PROMPT
