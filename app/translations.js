@@ -244,14 +244,8 @@ angular.module('app').constant('translations', {
   ],
 
   // SUBMISSION
-  'SUBMISSION_COMPLETE_OPTION': [
-    'Mijn voorstel is compleet, ik wil dit nu versturen!'
-  ],
   'SAVE': [
     'Bewaar'
-  ],
-  'SEND': [
-    'Verstuur'
   ],
 
   // COMMENTS

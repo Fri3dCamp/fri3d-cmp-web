@@ -325,15 +325,9 @@
                     <span class="md-warn" style="color: rgb(255,87,34); vertical-align: center" flex>{{ 'INVALID_FORM' | translate }}</span>
                 </div>
                 <div layout="row">
-                    <div layout="column" layout-align="center center">
-                        <md-checkbox class="md-primary" ng-model="vm.ready_to_publish" aria-label="Ready to publish" style="margin: 0;" ng-disabled="userForm.$invalid">
-                            {{ 'SUBMISSION_COMPLETE_OPTION' | translate }}
-                        </md-checkbox>
-                    </div>
                     <span flex></span>
                     <div layout="column" layout-align="center center">
-                        <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="! vm.ready_to_publish" ng-disabled="userForm.$invalid">{{ 'SAVE' | translate }}</md-button>
-                        <md-button ng-click="vm.save()" class="md-raised md-primary" ng-if="vm.ready_to_publish" ng-disabled="userForm.$invalid">{{ 'SEND' | translate }}</md-button>
+                        <md-button ng-click="vm.save()" class="md-raised md-primary" ng-disabled="userForm.$invalid">{{ 'SAVE' | translate }}</md-button>
                     </div>
                 </div>
 

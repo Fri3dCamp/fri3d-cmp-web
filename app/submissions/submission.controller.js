@@ -109,9 +109,7 @@
       }
 
     function save() {
-        if (vm.ready_to_publish) {
-            vm.submission.status = "PROPOSED";
-        }
+      vm.submission.status = "PROPOSED";
 
       // patch meta info into form
       vm.submission.form_language = vm.lang;
