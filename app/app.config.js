@@ -47,6 +47,10 @@
 
       $mdThemingProvider.setDefaultTheme('cyan');
 
+      // additional themes for cards
+      $mdThemingProvider.theme('card').backgroundPalette('orange').dark();
+      $mdThemingProvider.theme('dark-card').backgroundPalette('cyan').dark();
+
     $routeProvider
       .when('/callback', {
         controller: 'CallbackController',

@@ -4,14 +4,7 @@
 
   angular
     .module('app')
-    .controller('AppController', AppController)
-    .controller('AppCtrl', function($scope) {
-      $scope.imagePath = '/assets/washedout.png';
-    })
-    .config(function($mdThemingProvider) {
-      $mdThemingProvider.theme('teal').backgroundPalette('teal').dark();
-      $mdThemingProvider.theme('lime').backgroundPalette('light-green').dark();
-    });
+    .controller('AppController', AppController);
 
   AppController.$inject = ['$translate'];
 
