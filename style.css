@@ -266,3 +266,9 @@ A {
     margin-top: 18px;
   }
 }
+
+.large-button {
+  width: 300px;
+  height: 70px;
+  padding-top: 13px;
+}
