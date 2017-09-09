@@ -64,8 +64,8 @@
           'A400': '00ff00',
           'A700': '00ff00',
           'contrastDefaultColor': 'light',
-          'contrastDarkColors':   [],
-          'contrastLightColors':  [ '500', 'A100' ]
+          'contrastDarkColors':   [ '500' ],
+          'contrastLightColors':  []
         });
 
       $mdThemingProvider.theme('light-card')
