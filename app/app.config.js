@@ -47,9 +47,38 @@
 
       $mdThemingProvider.setDefaultTheme('cyan');
 
-      // additional themes for cards
-      $mdThemingProvider.theme('card').backgroundPalette('orange').dark();
-      $mdThemingProvider.theme('dark-card').backgroundPalette('cyan').dark();
+      // additional theme for cards
+      $mdThemingProvider.definePalette('cards', {
+            '50': 'd3d3d3',  // secondary button
+           '100': '00ff00',
+           '200': '00ff00',
+           '300': '00ff00',
+           '400': '00ff00',
+           '500': '33c8d4', // primary button (normal)
+           '600': '44d9e5', // primary button (hover)
+           '700': '00ff00',
+           '800': '006E7F', // dark background
+           '900': '535353', // text on secondary button
+          'A100': '33c8d4', // background
+          'A200': '00ff00',
+          'A400': '00ff00',
+          'A700': '00ff00',
+          'contrastDefaultColor': 'light',
+          'contrastDarkColors':   [],
+          'contrastLightColors':  [ '500', 'A100' ]
+        });
+
+      $mdThemingProvider.theme('light-card')
+        .primaryPalette('cards')
+        .accentPalette('cards')
+        .warnPalette('cards')
+        .backgroundPalette('cards');
+      $mdThemingProvider.theme('dark-card')
+        .primaryPalette('cards')
+        .accentPalette('cards')
+        .warnPalette('cards')
+        .backgroundPalette('cards').dark();
+
 
     $routeProvider
       .when('/callback', {
