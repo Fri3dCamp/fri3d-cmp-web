@@ -184,7 +184,7 @@ angular.module('app').constant('translations', {
     'Totale duur (in minuten)'
   ],
   'ACTIVITY_FORMAT_LABEL': [
-    'Deelnemers kunnen gedurende de activiteit langskomen voor hun deel. Ze moeten dus niet de hele tijd aanwezig te zijn.'
+    'Deelnemers kunnen gedurende de activiteit langskomen voor hun deel. Ze moeten dus niet de hele tijd aanwezig zijn.'
   ],
   'VISIT_DURATION_LABEL': [
     'Duur per deelnemer (in minuten)'
