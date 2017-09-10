@@ -179,16 +179,6 @@ layout-padding>p, .layout-padding>p  {
     color: #493F3A;
 }
 
-.fc-landingpage p {
-    text-align: center;
-    padding:0;
-    margin-bottom:0.5em;
-}
-.fc-landingpage .md-button {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
 @media (min-width: 700px) {
     .mainwrapper {
         padding-left:10%;padding-right:10%
