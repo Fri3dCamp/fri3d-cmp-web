@@ -135,6 +135,26 @@
               }]
           }
       })
+      .when('/cfp_wrong_email/:id', {
+          controller: 'WrongEmailController',
+          templateUrl: 'app/intro/intro.html',
+          controllerAs: 'vm',
+          resolve: {
+              comments: [ '$route', 'CommentsService', function($route, CommentsService) {
+                  return CommentsService.list($route.current.params.id);
+              }],
+              submission: ['$route', 'SubmissionService', function($route, SubmissionService) {
+                  if ($route.current.params.id) {
+                      return SubmissionService.get($route.current.params.id);
+                  } else {
+                      return emptySubmission();
+                  }
+              }],
+              language: ['$location', function($location) {
+                  return $location.hash() === 'en' ? 'en' : 'nl';
+              }]
+          }
+      })
       // temp duplicate for usertesting
       .when('/submission/:id', {
           controller: 'SubmissionController',

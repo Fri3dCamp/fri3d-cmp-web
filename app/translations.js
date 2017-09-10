@@ -293,4 +293,16 @@ angular.module('app').constant('translations', {
   'SAVED_DIALOG_OK' : [
       "Ok!",
   ],
+
+  // WRONG EMAIL DIALOG
+  'WRONG_EMAIL_DIALOG_HEADER' : [
+    "Bedankt voor de melding",
+  ],
+  'WRONG_EMAIL_DIALOG_CONTENTS' : [
+    "Bedankt om te melden dat onze mail foutief geaddresseerd was. We zullen je niet meer mailen.",
+  ],
+  'WRONG_EMAIL_DIALOG_OK' : [
+    "Ok!",
+  ],
+
 });

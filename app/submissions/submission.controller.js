@@ -115,7 +115,7 @@
       vm.submission.form_language = vm.lang;
 
       // is this the first time we save this submission, remember
-	  // so we can inform the user what to expect
+      // so we can inform the user what to expect
       if (vm.submission.id == undefined) {
         webStorageService.set('submission_first_save', true);
       }
