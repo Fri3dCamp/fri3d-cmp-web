@@ -82,7 +82,7 @@ h4 {
 p {
     margin: 0;
     padding-bottom: 1em;
-    line-height: 1.4em;
+    line-height: 1.2em;
 }
 
 md-content > form > div {
@@ -260,5 +260,5 @@ A {
 .large-button {
   width: 300px;
   height: 70px;
-  padding-top: 13px;
+  padding-top: 17px;
 }
