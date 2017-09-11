@@ -18,7 +18,7 @@ angular.module('app').constant('translations', {
   'SUBMISSION_INTRO': [
     '<h1>Fri3d Camp 2018 - Uitnodiging tot Deelname</h1>\
     <div class="download pdf"><a href="/assets/utd-2018.pdf" target="_blank"><img src="/assets/fri3d-pdf.png"><br><br>Download de volledige uitnodiging.</a></div>\
-    <p>Fri3d Camp brengt mensen met uiteenlopende interesses samen om vol enthousiasme van elkaar te leren. Gedurende <strong>drie dagen</strong> (en nachten) komen verschillende <strong>technologie- en wetenschap gerelateerde activiteiten</strong> aan bod. Tijdens Fri3d Camp staat het hacker & maker motto centraal : "be excellent to each other".</p>\
+    <p>Fri3d Camp brengt mensen met uiteenlopende interesses samen om vol enthousiasme van elkaar te leren. Gedurende <strong>drie dagen</strong> (en nachten) komen verschillende <strong>technologie- en wetenschap gerelateerde activiteiten</strong> aan bod. Tijdens Fri3d Camp staat het hacker- & makermotto centraal: "be excellent to each other".</p>\
     <p>De beste manier om deel te nemen aan Fri3d Camp is door <strong>zelf activiteiten</strong> te organiseren. We nodigen daarom <strong>iedereen</strong> uit om voorstellen te doen. <strong>We zoeken jullie</strong>: hackers, makers, artiesten, knutselaars, wetenschappers, ingenieurs, ouders en kinderen. We zoeken mensen die willen komen vertellen over wat hen boeit en waarom ze er door gepassioneerd zijn: elektronica, drones, LEGO, 3D scannen & printen, het internet der dingen, radiografie, knutselen met papier, beveiliging, grafische vormgeving, programmeren, muziek, bier brouwen, fimo kunst, … en nog veel meer.</p>\
     <p>Als je graag je steentje wil bijdragen aan Fri3d Camp en een <strong>presentatie</strong> wil geven over jouw passie, of een <strong>workshop</strong> wil inrichten om jouw kennis en kunde te delen met anderen, of op het terrein een <strong>kunstinstallatie</strong> wil uitwerken, een <strong>bosspel</strong> wil inrichten of gewoon het podium wil beklimmen en het beste van jezelf geven, … Laat van je horen en beantwoord deze uitnodiging tot deelname!</p>\
     <p>Het thema voor deze editie is <strong>Robots</strong>, en we hopen ze in alle mogelijk vormen en gedaanten te mogen verwelkomen. Naast robots zijn er nog enorm veel andere interessante onderwerpen die aan bod komen op Fri3d Camp, getuige de grote diversiteit in het programma tijdens de voorgaande edities.</p>\
@@ -29,8 +29,8 @@ angular.module('app').constant('translations', {
     <ul>\
     <li>Kies één van de drie activiteit types hieronder.</li>\
     <li>Vul zoveel mogelijk informatie in.</li>\
-    <li>Je kan je werk meerdere malen tussentijds bewaren en als je klaar bent, kan je doorsturen.</li>\
-    <li>We gaan dan samen met jou in dialoog om alles in detail perfect te maken.</li>\
+    <li>Wanneer je het voorstel bewaart, mailen we je een persoonlijke link waar je dit voorstel nog steeds kan bijwerken.</li>\
+    <li>We gaan vervolgens samen met jou alles in detail nakijken, ter voorbereiding van een eventuele opname in het programma.</li>\
     </ul>'],
   'SUBMISSION_TITLE': [
     'Jouw voorstel voor Fri3d Camp 2018',
@@ -95,7 +95,7 @@ angular.module('app').constant('translations', {
     'Vermeld de hackerspaces die je bezoekt'
   ],
   'ASSOCIATED_HINT': [
-    'Deze editie willen we de vele, goeie Belgische hacker spaces in het spotlicht zetten in een heus Belgisch Hacker Spaces track.'
+    'Deze editie willen we de vele, goeie Belgische hackerspaces in het spotlicht zetten in een Belgische Hackerspaces track.'
   ],
   'REPETITION_OPTION': [
     'Ik kan deze activiteit meerdere keren organiseren tijdens het kamp, bv. indien er veel interesse is.'
