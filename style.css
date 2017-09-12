@@ -296,3 +296,52 @@ A {
         column-count: 2;
     }
 }
+
+/* styling to mimic initial angular styling of cards */
+
+.card-block {
+  padding: 15px;
+}
+
+.card {
+  font-family: Open Sans;
+  border: none;
+}
+
+.card.light {
+  background-color: #00C9D2;
+}
+
+.card.dark {
+  background-color: #006F7D;
+  color: #fff;
+}
+
+.card-title {
+  font-family: Montserrat;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+img.card-img-right {
+  width: 80px;
+  height: 80px;
+  float: right;
+}
+
+.icon-download {
+  position: relative;
+  top: -10px;
+  border: 1px solid red;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-white {
+  fill: white;
+}
