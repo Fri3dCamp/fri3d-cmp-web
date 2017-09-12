@@ -253,7 +253,7 @@ A {
 
 @-moz-document url-prefix() {
   div.header.caption {
-    margin-top: 18px;
+    margin-top: 11px;
   }
 }
 
