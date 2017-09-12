@@ -79,6 +79,12 @@ h4 {
   font-family: 'Montserrat', sans-serif;
 }
 
+h5 {
+  font-weight: 300;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
 p {
     margin: 0;
     padding-bottom: 1em;
@@ -270,6 +276,21 @@ A {
   fill:white;
 }
 
+/* Open Sans is the default font */
+
+body {
+  font-family: "Open Sans";
+}
+
+input,
+button,
+select,
+textarea {
+ font-family: inherit;
+ font-size: inherit;
+ line-height: inherit;
+}
+
 /* styling to mimic initial angular styling of cards */
 
 .card-block {
@@ -277,7 +298,6 @@ A {
 }
 
 .card {
-  font-family: Open Sans;
   border: none;
   margin-bottom: 10px;
 }
@@ -292,7 +312,6 @@ A {
 }
 
 .card-title {
-  font-family: Montserrat;
   font-size: 24px;
   margin-top: 15px;
 }
