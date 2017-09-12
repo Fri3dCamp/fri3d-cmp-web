@@ -258,43 +258,16 @@ A {
 }
 
 .large-button {
-  width: 300px;
+  width: 240px;
   height: 70px;
   padding-top: 17px;
+  margin: 0px;
+  margin-bottom: 5px;
 }
 
-/* change default number of bootstrap card columns to two up to sm */
-
-@media (min-width: 34em) {
-    .card-columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
-}
-
-@media (min-width: 48em) {
-    .card-columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
-}
-
-@media (min-width: 62em) {
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media (min-width: 75em) {
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
+.btn-icon {
+  margin-left: 10px;
+  fill:white;
 }
 
 /* styling to mimic initial angular styling of cards */
@@ -306,6 +279,7 @@ A {
 .card {
   font-family: Open Sans;
   border: none;
+  margin-bottom: 10px;
 }
 
 .card.light {
@@ -332,16 +306,4 @@ img.card-img-right {
   width: 80px;
   height: 80px;
   float: right;
-}
-
-.icon-download {
-  position: relative;
-  top: -10px;
-  border: 1px solid red;
-  width: 32px;
-  height: 32px;
-}
-
-.icon-white {
-  fill: white;
 }
