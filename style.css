@@ -327,6 +327,16 @@ textarea {
 
 /* styling to mimic initial angular styling of cards */
 
+.cards {
+  margin: 25px;
+}
+
+@media only screen and (max-width: 40.063em) {
+  .cards {
+    margin: 10px;
+  }
+}
+
 .card-block {
   padding: 15px;
 }
