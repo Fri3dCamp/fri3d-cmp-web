@@ -28,15 +28,16 @@ angular.module('app').constant('translations', {
     <li>Vul zoveel mogelijk informatie in.</li>\
     <li>Wanneer je het voorstel bewaart, mailen we je een persoonlijke link waar je dit voorstel nog steeds kan bijwerken.</li>\
     <li>We gaan vervolgens samen met jou alles in detail nakijken, ter voorbereiding van een eventuele opname in het programma.</li>\
-    </ul>',    
+    </ul>',
+
     '<h1>Fri3d Camp 2018 - Call for Participation</h1>\
     <div class="download pdf"><a href="/assets/cfp-2018.pdf" target="_blank"><img src="/assets/fri3d-pdf.png"><br><br>Download the entire invitation.</a></div>\
-    <p>Fri3d Camp (www.fri3d.be) gathers people with a broad spectrum of interests and provides a breeding ground for learning from each other. Three days (and nights) many technology and science related activities make their appearance. At Fri3d Camp we live by the motto of the hacker and maker culture: "Be excellent to each other".</p>\
-    <p>The best way to experience Fri3d Camp is by organising your own activities. We therefore invite everyone to submit proposals. We\'re looking for you: hackers, makers, artists, crafters, scientists, engineers, parents and children. We\'re looking for people who want to talk about their passion: electronics, drones, LEGO, 3D sanning and printing, Interet of Things, radio waves, craft, security, graphic design, programming, music, brewing beer, fimo art ... and a whole lot more.</p>\
-    <p>If you want to contribute to Fri3d Camp and present your passion, host a workshop sharing your expertise with others, set up an artistic installation, organise forrest games or maybe you have something else in mind? Reach out and answer our call of participation!</p>\
-    <p>This edition\'s theme is Robots, we hope to welcome them in large numbers and many different shapes. Besides robots, Fri3d very much welcomes other topics too, as illustrated by the previous editions!</p>\
-    <p>IMPORTANT: The deadline to answer this call is Feburary 28 2018. On May 1 we will announce the selected activities.</p>\
-    <p>Selected speakers and workshop hosts will als get a discount on their admission ticket for the day of their activity, and are sure to be able to order tickets for their accompanying family members.</p>\
+    <p>Fri3d Camp (www.fri3d.be) gathers people with a broad spectrum of interests and provides a breeding ground for learning from each other. <strong>Three days</strong> (and nights) many <strong>technology and science related activities</strong> make their appearance. At Fri3d Camp we live by the motto of the hacker and maker culture: "Be excellent to each other".</p>\
+    <p>The best way to experience Fri3d Camp is by organising <strong>your own activities</strong>. We therefore invite <strong>everyone</strong> to submit proposals. <strong>We\'re looking for you</strong>: hackers, makers, artists, crafters, scientists, engineers, parents and children. We\'re looking for people who want to talk about their passion: electronics, drones, LEGO, 3D sanning and printing, Interet of Things, radio waves, craft, security, graphic design, programming, music, brewing beer, fimo art ... and a whole lot more.</p>\
+    <p>If you want to contribute to Fri3d Camp and <strong>present</strong> your passion, host a <strong>workshop</strong> sharing your expertise with others, set up an <strong>artistic installation</strong>, organise <strong>forrest games</strong> or maybe you have something else in mind? Reach out and answer our call of participation!</p>\
+    <p>This edition\'s theme is <strong>Robots</strong>, we hope to welcome them in large numbers and many different shapes. Besides robots, Fri3d very much welcomes other topics too, as illustrated by the previous editions!</p>\
+    <p><strong>IMPORTANT</strong>: The <strong>deadline</strong> to answer this call is <strong>Feburary 28 2018</strong>. On May 1 we will announce the selected activities.</p>\
+    <p>Selected speakers and workshop hosts will als get a <strong>discount</strong> on their admission ticket for the day of their activity, and <strong>are sure to be able to order tickets</strong> for their accompanying family members.</p>\
     <p>In case you have any questions regarding this call for participation, don\'t hesitate to contact Team Content (<a href="mailto:content@fri3d.be">content@fri3d.be</a>).</p>\
     <h2>When filling out the submission form:</h2>\
     <ul>\
@@ -70,7 +71,7 @@ angular.module('app').constant('translations', {
   ],
   'TYPE_WORKSHOP_DESC': [
     'Kunnen en/of moeten de deelnemers aan jouw activteit zelf de handen uit de mouwen steken? Begeleid je hen gedurende jouw activiteit van niets tot hun volgende wonderlijke creatie, dan helpen we je graag deze workshop te realiseren.',
-    'ACan or should participants of your activity engage in a hands on way? Are you ready to guide them from nothing to their next marvelous creation? We are ready to help you out in making your workshop idea reality.'
+    'Can and/or should participants of your activity roll up their sleeves? Are you ready to guide them from nothing to their next marvelous creation? We are ready to help you out in making your workshop idea reality.'
   ],
   'TYPE_OTHER': [
     'Andere',
@@ -78,12 +79,12 @@ angular.module('app').constant('translations', {
   ],
   'TYPE_OTHER_DESC': [
     'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties helemaal voor jou klaar staan.',
-    'Do you have a creative or artistic idea to transform the campgrounds? Or do you want to bring top notch entertainment? We\'re open for all ideas, we have a large terrain and a wide variety of accomodation for all types of things.'
+    'Do you have a creative or artistic idea to transform the campsite? Or do you want to bring top notch entertainment? We\'re open for all ideas, we have a large terrain and a wide variety of accomodation for all kinds of <i>other</i> activities.'
   ],
 
   'BASIC_INFO_SECTION_SUMMARY': [
     'De titel en de korte omschrijving zijn dé manier om deelnemers een goed beeld te geven van jouw activiteit. Ze zullen gebruikt worden op de website, in het programma,... Maak de titel kort en boding, maar zeer duidelijk. Vertel in de omschrijving wat je gaat doen, hoe deelnemers betrokken worden en wat het resultaat zal zijn.',
-    'The activity title and short description are crucial to give the Fri3d Camp activities a taste of what they can expect. These bits of text will be used throughout the website and in all communication. Use a short and clear title and give a concise overview of what you want to cover in your talk.'
+    'The activity title and short description are crucial to give the Fri3d Camp participants a taste of what they can expect. These bits of text will be used throughout the website and in all communication. Use a short and clear title and give a concise overview of what you want to cover in your talk.'
   ],
   'TITLE': [
     'Titel van je activiteit',
@@ -104,8 +105,8 @@ angular.module('app').constant('translations', {
     'About you'
   ],
   'SPEAKER_SECTION_SUMMARY': [
-    '<p>We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal, naast de titel en korte omschrijving, ook in de communicatie omtrent je activiteit gebruikt worden.</p>',
-    'In order to enage in further communication, we need to be able to contact you. Also, it\'s nice for all other participats to get some background on you. Your bio, just like the activity title and short description, will be used in all communication.'
+    'We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal, naast de titel en korte omschrijving, ook in de communicatie omtrent je activiteit gebruikt worden.',
+    'Of course we want to get to know you, and how we can contact you. Also, it\'s nice for other participats to get some background on you. Your bio, just like the activity title and short description, will be used in all communication.'
   ],
   'NAME': [
     'Naam',
@@ -113,7 +114,7 @@ angular.module('app').constant('translations', {
   ],
   'EMAIL': [
     'E-Mail adres',
-    'E-mail Address'
+    'E-mail address'
   ],
   'BIO' : [
     'Bio',
@@ -195,7 +196,7 @@ angular.module('app').constant('translations', {
   ],
   'AUDIENCE_SECTION_SUMMARY': [
     'Fri3d Camp heeft typisch een publiek met verschillende voorkennis. Daarom is het belangrijk dat je nu al in grote lijnen aangeeft voor welk publiek jouw activiteit geschikt is. Zijn er specifieke verwachtingen die je hebt van je publiek? Zaken die ze zelf moeten meebrengen, dingen die ze reeds moeten kunnen of weten,...',
-    'At Fri3d camp, people with extremely diverse skillsets participate. Therefore, it is important to roughly indicate which specific skills are needed to be part of your activity. Do you have any specific expectations? Things people should bring? Things people should know or master upfront?'
+    'At Fri3d camp, people with extremely diverse skillsets participate. Therefore, it is important to roughly indicate which specific skills are needed to take part in your activity. Do you have any specific expectations? Things people should bring? Things people should know or master upfront?'
   ],
   'AUDIENCE_TYPE_LABEL' : [
     'Deze activiteit is gericht op...',
@@ -277,7 +278,7 @@ angular.module('app').constant('translations', {
   ],
   'COLLABORATORS_SECTION_SUMMARY': [
     'Organiseer je deze activiteit samen met anderen? Dan kan je hun gegevens hier toevoegen.',
-    'Do you organise your activity together with others? You can enter the contact details of all other people below.'
+    'Do you organise your activity together with others? You can enter their contact details below.'
   ],
   'COLLABORATORS': [
     'Medewerkers',
@@ -319,13 +320,13 @@ angular.module('app').constant('translations', {
   ],
   'REMARKS_SECTION_SUMMARY': [
     'Het formulier tracht de belangrijkste informatie af te toetsen. Heb je het gevoel dat bepaalde belangrijke aspecten van je activiteit niet aan bod kwamen, dan kan je ons hieronder verdere informatie bezorgen.',
-    'This form checks for most crucial information. If you feel important aspects of your activity idea were not covered, please fill out any other required information below.'
+    'This form checks for most crucial information. If you feel important aspects of your activity were not covered, please fill out any other required information below.'
   ],
 
   // VALIDATION
   'INVALID_FORM' : [
     'Het formulier bevat nog fouten of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en corrigeer de fouten of vul de ontbrekende gegevens aan.',
-    'This form still contains errors or blank fields which prevents it from being saved. Take some time to check everything, add missing data or correct errors.'
+    'This form still contains errors or blank fields which prevents it from being saved. Take some time to check everything, add missing data or correct the errors.'
   ],
 
   // SUBMISSION
