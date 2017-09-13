@@ -1,7 +1,5 @@
 body {
-  /*background-color: #efefef;*/
   font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
 }
 
 html,
@@ -271,6 +269,12 @@ A {
   margin-bottom: 5px;
 }
 
+@media only screen and (min-width: 40.063em) {
+  .large-button {
+    margin-left: 20px;
+  }
+}
+
 .btn-icon {
   margin-left: 10px;
   fill:white;
@@ -318,7 +322,7 @@ textarea {
 
 .card-subtitle {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 img.card-img-right {
