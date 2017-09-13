@@ -289,7 +289,7 @@ angular.module('app').constant('translations', {
     'Add a collaborator'
   ],
   'COLLABORATORS_DIALOG_ADD_CANCEL' : [
-    'Breek af',
+    'Annuleer',
     'Cancel'
   ],
   'COLLABORATORS_DIALOG_ADD_CONFIRM' : [
@@ -305,7 +305,7 @@ angular.module('app').constant('translations', {
     'Do you want to remove {{collab_name}}?'
   ],
   'COLLABORATORS_DIALOG_REMOVE_CANCEL' : [
-    'Breek af',
+    'Annuleer',
     'Cancel'
   ],
   'COLLABORATORS_DIALOG_REMOVE_CONFIRM' : [
