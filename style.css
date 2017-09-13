@@ -236,11 +236,30 @@ div.extended.info {
 }
 
 div.download.pdf {
+  display: inline-block;
   font-size: 75%;
   text-align: center;
-  float: left;
   margin: 15px;
   width: 110px;
+}
+
+div.download.pdf.left {
+  float: left;
+}
+
+div.download.pdf.small {
+  width: auto;
+  margin: 0px;
+  font-size: 100%;
+}
+
+div.download.pdf.small IMG {
+  height: 30px;
+  margin-bottom: 3px;
+}
+
+div.download.pdf.small a {
+  color: white;
 }
 
 md-switch + span {
