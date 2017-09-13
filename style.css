@@ -244,11 +244,18 @@ div.download.pdf {
 }
 
 md-switch + span {
-    display: block;
-    position: relative;
-    left: 50px;
-    top: -37px;
-    width: 90%;
+  display: block;
+  position: relative;
+  left: 50px;
+  top: -27px;
+  width: 90%;
+}
+
+md-switch.in-front {
+  display:inline-block;
+  width:45px;
+  margin:0px;
+  margin-bottom:-10px;
 }
 
 A {
