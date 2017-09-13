@@ -292,7 +292,7 @@ angular.module('app').constant('translations', {
     'Cancel'
   ],
   'COLLABORATORS_DIALOG_ADD_CONFIRM' : [
-    'Voegen toe',
+    'Voeg toe',
     'Add'
   ],
   'COLLABORATORS_DIALOG_REMOVE_HEADER' : [
