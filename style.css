@@ -355,6 +355,13 @@ textarea {
   margin-bottom: 20px;
 }
 
+.card-date {
+  font-size: 80%;
+  margin-top: 15px;
+  float: right;
+  color: #d3d3d3;
+}
+
 img.card-img-right {
   width: 80px;
   height: 80px;
