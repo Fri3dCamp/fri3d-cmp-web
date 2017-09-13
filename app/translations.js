@@ -350,12 +350,25 @@ angular.module('app').constant('translations', {
     'Your proposal has been submitted!'
   ],
   'SAVED_DIALOG_CONTENTS' : [
-      "We kijken er zo spoedig mogelijk naar. We hebben je een linkje gemailed langs welke je je voorstel nog kan aanpassen. Je kan hier desgewenst verder voorstellen indienen.
+      "We kijken er zo spoedig mogelijk naar. We hebben je een linkje gemailed langs welke je je voorstel nog kan aanpassen. Je kan hier desgewenst verder voorstellen indienen."
   ],
   'SAVED_DIALOG_OK' : [
     "Ok!",
     "Ok!"
   ],
+  // UPDATED DIALOG (STILL NEEDS STRUCTURAL CHANGES)
+  'UPDATED_DIALOG_HEADER' : [
+    "Je voorstel is bijgewerkt!",
+    'Your proposal has been updated!'
+  ],
+  'UPDATED_DIALOG_CONTENTS' : [
+      "We kijken er zo spoedig mogelijk naar. We hebben je een overzicht van de wijzigingen gemailed, je kan desgewenst hier nog verder aanpassen."
+  ],
+  'UPDATED_DIALOG_OK' : [
+    "Ok!",
+    "Ok!"
+  ],
+
 
   // WRONG EMAIL DIALOG
   'WRONG_EMAIL_DIALOG_HEADER' : [

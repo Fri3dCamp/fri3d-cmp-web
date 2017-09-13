@@ -6,10 +6,12 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog', 'webStorageService', '$window'];
+    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog', 'webStorageService', '$window', '$anchorScroll'];
 
-  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog, webStorageService, $window) {
+  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog, webStorageService, $window, $anchorScroll) {
       let vm = this;
+      let submission_was_empty = (('id' in submission) && (submission.id.length > 0)) ? false : true;
+
 
       // -- get the search arguments from the url and check if a lang query is available.
       let searchArgs = $location.search();
@@ -58,16 +60,6 @@
       vm.toggle = toggle;
       vm.inList = inList;
 
-      // if save() noticed this is the first time this submission
-      // is saved, tell the user what's going on
-      if (webStorageService.get('submission_first_save')) {
-          webStorageService.remove('submission_first_save');
-          $mdDialog.show($mdDialog.alert()
-            .title($translate.instant('SAVED_DIALOG_HEADER'))
-            .textContent($translate.instant('SAVED_DIALOG_CONTENTS'))
-            .ok($translate.instant('SAVED_DIALOG_OK'))
-          );
-      }
 
       function inList(item, list) {
           return list.indexOf(item) > -1;
@@ -102,17 +94,47 @@
           return res;
       }
 
+    function emptySubmission() {
+      // TODO FIXME tried to stick this in the service, but trying
+      // to call that from app.config.js (after injecting it) yields
+      // an errorless white page, so duplicated here
+        return {
+            affiliated: false,
+            status: "IN_PREPARATION",
+            activity_participant_limit: 25,
+            always_available: true,
+            day_1_available: true,
+            day_1_from: 9,
+            day_1_until: 21,
+            day_2_available: true,
+            day_2_from: 9,
+            day_2_until: 21,
+            day_3_available: true,
+            day_3_from: 9,
+            day_3_until: 21,
+            costs: 0,
+            multiple_sessions: false,
+            session_count: 2,
+            open_for_all: true,
+            audience_level: [],
+            open_for_repetitions: true,
+            format: false,
+            activity_duration: 60,
+            visit_duration: 15
+        };
+    }
+
+    function reset() {
+      // TODO XXX FIXME check if this covers all our bases
+      vm.submission = emptySubmission();
+      vm.comments = comments;
+    }
+
     function save() {
       vm.submission.status = "PROPOSED";
 
       // patch meta info into form
       vm.submission.form_language = vm.lang;
-
-      // is this the first time we save this submission, remember
-      // so we can inform the user what to expect
-      if (vm.submission.id == undefined) {
-        webStorageService.set('submission_first_save', true);
-      }
 
       SubmissionService.save(vm.submission).then(function(response) {
           vm.submission.id = response._id;
@@ -123,7 +145,25 @@
                 .hideDelay(3000)
         );
 
-        $window.location.href = '/cfp';
+        // if we came here with an empty form, reset so the user can
+        // fill in again
+        if (submission_was_empty) {
+          $mdDialog.show($mdDialog.alert()
+            .title($translate.instant('SAVED_DIALOG_HEADER'))
+            .textContent($translate.instant('SAVED_DIALOG_CONTENTS'))
+            .ok($translate.instant('SAVED_DIALOG_OK'))
+          );
+          $anchorScroll('main');
+          reset();
+        } else {
+          $mdDialog.show($mdDialog.alert()
+            .title($translate.instant('UPDATED_DIALOG_HEADER'))
+            .textContent($translate.instant('UPDATED_DIALOG_CONTENTS'))
+            .ok($translate.instant('UPDATED_DIALOG_OK'))
+          );
+          $anchorScroll('main');
+        }
+
       });
     }
 
