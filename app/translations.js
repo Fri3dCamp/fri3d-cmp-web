@@ -345,13 +345,14 @@ angular.module('app').constant('translations', {
     'Send'
   ],
 
-  // SAVED DIALOG (STILL NEEDS STRUCTURAL CHANGES)
+  // SAVED DIALOG
   'SAVED_DIALOG_HEADER' : [
     "Je voorstel is verstuurd!",
     'Your proposal has been submitted!'
   ],
   'SAVED_DIALOG_CONTENTS' : [
-      "We kijken er zo spoedig mogelijk naar. We hebben je een linkje gemailed langs welke je je voorstel nog kan aanpassen. Je kan hier desgewenst verder voorstellen indienen."
+    "Bedankt voor je voorstel. We kijken er zo spoedig mogelijk naar. We hebben je ondertussen een link gemailed waarmee je dit voorstel nog kan bijwerken. En nu kan je natuurlijk nog altijd nieuwe, bijkomende voorstellen ingeven.",
+    "Thank you for your proposal. We are looking into it as soon as possible. In the meantime we have sent you a link. Use that link to retrieve your proposal and edit it further. Right now, you can always submit more proposals."
   ],
   'SAVED_DIALOG_OK' : [
     "Ok!",
@@ -363,7 +364,8 @@ angular.module('app').constant('translations', {
     'Your proposal has been updated!'
   ],
   'UPDATED_DIALOG_CONTENTS' : [
-      "We kijken er zo spoedig mogelijk naar. We hebben je een overzicht van de wijzigingen gemailed, je kan desgewenst hier nog verder aanpassen."
+    "We bekijken zo spoedig mogelijk je aanpassingen. Ter bevestiging hebben we een overzicht van de wijzigingen gemailed.",
+    "We will look into your changes as soon as possible. As a confirmation, we have sent you an overview of the changes you made, by e-mail."
   ],
   'UPDATED_DIALOG_OK' : [
     "Ok!",
