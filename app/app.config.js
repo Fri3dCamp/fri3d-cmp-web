@@ -50,19 +50,19 @@
       // additional theme for cards
       $mdThemingProvider.definePalette('cards', {
             '50': 'd3d3d3',  // secondary button
-           '100': '00ff00',
-           '200': '00ff00',
-           '300': '00ff00',
-           '400': '00ff00',
+           '100': 'd3d3d3',
+           '200': 'd3d3d3',
+           '300': 'd3d3d3',
+           '400': 'd3d3d3',
            '500': '33c8d4', // primary button (normal)
            '600': '44d9e5', // primary button (hover)
-           '700': '00ff00',
+           '700': 'd3d3d3',
            '800': '006E7F', // dark background
            '900': '535353', // text on secondary button
           'A100': '33c8d4', // background
-          'A200': '00ff00',
-          'A400': '00ff00',
-          'A700': '00ff00',
+          'A200': 'd3d3d3',
+          'A400': 'd3d3d3',
+          'A700': 'd3d3d3',
           'contrastDefaultColor': 'light',
           'contrastDarkColors':   [ '500' ],
           'contrastLightColors':  []
