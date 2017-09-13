@@ -73,8 +73,7 @@
                 </div>
 
                 <div class="fc-section-body" ng-if="vm.lang === 'en' && vm.submission.type && (vm.submission.type == 'WORKSHOP' || vm.submission.type == 'OTHER')">
-                    <md-switch flex="50" class="md-primary" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?"
-                               style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                    <md-switch flex="50" class="md-primary in-front" ng-model="vm.submission.dutch_support" aria-label="Need Dutch language support?"></md-switch>
                     <span>{{ 'LANGUAGE_SUPPORT_OPTION' | translate }}</span>
                 </div>
 
@@ -102,8 +101,7 @@
                     </div>
 
                     <div ng-if="vm.submission.type">
-                        <md-switch flex class="md-primary" ng-model="vm.submission.affiliated" aria-label="Affiliated"
-                                   style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                        <md-switch flex class="md-primary in-front" ng-model="vm.submission.affiliated" aria-label="Affiliated"></md-switch>
                         <span>{{ 'AFFILIATED' | translate }}</span>
                     </div>
 
@@ -116,15 +114,13 @@
                     </div>
 
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                      <md-switch flex class="md-primary" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions"
-                                 style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                      <md-switch flex class="md-primary in-front" ng-model="vm.submission.open_for_repetitions" aria-label="Open for repetitions"></md-switch>
                       <span>{{ 'REPETITION_OPTION' | translate }}</span>
                   </div>
 
                   <div class="fc-section-body">
                     <div ng-if="vm.submission.type">
-                      <md-switch flex class="md-primary" ng-model="vm.submission.always_available" aria-label="Multiple sessions"
-                                style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                      <md-switch flex class="md-primary in-front" ng-model="vm.submission.always_available" aria-label="Multiple sessions"></md-switch>
                       <span>{{ 'AVAILABILITY_ALWAYS' | translate }}</span>
                     </div>
                   </div>
@@ -135,7 +131,7 @@
                       <p class="fc-section-summary" ng-bind-html="'AVAILABILITY_SECTION_SUMMARY' | translate"></p>
 
                       <div layout="column" layout-gt-xs="row" layout-align="start start">
-                          <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
+                          <md-switch flex-gt-xs class="md-primary" style="margin-top:30px;" ng-model="vm.submission.day_1_available">{{ 'DAY_ONE' | translate }}</md-switch>
                           <div layout="row" flex-gt-xs>
                               <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                   <label class="">{{ 'FROM' | translate }}</label>
@@ -148,7 +144,7 @@
                           </div>
                       </div>
                       <div layout="column"  layout-gt-xs="row" layout-align="start start">
-                          <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_2_available">{{ 'DAY_TWO' | translate }}</md-switch>
+                          <md-switch flex-gt-xs class="md-primary" style="margin-top:30px;" ng-model="vm.submission.day_2_available">{{ 'DAY_TWO' | translate }}</md-switch>
                           <div layout="row" flex-gt-xs>
                               <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                   <label class="">{{ 'FROM' | translate }}</label>
@@ -161,7 +157,7 @@
                           </div>
                       </div>
                       <div layout="column" layout-gt-xs="row" layout-align="start start">
-                          <md-switch flex-gt-xs class="md-primary" style="margin-top:0px;" ng-model="vm.submission.day_3_available">{{ 'DAY_THREE' | translate }}</md-switch>
+                          <md-switch flex-gt-xs class="md-primary" style="margin-top:30px;" ng-model="vm.submission.day_3_available">{{ 'DAY_THREE' | translate }}</md-switch>
                           <div layout="row" flex-gt-xs>
                               <md-input-container class="md-block" style="margin-top:0px;padding-right:10px;" flex-gt-xs>
                                   <label class="">{{ 'FROM' | translate }}</label>
@@ -194,8 +190,7 @@
                 </div>
 
                 <div>
-                  <md-switch flex class="md-primary" ng-model="vm.submission.open_for_all" aria-label="Open for all"
-                             style="display:inline-block;margin:0px;"></md-switch>
+                  <md-switch flex class="md-primary in-front" ng-model="vm.submission.open_for_all" aria-label="Open for all"></md-switch>
                   <span>{{ 'AUDIENCE_ALL' | translate }}</span>
                 </div>
 
@@ -204,7 +199,7 @@
                     <p class="fc-section-summary" ng-bind-html="'AUDIENCE_SECTION_SUMMARY' | translate"></p>
                       <div layout="column" layout-gt-xs="row">
                         <md-input-container md-no-float class="md-block" flex-gt-xs style="margin-top: 0px;margin-bottom:0px;">
-                          <label class="md-no-float" style="margin-bottom:15px;">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label><br><br>
+                          <label class="md-no-float">{{ 'AUDIENCE_TYPE_LABEL' | translate }}</label><br>
                           <md-checkbox ng-checked="vm.inList(level, vm.submission.audience_level)"
                                        ng-click="vm.toggle(level, vm.submission.audience_level)"
                                        ng-repeat="level in vm.audienceLevels"
@@ -224,8 +219,7 @@
                 </div>
 
                 <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                    <md-switch flex class="md-primary" ng-model="vm.submission.requires_pay" aria-label="Open for all"
-                               style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                    <md-switch flex class="md-primary in-front" ng-model="vm.submission.requires_pay" aria-label="Open for all"></md-switch>
                     <span>{{ 'COSTS_REQUIRED' | translate }}</span>
                 </div>
 
@@ -251,8 +245,7 @@
 
                 <div class="fc-section-body">
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                    <md-switch flex class="md-primary" ng-model="vm.submission.format" aria-label="Attendance format"
-                               style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                    <md-switch flex class="md-primary in-front" ng-model="vm.submission.format" aria-label="Attendance format"></md-switch>
                     <span>{{ 'ACTIVITY_FORMAT_LABEL' | translate }}</span>
                   </div>
                 </div>
@@ -268,15 +261,14 @@
 
                 <div class="fc-section-body">
                   <div ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP'">
-                    <md-switch flex class="md-primary" ng-model="vm.submission.multiple_sessions" aria-label="Multiple sessions"
-                               style="width:45px;display:inline-block;margin:0px;"></md-switch>
+                    <md-switch flex class="md-primary in-front" ng-model="vm.submission.multiple_sessions" aria-label="Multiple sessions"></md-switch>
                     <span>{{ 'ACTIVITY_SESSIONS_MULTIPLE' | translate }}</span>
                   </div>
                 </div>
 
                 <div layout-gt-sm="row" ng-if="vm.submission.type && vm.submission.type == 'WORKSHOP' && vm.submission.multiple_sessions" class="extended info">
                   <md-input-container style="margin-top:0px;" flex-gt-sm>
-                      <label flex-gt-sm for="session_count">{{ 'SESSIONS_LABEL' | translate }}</label>
+                      <label class="md-no-float"m>{{ 'SESSIONS_LABEL' | translate }}</label>
                       <input class="fri3d" type="number" id="session_count" ng-model="vm.submission.session_count" min="2" aria-label="{{ 'SESSIONS_LABEL' | translate }}">
                       <div class="fc-hint">{{ 'SESSIONS_HINT' | translate }}</div>
                   </md-input-container>
@@ -322,7 +314,7 @@
 
             <section id="controls" layout="column" layout-align="end stretch" ng-if="vm.submission.type">
                 <div layout="row" layout-align="start stretch" layout-padding class="md-warn" ng-if="userForm.$invalid">
-                    <md-icon md-font-icon="lnr-warning" class="lnr md-warn"></md-icon>
+                    <md-icon md-font-icon="lnr-warning" class="lnr md-warn" style="padding-top:0px;margin-top:15px;"></md-icon>
                     <span class="md-warn" style="color: rgb(255,87,34); vertical-align: center" flex>{{ 'INVALID_FORM' | translate }}</span>
                 </div>
                 <div layout="row">

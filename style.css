@@ -150,10 +150,14 @@ md-sidenav {
 }
 
 .fc-toggle.selected {
-    /*box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);*/
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
     background-color: #0E98AF;
     color: white;
     border: solid 1px #0E98AF;
+}
+
+.fc-toggle:hover {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 
 layout-padding>p, .layout-padding>p  {
@@ -240,11 +244,18 @@ div.download.pdf {
 }
 
 md-switch + span {
-    display: block;
-    position: relative;
-    left: 50px;
-    top: -27px;
-    width: 90%;
+  display: block;
+  position: relative;
+  left: 50px;
+  top: -27px;
+  width: 90%;
+}
+
+md-switch.in-front {
+  display:inline-block;
+  width:45px;
+  margin:0px;
+  margin-bottom:-10px;
 }
 
 A {
