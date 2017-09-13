@@ -345,18 +345,12 @@ angular.module('app').constant('translations', {
   ],
 
   // SAVED DIALOG (STILL NEEDS STRUCTURAL CHANGES)
-  'SAVED_DIALOG_HEADER_IN_PREPARATION' : [
-    "Je voorstel is opgeslagen!",
-    'Your proposal has been saved!'
-  ],
-  'SAVED_DIALOG_HEADER_PROPOSED' : [
+  'SAVED_DIALOG_HEADER' : [
     "Je voorstel is verstuurd!",
+    'Your proposal has been submitted!'
   ],
-  'SAVED_DIALOG_CONTENTS_IN_PREPARATION' : [
-      "Je kan deze pagina bookmarken (we mailen je ook een linkje) om je voorstel nog te wijzigen en uiteindelijk door te sturen zodat we het kunnen bekijken.",
-  ],
-  'SAVED_DIALOG_CONTENTS_PROPOSED' : [
-      "We kijken er zo spoedig mogelijk naar. Je kan deze pagina bookmarken (we mailen je ook een linkje) om je voorstel nog te bekijken en/of wijzigen.",
+  'SAVED_DIALOG_CONTENTS' : [
+      "We kijken er zo spoedig mogelijk naar. We hebben je een linkje gemailed langs welke je je voorstel nog kan aanpassen. Je kan hier desgewenst verder voorstellen indienen.
   ],
   'SAVED_DIALOG_OK' : [
     "Ok!",

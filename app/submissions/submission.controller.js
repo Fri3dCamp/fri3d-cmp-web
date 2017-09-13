@@ -6,9 +6,9 @@
     .module('app')
     .controller('SubmissionController', SubmissionController);
 
-    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog', 'webStorageService'];
+    SubmissionController.$inject = ['$scope', '$location', 'comments', 'submission', 'language', 'SubmissionService', '$translate', '$mdToast', '$mdDialog', 'webStorageService', '$window'];
 
-  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog, webStorageService) {
+  function SubmissionController($scope, $location, comments, submission, language, SubmissionService, $translate, $mdToast, $mdDialog, webStorageService, $window) {
       let vm = this;
 
       // -- get the search arguments from the url and check if a lang query is available.
@@ -63,14 +63,8 @@
       if (webStorageService.get('submission_first_save')) {
           webStorageService.remove('submission_first_save');
           $mdDialog.show($mdDialog.alert()
-            .title($translate.instant(
-              (vm.submission.status == 'PROPOSED') ?
-                'SAVED_DIALOG_HEADER_PROPOSED' :
-                'SAVED_DIALOG_HEADER_IN_PREPARATION'))
-            .textContent($translate.instant(
-              (vm.submission.status == 'PROPOSED') ?
-                'SAVED_DIALOG_CONTENTS_PROPOSED' :
-                'SAVED_DIALOG_CONTENTS_IN_PREPARATION'))
+            .title($translate.instant('SAVED_DIALOG_HEADER'))
+            .textContent($translate.instant('SAVED_DIALOG_CONTENTS'))
             .ok($translate.instant('SAVED_DIALOG_OK'))
           );
       }
@@ -129,7 +123,7 @@
                 .hideDelay(3000)
         );
 
-        $location.path("/cfp/" + vm.submission.id);
+        $window.location.href = '/cfp';
       });
     }
 
