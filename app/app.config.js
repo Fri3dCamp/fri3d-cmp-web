@@ -100,21 +100,6 @@
               }]
           }
       })
-      // temp duplicate for usertesting
-      .when('/submission', {
-          controller: 'SubmissionController',
-          templateUrl: 'app/submissions/submission.html',
-          controllerAs: 'vm',
-          resolve: {
-              comments: [function() { return {}; }],
-              submission: [function() {
-                  return emptySubmission();
-              }],
-              language: ['$location', function($location) {
-                  return $location.hash() === 'en' ? 'en' : 'nl';
-              }]
-          }
-      })
       .when('/cfp/:id', {
           controller: 'SubmissionController',
           templateUrl: 'app/submissions/submission.html',
@@ -138,27 +123,6 @@
       .when('/cfp_wrong_email/:id', {
           controller: 'WrongEmailController',
           templateUrl: 'app/intro/intro.html',
-          controllerAs: 'vm',
-          resolve: {
-              comments: [ '$route', 'CommentsService', function($route, CommentsService) {
-                  return CommentsService.list($route.current.params.id);
-              }],
-              submission: ['$route', 'SubmissionService', function($route, SubmissionService) {
-                  if ($route.current.params.id) {
-                      return SubmissionService.get($route.current.params.id);
-                  } else {
-                      return emptySubmission();
-                  }
-              }],
-              language: ['$location', function($location) {
-                  return $location.hash() === 'en' ? 'en' : 'nl';
-              }]
-          }
-      })
-      // temp duplicate for usertesting
-      .when('/submission/:id', {
-          controller: 'SubmissionController',
-          templateUrl: 'app/submissions/submission.html',
           controllerAs: 'vm',
           resolve: {
               comments: [ '$route', 'CommentsService', function($route, CommentsService) {
