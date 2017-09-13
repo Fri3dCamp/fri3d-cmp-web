@@ -12,7 +12,6 @@
       let vm = this;
       let submission_was_empty = (('id' in submission) && (submission.id.length > 0)) ? false : true;
 
-
       // -- get the search arguments from the url and check if a lang query is available.
       let searchArgs = $location.search();
       vm.lang = searchArgs['lang'] || 'nl';
@@ -38,6 +37,7 @@
     vm.submission = submission;
     vm.statusTypes = ["PROPOSED", "UNDER_REVIEW", "ACCEPTED", "MAYBE", "REJECTED", "IN_PREPARATION"];
     vm.audienceLevels = [ "LEVEL_BEGINNER", "LEVEL_INTERMEDIATE", "LEVEL_EXPERT", "LEVEL_FAMILY", "LEVEL_CHILD", "LEVEL_ADULT" ];
+    vm.submission_was_empty = submission_was_empty;
 
     if (webStorageService.get('pending_submission', 'sessionStorage')) {
         vm.submission = webStorageService.get('pending_submission', 'sessionStorage');

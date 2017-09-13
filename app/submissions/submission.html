@@ -91,7 +91,7 @@
                         </md-input-container>
                         <md-input-container md-no-float class="md-block fc-right" flex-gt-xs>
                             <label class="md-no-float">{{ 'EMAIL' | translate }}</label>
-                            <input type="email" class="fri3d" ng-model="vm.submission.speaker_email" required>
+                            <input type="email" class="fri3d" ng-model="vm.submission.speaker_email" required ng-readonly="!vm.submission_was_empty">
                         </md-input-container>
                     </div>
                     <div layout-gt-sm="row">
