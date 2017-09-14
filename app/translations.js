@@ -43,7 +43,7 @@ angular.module('app').constant('translations', {
     <ul>\
     <li>Choose one of the listed activity types below.</li>\
     <li>Fill out as much information as possible.</li>\
-    <li>When you save your proposal, we will email you a presonal link which you can use to edit your submission at a later time.</li>\
+    <li>When you save your proposal, we will email you a personal link which you can use to edit your submission at a later time.</li>\
     <li>Once a submission is complete, we will go over all details with you, in order to make a final selection later on.</li>\
     </ul>'
   ],
@@ -79,7 +79,7 @@ angular.module('app').constant('translations', {
   ],
   'TYPE_OTHER_DESC': [
     'Wil je kunstzinnig aan de slag gaan op het terrein, of wil je entertainment van de bovenste plank brengen? Ook dat kan allemaal. We hebben een groot terrein, en verschillende accomodaties helemaal voor jou klaar staan.',
-    'Do you have a creative or artistic idea to transform the campsite? Or do you want to bring top notch entertainment? We\'re open for all ideas, we have a large terrain and a wide variety of accomodation for all kinds of <i>other</i> activities.'
+    'Do you have a creative or artistic idea to transform the campsite? Or do you want to bring top notch entertainment? We\'re open for all ideas, we have a large terrain and a wide variety of accommodation for all kinds of <i>other</i> activities.'
   ],
 
   'BASIC_INFO_SECTION_SUMMARY': [
@@ -106,7 +106,7 @@ angular.module('app').constant('translations', {
   ],
   'SPEAKER_SECTION_SUMMARY': [
     'We willen natuurlijk graag weten wie jij bent en hoe we je kunnen contacteren. Ook de deelnemers zijn geïnteresseerd in jouw achtergrond. De bio zal, naast de titel en korte omschrijving, ook in de communicatie omtrent je activiteit gebruikt worden.',
-    'Of course we want to get to know you, and how we can contact you. Also, it\'s nice for other participats to get some background on you. Your bio, just like the activity title and short description, will be used in all communication.'
+    'Of course we want to get to know you, and how we can contact you. Also, it\'s nice for other participants to get some background on you. Your bio, just like the activity title and short description, will be used in all communication.'
   ],
   'NAME': [
     'Naam',
@@ -146,7 +146,7 @@ angular.module('app').constant('translations', {
   ],
   'AVAILABILITY_SECTION_SUMMARY': [
     'Indien je niet gedurende het hele weekend beschikbaar bent om je activiteit te organiseren, laat ons weten wanneer dit wel kan. We proberen hier zo goed mogelijk rekening mee te houden, bij het opstellen van het programma.',
-    'In case you are not available througout the whole weekend, please let us know when it would be best to plan your activity. We will do our very best to take this into account when constructing the program.'
+    'In case you are not available throughout the whole weekend, please let us know when it would be best to plan your activity. We will do our very best to take this into account when constructing the program.'
   ],
   'FROM': [
     'Van',
@@ -176,7 +176,7 @@ angular.module('app').constant('translations', {
   ],
   'ACTIVITY_SECTION_SUMMARY' : [
     'Om jouw activiteit in de beste omstandigheden op te nemen in het Fri3d programma, hebben we wat informatie nodig. Ook voor je deelnemers is dit interessante informatie. Zo kan je aangeven wie jouw doelpubliek is, hoeveel deelnemers je kan begeleiden,...',
-    'In order to process your activity further, we need some additional information. This information will also be relevant to potential participants, as you will be able to highlight your target audience, the amount of participants and required time.'
+    'In order to process your activity further, we need some additional information. This information will also be relevant to potential participants, as you will be able to highlight your target audience, the number of participants and required time.'
   ],
   'AUDIENCE_SECTION_TITLE': [
     'Publiek',
@@ -228,7 +228,7 @@ angular.module('app').constant('translations', {
   ],
   'AUDIENCE_REQUIREMENTS_LABEL': [
     'Vereiste voorbreiding, voorkennis,...',
-    'Prerequiste knowledge, required preparations, ...'
+    'Prerequisite knowledge, required preparations, ...'
   ],
   'COSTS_REQUIRED' : [
     'Ondanks dat ik probeer om deze activiteit volledig zelf aan te bieden, is er toch een kleine kost aan verbonden.',
@@ -278,7 +278,7 @@ angular.module('app').constant('translations', {
   ],
   'COLLABORATORS_SECTION_SUMMARY': [
     'Organiseer je deze activiteit samen met anderen? Dan kan je hun gegevens hier toevoegen.',
-    'Do you organise your activity together with others? You can enter their contact details below.'
+    'Do you organize your activity together with others? You can enter their contact details below.'
   ],
   'COLLABORATORS': [
     'Medewerkers',
@@ -326,7 +326,7 @@ angular.module('app').constant('translations', {
   // VALIDATION
   'INVALID_FORM' : [
     'Het formulier bevat nog fouten of niet ingevulde velden waardoor je het niet kan bewaren. Doorloop het even en corrigeer de fouten of vul de ontbrekende gegevens aan.',
-    'This form still contains errors or blank fields which prevents it from being saved. Take some time to check everything, add missing data or correct the errors.'
+    'This form still contains errors or blank fields which prevent it from being saved. Take some time to check everything, add missing data or correct the errors.'
   ],
 
   // SUBMISSION
