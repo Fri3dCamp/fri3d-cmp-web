@@ -125,7 +125,7 @@ angular.module('app').constant('translations', {
     'A few more things we\'d like to know...'
   ],
   'AFFILIATED' : [
-    'Ik bezoek (af en toe) al een hackerspace.',
+    'Ik bezoek (af en toe) een hackerspace.',
     'I (sometimes) visit a hackerspace'
   ],
   'ASSOCIATED': [
