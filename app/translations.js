@@ -120,6 +120,10 @@ angular.module('app').constant('translations', {
     'Bio',
     'Bio'
   ],
+  'SPEAKER_MORE_INFO_TITLE' : [
+    'Nog enkele dingen die we willen weten...',
+    'A few more things we\'d like to know...'
+  ],
   'AFFILIATED' : [
     'Ik bezoek (af en toe) al een hackerspace.',
     'I (sometimes) visit a hackerspace'
