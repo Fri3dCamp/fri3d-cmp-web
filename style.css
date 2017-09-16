@@ -377,3 +377,7 @@ img.card-img-right {
   height: 80px;
   float: right;
 }
+
+.card .card-text a {
+  color: white;
+}
