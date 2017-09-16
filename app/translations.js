@@ -1,10 +1,4 @@
 angular.module('app').constant('translations', {
-  // HEADER
-  'DOMAIN_CAPTION' : [
-    'Team Content',
-    'Team Content'
-  ],
-
   // LANGUAGE PROMPT
   'LANGUAGE_PROMPT' : [
     'Looking for an English version of the form?',
