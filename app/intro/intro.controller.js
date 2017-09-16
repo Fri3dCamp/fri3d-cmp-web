@@ -32,5 +32,15 @@
     vm.promptLanguage = false;
     setTimeout(function(){ vm.promptLanguage = true;  },  250);
     setTimeout(function(){ vm.promptLanguage = false; }, 3000);
+
+    // make sure that tweets are transformed by the Twitter JS code
+    // NOTE: problem seems when following a link to the page, probably because
+    //       the default JS code has already ran before Angular has rendered
+    // TODO this function is evaluated multiple times
+    vm.forceTwitterRendering = function forceTwitterRendering() {
+      twttr.widgets.load();
+      return false;
+    };
   }
+
 })();
